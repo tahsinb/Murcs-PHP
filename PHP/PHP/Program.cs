@@ -16,7 +16,7 @@ namespace PHP
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1());
+			//Application.Run(new Form1());
 
 			//Testing functionality of this form. 
 			//TODO: Will have to be linked to Form1 later.
