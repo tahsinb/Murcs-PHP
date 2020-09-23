@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHP", "PHP\PHP.csproj", "{6B9E70EA-701E-4275-9DB9-47F6A8627BFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHP.Database", "PHP.Database\PHP.Database.csproj", "{BA8C6CAD-7446-421D-A78A-8607D083C19C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PHP.Database", "PHP.Database\PHP.Database.csproj", "{BA8C6CAD-7446-421D-A78A-8607D083C19C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHP.Database.TestConsole", "PHP.DataBase.TestConsole\PHP.Database.TestConsole.csproj", "{817F80C1-346C-4446-9EBA-EEF9D23B61BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BA8C6CAD-7446-421D-A78A-8607D083C19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA8C6CAD-7446-421D-A78A-8607D083C19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA8C6CAD-7446-421D-A78A-8607D083C19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817F80C1-346C-4446-9EBA-EEF9D23B61BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817F80C1-346C-4446-9EBA-EEF9D23B61BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817F80C1-346C-4446-9EBA-EEF9D23B61BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817F80C1-346C-4446-9EBA-EEF9D23B61BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
