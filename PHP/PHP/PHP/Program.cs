@@ -19,7 +19,7 @@ namespace PHP
 			Application.Run(new ParentMDI());
 			//Tahsin: added transaction form. 
 			//TODO: Has to be linked to Parent form. Currently opens by default.
-			//Application.Run(new AddTransaction());
+			Application.Run(new AddTransaction());
 
 		}
 	}

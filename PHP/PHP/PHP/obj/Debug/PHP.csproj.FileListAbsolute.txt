@@ -75,3 +75,4 @@ C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.G
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
