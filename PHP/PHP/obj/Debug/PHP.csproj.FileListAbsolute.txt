@@ -1,9 +1,0 @@
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe.config
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.pdb
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe
-C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.pdb
