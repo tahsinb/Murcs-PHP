@@ -27,7 +27,7 @@ namespace PHP
 			bool isOpen = false;
 			foreach (Form f in Application.OpenForms)
             {
-				if (f.Text == "AddSale")
+				if (f.Text == "AddTransaction")
                 {
 					isOpen = true;
 					f.Focus();
@@ -36,9 +36,9 @@ namespace PHP
             }
 			if (isOpen == false)
             {
-				AddSale AddSaleRecord = new AddSale();
-				AddSaleRecord.MdiParent = this;
-				AddSaleRecord.Show();
+				AddTransaction AddTransaction = new AddTransaction();
+				AddTransaction.MdiParent = this;
+				AddTransaction.Show();
             }
 			
 		}

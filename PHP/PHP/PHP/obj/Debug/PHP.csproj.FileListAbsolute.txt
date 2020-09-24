@@ -76,3 +76,23 @@ C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.C
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
 C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
