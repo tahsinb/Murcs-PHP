@@ -10,13 +10,12 @@ namespace PHP.Database.Classes
     {
         public Sale()
         {
-            Products = new List<ProductSale>();
         }
         public int SaleId { get; set; }
         public DateTime Sale_Date { get; set; }
         public double Total_Cost { get; set; }
         public string Customer_Name { get; set; }
-        public ICollection<ProductSale> Products { get; set; }
+        public ICollection<ProductSale> ProductSales { get; set; } = new List<ProductSale>();
         public Employee Employee {get;set;}
         public int EmployeeId { get; set; }
 

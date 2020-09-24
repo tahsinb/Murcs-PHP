@@ -16,15 +16,15 @@ namespace PHP.Database
         public DbSet<Product> Products { get; set; }
         public DbSet<Sale> Sales { get; set; }
         public DbSet<ProductSale> ProductSales { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelbuilder) // Configure one to many or many to one 
         {
             modelbuilder.Entity<ProductSale>()
                 .HasOne(p=>p.Sale)
-                .WithMany(s => s.Products)
+                .WithMany(s => s.ProductSales)
                 .HasForeignKey(p => p.SaleId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);
-            modelbuilder.UseIdentityColumns();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
             optionsBuilder.UseNpgsql($"Host={_databaseAppSettings.URL};Database={_databaseAppSettings.DatabaseName};Username={_databaseAppSettings.UserName};Password={_databaseAppSettings.Password}");

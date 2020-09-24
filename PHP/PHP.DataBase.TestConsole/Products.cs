@@ -23,7 +23,7 @@ namespace PHP.DataBase.TestConsole
             {
                 Console.WriteLine("0 : return");
                 Console.WriteLine("1 : Add Product ");
-                Console.WriteLine("2 : Add Product ");
+                Console.WriteLine("2 : List Product ");
                 string selection = Console.ReadLine();
                 switch (selection)
                 {

@@ -55,6 +55,7 @@ namespace PHP.DataBase.TestConsole
             Console.WriteLine("AddProducts from list or enter to exit  :");
             Console.WriteLine("Avaliable Products : ");
             Console.WriteLine(JsonConvert.SerializeObject (_phpRepo.GetProducts()));
+            double cost = 0;
             while (addProduct) 
             {
                 string input = Console.ReadLine();
@@ -69,7 +70,8 @@ namespace PHP.DataBase.TestConsole
                 {
                     ProductSale productSale = new ProductSale();
                     productSale.Product = product;
-                    sale.Products.Add(productSale);
+                    cost = cost + product.Price;
+                    sale.ProductSales.Add(productSale);
                 }
                 else
                 {
@@ -77,6 +79,7 @@ namespace PHP.DataBase.TestConsole
                 }
             
             }
+            sale.Total_Cost = cost;
             var emplopyees = _phpRepo.GetEmployees();
             if (emplopyees.Count > 0)
             {
@@ -102,9 +105,9 @@ namespace PHP.DataBase.TestConsole
                 if (sale.Employee != null && string.IsNullOrEmpty(sale.Employee.Employee_Name))outlist.Add($"  Employee  Name  : {sale.Employee.Employee_Name}");
                 outlist.Add($"  Sale Date {sale.Sale_Date}");
                 outlist.Add($"  Items :");
-                foreach (var item in sale.Products)
+                foreach (var item in sale.ProductSales)
                 {
-                    outlist.Add($"     item name  : {item.Product.Product_Name}    Product Price {item.Product.Price}");
+                    if(item != null) outlist.Add($"     item name  : {item.Product.Product_Name}    Product Price {item.Product.Price}");
                 }
             }
             string Salelist = string.Join(Environment.NewLine,outlist);

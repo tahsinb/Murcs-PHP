@@ -14,7 +14,7 @@ namespace PHP.Database.Classes
         public Product Product { get; set; }
         public int ProductId { get; set; }
         [JsonIgnore]
-        public Sale Sale { get; set; }
+        public Sale Sale { get; set; } 
         [ForeignKey("Sale")]
         public int SaleId { get; set; }
     }

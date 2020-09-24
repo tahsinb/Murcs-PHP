@@ -4,6 +4,7 @@ using System.Text;
 using System.Linq;
 using PHP.Database.Classes;
 using System.Security.Cryptography;
+using Microsoft.EntityFrameworkCore;
 
 namespace PHP.Database
 {
@@ -31,7 +32,7 @@ namespace PHP.Database
         }
         public List<Sale> GetSales()
         {
-            return _pHPContext.Sales.ToList();
+            return _pHPContext.Sales.Include(s=>s.ProductSales).ThenInclude(p=>p.Product).ToList();
         }
         public void RemoveSales(Sale sale)
         {
