@@ -52,6 +52,8 @@
     <Compile Include="AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTransaction.cs" />
+    <Compile Include="AddTransaction.Designer.cs" />
     <Compile Include="DeleteItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +116,7 @@
     <EmbeddedResource Include="AddSale.resx">
       <DependentUpon>AddSale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTransaction.resx" />
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.cs</DependentUpon>
     </EmbeddedResource>

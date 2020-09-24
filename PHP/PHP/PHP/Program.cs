@@ -17,6 +17,10 @@ namespace PHP
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new ParentMDI());
+			//Tahsin: added transaction form. 
+			//TODO: Has to be linked to Parent form. Currently opens by default.
+			Application.Run(new AddTransaction());
+
 		}
 	}
 }
