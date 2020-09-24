@@ -19,7 +19,6 @@ namespace PHP.Database.Classes
         public ICollection<ProductSale> Products { get; set; }
         public Employee Employee {get;set;}
         public int EmployeeId { get; set; }
-        public int ProductSaleId { get; set; }
 
     }
 }
