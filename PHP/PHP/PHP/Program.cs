@@ -16,11 +16,11 @@ namespace PHP
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new Form1());
+			Application.Run(new ParentMDI());
+			//Tahsin: added transaction form. 
+			//TODO: Has to be linked to Parent form. Currently opens by default.
+			//Application.Run(new AddTransaction());
 
-			//Testing functionality of this form. 
-			//TODO: Will have to be linked to Form1 later.
-			Application.Run(new AddTransaction());
 		}
 	}
 }
