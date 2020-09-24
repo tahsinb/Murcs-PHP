@@ -1,0 +1,79 @@
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.MDIParent1.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.exe
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.pdb
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.exe
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.pdb
+D:\_Swinburne\Sem 02 2020\SWE30010 Development Project 2 - Design, Planning and Management\Repo\Murcs-PHP-Home-Page-GUI\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.Login.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.Login.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\Alex\Downloads\HomePage_Login\Murcs-PHP-Home-Page-GUI\PHP\PHP\PHP\obj\Debug\PHP.pdb
