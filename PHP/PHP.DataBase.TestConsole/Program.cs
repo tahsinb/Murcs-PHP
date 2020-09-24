@@ -21,17 +21,16 @@ namespace PHP.DataBase.TestConsole
                 DatabaseName = "test1"
             };
             PHPConext pHPConext = new PHPConext(appSettings);
-            //try
-            //{
-            //    pHPConext.Database.EnsureCreated();
-            //    pHPConext.SaveChanges();
-            //    Console.WriteLine("DB Created");
-            //}
-            //catch(Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //}
-            Console.ReadLine();
+            try
+            {
+                pHPConext.Database.EnsureCreated();
+                pHPConext.SaveChanges();
+                Console.WriteLine("DB Created");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             PHPRepo pHPRepo = new PHPRepo(pHPConext);
             Employees employees = new Employees(pHPRepo);
             Products products = new Products(pHPRepo);

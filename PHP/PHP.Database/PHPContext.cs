@@ -18,10 +18,12 @@ namespace PHP.Database
         public DbSet<ProductSale> ProductSales { get; set; }
         protected override void OnModelCreating(ModelBuilder modelbuilder) // Configure one to many or many to one 
         {
-            modelbuilder.Entity<Sale>()
-                .HasMany(s => s.Products)
-                .WithOne()
-                .HasForeignKey(p => p.SaleId);
+            modelbuilder.Entity<ProductSale>()
+                .HasOne(p=>p.Sale)
+                .WithMany(s => s.Products)
+                .HasForeignKey(p => p.SaleId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
             modelbuilder.UseIdentityColumns();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
