@@ -49,33 +49,37 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 126);
+            this.textBox1.Location = new System.Drawing.Point(160, 155);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 168);
+            this.textBox2.Location = new System.Drawing.Point(160, 207);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(526, 391);
+            this.button1.Location = new System.Drawing.Point(701, 481);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 36);
+            this.button1.Size = new System.Drawing.Size(197, 44);
             this.button1.TabIndex = 3;
             this.button1.Text = "Add Sale";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(14, 320);
+            this.button2.Location = new System.Drawing.Point(19, 394);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
+            this.button2.Size = new System.Drawing.Size(133, 47);
             this.button2.TabIndex = 4;
             this.button2.Text = "Add Item";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(41, 129);
+            this.label1.Location = new System.Drawing.Point(55, 159);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Product Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -96,43 +101,48 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(58, 171);
+            this.label2.Location = new System.Drawing.Point(77, 210);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Product ID";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 247);
+            this.textBox4.Location = new System.Drawing.Point(160, 304);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(28, 210);
+            this.label3.Location = new System.Drawing.Point(37, 258);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Product Quantity";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 210);
+            this.textBox3.Location = new System.Drawing.Point(160, 258);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(45, 247);
+            this.label4.Location = new System.Drawing.Point(60, 304);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Product Price";
             // 
@@ -144,9 +154,10 @@
             this.Header3,
             this.Header4});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(288, 79);
+            this.listView1.Location = new System.Drawing.Point(384, 97);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(609, 297);
+            this.listView1.Size = new System.Drawing.Size(811, 365);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -176,17 +187,19 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label5.Location = new System.Drawing.Point(534, 25);
+            this.label5.Location = new System.Drawing.Point(712, 31);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 51);
+            this.label5.Size = new System.Drawing.Size(136, 63);
             this.label5.TabIndex = 12;
             this.label5.Text = "Sale";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(155, 320);
+            this.button3.Location = new System.Drawing.Point(207, 394);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 38);
+            this.button3.Size = new System.Drawing.Size(133, 47);
             this.button3.TabIndex = 13;
             this.button3.Text = "Remove Item";
             this.button3.UseVisualStyleBackColor = true;
@@ -194,10 +207,10 @@
             // 
             // AddSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
-            this.ClientSize = new System.Drawing.Size(909, 505);
+            this.ClientSize = new System.Drawing.Size(1212, 622);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label5);
@@ -211,6 +224,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddSale";
             this.Text = "AddSale";
             this.ResumeLayout(false);
