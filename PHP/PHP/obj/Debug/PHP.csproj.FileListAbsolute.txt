@@ -1,0 +1,10 @@
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.pdb
