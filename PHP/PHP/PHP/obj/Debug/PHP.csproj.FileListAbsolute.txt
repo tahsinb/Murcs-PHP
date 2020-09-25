@@ -96,3 +96,4 @@ C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.Genera
 C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
 C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\Alex\Documents\GitHub\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.Login.resources
