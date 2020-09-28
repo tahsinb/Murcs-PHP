@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PHP.Database;
 
 namespace PHP
 {
 	public partial class ParentMDI : Form
 	{
-		public ParentMDI()
+		PHPRepo _pHPRepo;
+		public ParentMDI(PHPRepo pHPRepo)
 		{
 			InitializeComponent();
+			_pHPRepo = pHPRepo;
 		}
 
         private void addSaleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +98,7 @@ namespace PHP
 
         private void deleteSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+			
 			foreach (Form frm in this.MdiChildren)
 			{
 				frm.Visible = false;
@@ -112,7 +116,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				DeleteSale DeleteSaleRecord = new DeleteSale();
+				DeleteSale DeleteSaleRecord = new DeleteSale(_pHPRepo);
 				DeleteSaleRecord.MdiParent = this;
 				DeleteSaleRecord.Show();
 			}
@@ -243,5 +247,10 @@ namespace PHP
 				ViewStockItems.Show();
 			}
 		}
+
+        private void ParentMDI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace PHP
                 //hide login window
                 this.Hide();
                 // Load main application window
-                ParentMDI main = new ParentMDI();
+                ParentMDI main = new ParentMDI(_pHPRepo);
                 main.Show();
             }
             else
@@ -52,6 +52,11 @@ namespace PHP
             login_id_box.Clear();
             login_pass_box.Clear();
             login_id_box.Focus();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
