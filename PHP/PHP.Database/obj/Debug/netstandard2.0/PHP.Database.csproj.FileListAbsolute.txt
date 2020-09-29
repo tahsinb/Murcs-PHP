@@ -1,0 +1,9 @@
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\bin\Debug\netstandard2.0\PHP.Database.deps.json
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\bin\Debug\netstandard2.0\PHP.Database.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\bin\Debug\netstandard2.0\PHP.Database.pdb
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.csprojAssemblyReference.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.AssemblyInfoInputs.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.AssemblyInfo.cs
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.csproj.CoreCompileInputs.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP.Database\obj\Debug\netstandard2.0\PHP.Database.pdb
