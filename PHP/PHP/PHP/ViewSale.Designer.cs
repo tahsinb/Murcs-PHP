@@ -30,12 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.SaleIDtext = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
             this.Header1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SaleTable = new System.Windows.Forms.ListView();
             this.SuspendLayout();
@@ -58,15 +57,15 @@
             this.SaleIDtext.TabIndex = 8;
             this.SaleIDtext.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button2
+            // Search
             // 
-            this.button2.Location = new System.Drawing.Point(69, 190);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.SaleID_Search);
+            this.Search.Location = new System.Drawing.Point(69, 190);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(100, 38);
+            this.Search.TabIndex = 10;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.SaleID_Search);
             // 
             // Header1
             // 
@@ -88,11 +87,6 @@
             this.Header4.Text = "Customer Name";
             this.Header4.Width = 100;
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Employee Name";
-            this.columnHeader1.Width = 100;
-            // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Employee ID";
@@ -105,14 +99,13 @@
             this.Header2,
             this.Header3,
             this.Header4,
-            this.columnHeader1,
             this.columnHeader2});
             this.SaleTable.GridLines = true;
             this.SaleTable.HideSelection = false;
-            this.SaleTable.Location = new System.Drawing.Point(175, 56);
+            this.SaleTable.Location = new System.Drawing.Point(222, 61);
             this.SaleTable.Name = "SaleTable";
             this.SaleTable.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SaleTable.Size = new System.Drawing.Size(613, 297);
+            this.SaleTable.Size = new System.Drawing.Size(535, 297);
             this.SaleTable.TabIndex = 12;
             this.SaleTable.UseCompatibleStateImageBehavior = false;
             this.SaleTable.View = System.Windows.Forms.View.Details;
@@ -124,7 +117,7 @@
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SaleTable);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.SaleIDtext);
             this.Controls.Add(this.label1);
             this.Name = "ViewSale";
@@ -138,12 +131,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SaleIDtext;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Search;
         public System.Windows.Forms.ColumnHeader Header1;
         private System.Windows.Forms.ColumnHeader Header2;
         private System.Windows.Forms.ColumnHeader Header3;
         private System.Windows.Forms.ColumnHeader Header4;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListView SaleTable;
     }
