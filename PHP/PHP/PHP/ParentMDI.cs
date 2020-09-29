@@ -65,7 +65,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				EditSale EditSaleRecord = new EditSale();
+				EditSale EditSaleRecord = new EditSale(_pHPRepo);
 				EditSaleRecord.MdiParent = this;
 				EditSaleRecord.Show();
 			}
