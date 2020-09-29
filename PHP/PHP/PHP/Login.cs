@@ -7,35 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PHP.Database;
 
 namespace PHP
 {
     public partial class Login : Form
     {
-        public Login()
+        PHPRepo _pHPRepo;
+
+        public Login(PHPRepo pHPRepo)
         {
             InitializeComponent();
+
+            _pHPRepo = pHPRepo;
         }
 
-        private bool LoginValid(string username, string password)
+        private bool LoginValid(int id, string password)
         {
-            string[] usernames = { "admin", "employee1", "employee2" };
-            string[] passwords = { "password", "password1", "password2" };
-
-            return (usernames.Contains(username) && passwords.Contains(password));
-
+            return _pHPRepo.VerifyPassword(id, password);
         }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            //TODO - Check login details from database
+            int id;
+            int.TryParse(login_id_box.Text, out id);
 
-            if (LoginValid(login_id_box.Text, login_pass_box.Text))
+            if (LoginValid(id, login_pass_box.Text))
             {
                 //hide login window
                 this.Hide();
                 // Load main application window
-                ParentMDI main = new ParentMDI();
+                ParentMDI main = new ParentMDI(_pHPRepo);
                 main.Show();
             }
             else
@@ -50,6 +52,11 @@ namespace PHP
             login_id_box.Clear();
             login_pass_box.Clear();
             login_id_box.Focus();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
