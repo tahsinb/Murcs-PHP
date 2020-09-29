@@ -23,6 +23,7 @@ namespace PHP
             InitializeComponent();
             _PHPRepo = pHPRepo;
             _SalesList = pHPRepo.GetSales();
+            InitialiseTextBoxes();
             DisplaySales();
         }
 
@@ -41,17 +42,14 @@ namespace PHP
         }
         private void SaleID_Search(object sender, EventArgs e)
         {
+            enableTextBoxes();
             SaleTable.Items.Clear();
             if (_PHPRepo.GetSaleById(SaleID) == null)
                 MessageBox.Show("Could not find sale", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
-                string[] row = {_sale.SaleId.ToString(), _sale.Sale_Date.ToString(),
-                            _sale.Total_Cost.ToString(), _sale.Customer_Name,
-                            _sale.EmployeeId.ToString()};
-                var listViewItem = new ListViewItem(row);
-                SaleTable.Items.Add(listViewItem);
+                AddSaleToTable(_sale);
             }
         }
         private void DisplaySales()
@@ -59,11 +57,7 @@ namespace PHP
 
             foreach (Sale sale in _SalesList)
             {
-                string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
-                            sale.Total_Cost.ToString(), sale.Customer_Name,
-                            sale.EmployeeId.ToString()};
-                var listViewItem = new ListViewItem(row);
-                SaleTable.Items.Add(listViewItem);
+                AddSaleToTable(sale);
             }
         }
 
@@ -89,18 +83,43 @@ namespace PHP
             {
                 _sale.EmployeeId = int.Parse(IDBox.Text);
             }
+            _PHPRepo.EditSalesRecord(_sale);
             SaleTable.Items.Clear();
             _sale = _PHPRepo.GetSaleById(SaleID);
-            string[] row = {_sale.SaleId.ToString(), _sale.Sale_Date.ToString(),
-                            _sale.Total_Cost.ToString(), _sale.Customer_Name,
-                            _sale.EmployeeId.ToString()};
+            AddSaleToTable(_sale);
+            InitialiseTextBoxes();
+            SaleIDtext.Clear();
+
+
+        }
+        private void AddSaleToTable(Sale sale)
+        {
+            string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
+                            sale.Total_Cost.ToString(), sale.Customer_Name,
+                            sale.EmployeeId.ToString()};
             var listViewItem = new ListViewItem(row);
             SaleTable.Items.Add(listViewItem);
-            
+        }
+        private void InitialiseTextBoxes()
+        {
             SaleIdBox.Clear();
             SaleIdBox.Enabled = false;
-
-
+            DateBox.Clear();
+            DateBox.Enabled = false;
+            CostBox.Clear();
+            CostBox.Enabled = false;
+            NameBox.Clear();
+            NameBox.Enabled = false;
+            IDBox.Clear();
+            IDBox.Enabled = false;
+        }
+        private void enableTextBoxes()
+        {
+            SaleIdBox.Enabled = true;
+            DateBox.Enabled = true;
+            CostBox.Enabled = true;
+            NameBox.Enabled = true;
+            IDBox.Enabled = true;
         }
     }
 }

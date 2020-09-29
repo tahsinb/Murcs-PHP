@@ -49,11 +49,7 @@ namespace PHP
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
-                string[] row = {_sale.SaleId.ToString(), _sale.Sale_Date.ToString(),
-                            _sale.Total_Cost.ToString(), _sale.Customer_Name,
-                            _sale.EmployeeId.ToString()};
-                var listViewItem = new ListViewItem(row);
-                SaleTable.Items.Add(listViewItem);
+                AddSaleToTable(_sale);
             }
         }
         private void DisplaySales()
@@ -61,12 +57,16 @@ namespace PHP
             
             foreach(Sale sale in _SalesList)
             {
-                string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
+                AddSaleToTable(sale);
+            }
+        }
+        private void AddSaleToTable(Sale sale)
+        {
+            string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
                             sale.Total_Cost.ToString(), sale.Customer_Name,
                             sale.EmployeeId.ToString()};
-                var listViewItem = new ListViewItem(row);
-                SaleTable.Items.Add(listViewItem);
-            }
+            var listViewItem = new ListViewItem(row);
+            SaleTable.Items.Add(listViewItem);
         }
     }
 }
