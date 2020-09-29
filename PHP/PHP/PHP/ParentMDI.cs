@@ -90,7 +90,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				ViewSale ViewSaleRecord = new ViewSale();
+				ViewSale ViewSaleRecord = new ViewSale(_pHPRepo);
 				ViewSaleRecord.MdiParent = this;
 				ViewSaleRecord.Show();
 			}
