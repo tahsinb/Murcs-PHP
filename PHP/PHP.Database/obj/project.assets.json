@@ -1268,11 +1268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tbhui\\Desktop\\MURCS PHP BACKUP\\Murcs-PHP\\PHP\\PHP.Database\\PHP.Database.csproj",
+      "projectUniqueName": "C:\\Users\\tbhui\\Desktop\\GITHUB Repos\\Murcs-PHP\\PHP\\PHP.Database\\PHP.Database.csproj",
       "projectName": "PHP.Database",
-      "projectPath": "C:\\Users\\tbhui\\Desktop\\MURCS PHP BACKUP\\Murcs-PHP\\PHP\\PHP.Database\\PHP.Database.csproj",
+      "projectPath": "C:\\Users\\tbhui\\Desktop\\GITHUB Repos\\Murcs-PHP\\PHP\\PHP.Database\\PHP.Database.csproj",
       "packagesPath": "C:\\Users\\tbhui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tbhui\\Desktop\\MURCS PHP BACKUP\\Murcs-PHP\\PHP\\PHP.Database\\obj\\",
+      "outputPath": "C:\\Users\\tbhui\\Desktop\\GITHUB Repos\\Murcs-PHP\\PHP\\PHP.Database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

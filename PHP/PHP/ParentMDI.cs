@@ -242,7 +242,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				ViewStock ViewStockItems = new ViewStock();
+				ViewStock ViewStockItems = new ViewStock(_pHPRepo);
 				ViewStockItems.MdiParent = this;
 				ViewStockItems.Show();
 			}
