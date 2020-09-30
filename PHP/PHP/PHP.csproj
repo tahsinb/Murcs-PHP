@@ -144,7 +144,9 @@
     <Compile Include="AddTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddTransaction.Designer.cs" />
+    <Compile Include="AddTransaction.Designer.cs">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Employee.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductSale.cs" />
@@ -220,7 +222,9 @@
     <EmbeddedResource Include="AddSale.resx">
       <DependentUpon>AddSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddTransaction.resx" />
+    <EmbeddedResource Include="AddTransaction.resx">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteItem.resx">
       <DependentUpon>DeleteItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,9 +272,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background.jpg" />

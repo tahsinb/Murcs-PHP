@@ -39,7 +39,7 @@ namespace PHP
             }
 			if (isOpen == false)
             {
-				AddTransaction AddTransaction = new AddTransaction();
+				AddTransaction AddTransaction = new AddTransaction(_pHPRepo);
 				AddTransaction.MdiParent = this;
 				AddTransaction.Show();
             }
