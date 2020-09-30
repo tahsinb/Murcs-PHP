@@ -65,7 +65,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				EditSale EditSaleRecord = new EditSale();
+				EditSale EditSaleRecord = new EditSale(_pHPRepo);
 				EditSaleRecord.MdiParent = this;
 				EditSaleRecord.Show();
 			}
@@ -90,7 +90,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				ViewSale ViewSaleRecord = new ViewSale();
+				ViewSale ViewSaleRecord = new ViewSale(_pHPRepo);
 				ViewSaleRecord.MdiParent = this;
 				ViewSaleRecord.Show();
 			}
