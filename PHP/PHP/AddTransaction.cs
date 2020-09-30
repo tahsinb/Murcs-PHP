@@ -134,8 +134,6 @@ namespace PHP
 
         #endregion
 
-
-
         //Extra functions that are used throughout the form.
         #region Helper Functions
 
