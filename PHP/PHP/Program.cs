@@ -40,9 +40,6 @@ namespace PHP
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login(pHPRepo));
-			//Tahsin: added transaction form. 
-			//TODO: Has to be linked to Parent form. Currently opens by default.
-
 		}
 	}
 	public class AppSettings : IDatabaseAppSettings
