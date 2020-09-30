@@ -27,20 +27,6 @@ namespace PHP
             DisplaySales();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(SaleIDtext.Text))
-            {
-                SaleIDtext.Text = "";
-                SaleTable.Items.Clear();
-                DisplaySales();
-            }
-            else
-            {
-                SaleID = int.Parse(SaleIDtext.Text);
-            }
-        }
-
         private void SaleID_Search(object sender, EventArgs e)
         {
             SaleTable.Items.Clear();
@@ -67,6 +53,20 @@ namespace PHP
                             sale.EmployeeId.ToString()};
             var listViewItem = new ListViewItem(row);
             SaleTable.Items.Add(listViewItem);
+        }
+
+        private void SaleID_TexChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(SaleIDtext.Text))
+            {
+                SaleIDtext.Text = "";
+                SaleTable.Items.Clear();
+                DisplaySales();
+            }
+            else
+            {
+                SaleID = int.Parse(SaleIDtext.Text);
+            }
         }
     }
 }

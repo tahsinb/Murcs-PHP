@@ -50,6 +50,10 @@ namespace PHP
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
                 AddSaleToTable(_sale);
+                DateBox.Text = _sale.Sale_Date.ToString();
+                CostBox.Text = _sale.Total_Cost.ToString();
+                NameBox.Text = _sale.Customer_Name;
+
             }
         }
         private void DisplaySales()
@@ -63,25 +67,17 @@ namespace PHP
 
         private void ClickConfirm(object sender, EventArgs e)
         {
-            if(SaleIdBox.Text != "")
-            {
-                _sale.SaleId = int.Parse(SaleIdBox.Text);
-            }
             if(DateBox.Text != "")
             {
                 _sale.Sale_Date = Convert.ToDateTime(DateBox.Text);
             }
             if (CostBox.Text != "")
             {
-                _sale.Total_Cost = int.Parse(CostBox.Text);
+                _sale.Total_Cost = double.Parse(CostBox.Text);
             }
             if (NameBox.Text != "")
             {
                 _sale.Customer_Name = NameBox.Text; 
-            }
-            if (IDBox.Text != "")
-            {
-                _sale.EmployeeId = int.Parse(IDBox.Text);
             }
             _PHPRepo.EditSalesRecord(_sale);
             SaleTable.Items.Clear();
@@ -89,8 +85,6 @@ namespace PHP
             AddSaleToTable(_sale);
             InitialiseTextBoxes();
             SaleIDtext.Clear();
-
-
         }
         private void AddSaleToTable(Sale sale)
         {
@@ -102,24 +96,18 @@ namespace PHP
         }
         private void InitialiseTextBoxes()
         {
-            SaleIdBox.Clear();
-            SaleIdBox.Enabled = false;
             DateBox.Clear();
             DateBox.Enabled = false;
             CostBox.Clear();
             CostBox.Enabled = false;
             NameBox.Clear();
             NameBox.Enabled = false;
-            IDBox.Clear();
-            IDBox.Enabled = false;
         }
         private void enableTextBoxes()
         {
-            SaleIdBox.Enabled = true;
             DateBox.Enabled = true;
             CostBox.Enabled = true;
             NameBox.Enabled = true;
-            IDBox.Enabled = true;
         }
     }
 }

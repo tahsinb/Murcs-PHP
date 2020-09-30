@@ -37,11 +37,9 @@
             this.Search = new System.Windows.Forms.Button();
             this.SaleIDtext = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.SaleIdBox = new System.Windows.Forms.TextBox();
             this.DateBox = new System.Windows.Forms.TextBox();
             this.CostBox = new System.Windows.Forms.TextBox();
             this.NameBox = new System.Windows.Forms.TextBox();
-            this.IDBox = new System.Windows.Forms.TextBox();
             this.Edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -94,7 +92,7 @@
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(100, 38);
             this.Search.TabIndex = 15;
-            this.Search.Text = "Search";
+            this.Search.Text = "Edit";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.SaleID_Search);
             // 
@@ -115,13 +113,6 @@
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Sale ID";
-            // 
-            // SaleIdBox
-            // 
-            this.SaleIdBox.Location = new System.Drawing.Point(210, 389);
-            this.SaleIdBox.Name = "SaleIdBox";
-            this.SaleIdBox.Size = new System.Drawing.Size(71, 20);
-            this.SaleIdBox.TabIndex = 17;
             // 
             // DateBox
             // 
@@ -144,13 +135,6 @@
             this.NameBox.Size = new System.Drawing.Size(92, 20);
             this.NameBox.TabIndex = 20;
             // 
-            // IDBox
-            // 
-            this.IDBox.Location = new System.Drawing.Point(635, 388);
-            this.IDBox.Name = "IDBox";
-            this.IDBox.Size = new System.Drawing.Size(110, 20);
-            this.IDBox.TabIndex = 21;
-            // 
             // Edit
             // 
             this.Edit.Location = new System.Drawing.Point(58, 378);
@@ -168,11 +152,9 @@
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Edit);
-            this.Controls.Add(this.IDBox);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.CostBox);
             this.Controls.Add(this.DateBox);
-            this.Controls.Add(this.SaleIdBox);
             this.Controls.Add(this.SaleTable);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SaleIDtext);
@@ -195,11 +177,9 @@
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.TextBox SaleIDtext;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox SaleIdBox;
         private System.Windows.Forms.TextBox DateBox;
         private System.Windows.Forms.TextBox CostBox;
         private System.Windows.Forms.TextBox NameBox;
-        private System.Windows.Forms.TextBox IDBox;
         private System.Windows.Forms.Button Edit;
     }
 }

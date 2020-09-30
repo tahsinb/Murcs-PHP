@@ -55,7 +55,7 @@
             this.SaleIDtext.Name = "SaleIDtext";
             this.SaleIDtext.Size = new System.Drawing.Size(100, 20);
             this.SaleIDtext.TabIndex = 8;
-            this.SaleIDtext.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.SaleIDtext.TextChanged += new System.EventHandler(this.SaleID_TexChanged);
             // 
             // Search
             // 
