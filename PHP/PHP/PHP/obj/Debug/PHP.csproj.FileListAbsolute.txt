@@ -1,0 +1,78 @@
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\Alex\source\repos\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.MDIParent1.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\Alex\source\repos\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\alpal\Downloads\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\alpal\Downloads\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\Oscar\Desktop\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
