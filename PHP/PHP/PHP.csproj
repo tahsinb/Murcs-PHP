@@ -147,6 +147,10 @@
     <Compile Include="AddTransaction.Designer.cs">
       <DependentUpon>AddTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ProductSale.cs" />
+    <Compile Include="Classes\Sale.cs" />
     <Compile Include="DeleteItem.cs">
       <SubType>Form</SubType>
     </Compile>
