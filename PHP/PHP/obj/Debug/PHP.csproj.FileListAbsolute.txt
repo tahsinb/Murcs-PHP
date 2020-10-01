@@ -271,3 +271,163 @@ C:\Users\Alex\Desktop\DP2\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompile
 C:\Users\Alex\Desktop\DP2\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.csproj.CopyComplete
 C:\Users\Alex\Desktop\DP2\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.exe
 C:\Users\Alex\Desktop\DP2\Murcs-PHP\PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Buffers.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Collections.Immutable.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Memory.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Json.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.ValueTuple.dll
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Buffers.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Collections.Immutable.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Memory.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Json.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\bin\Debug\System.ValueTuple.xml
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Login.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CopyComplete
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.pdb
+C:\Users\tbhui\Desktop\GITHUB Repos\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe.config
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csprojAssemblyReference.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe.config
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddItem.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddSale.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.AddTransaction.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.DeleteItem.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.DeleteSale.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.EditItem.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.EditSale.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Login.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.LowStock.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ParentMDI.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.Properties.Resources.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ViewSale.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.ViewStock.resources
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.GenerateResource.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CoreCompileInputs.cache
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe.config
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.exe
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.pdb
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.Database.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Buffers.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Collections.Immutable.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Memory.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Json.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.ValueTuple.dll
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\PHP.Database.pdb
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\Npgsql.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Buffers.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Collections.Immutable.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Memory.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Text.Json.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\bin\Debug\System.ValueTuple.xml
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.csproj.CopyComplete
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.exe
+C:\Users\lance\source\repos\ProofConcept\Murcs-PHP\PHP\PHP\obj\Debug\PHP.pdb

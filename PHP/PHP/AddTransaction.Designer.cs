@@ -28,491 +28,543 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CompanyName = new System.Windows.Forms.Label();
-            this.ContentTitle1 = new System.Windows.Forms.Label();
-            this.Description = new System.Windows.Forms.Label();
-            this.SaleDate = new System.Windows.Forms.DateTimePicker();
-            this.InvoiceNumLabel = new System.Windows.Forms.Label();
-            this.EmployeeNameLabel = new System.Windows.Forms.Label();
-            this.EmployeeIDLabel = new System.Windows.Forms.Label();
-            this.NameEntry = new System.Windows.Forms.TextBox();
-            this.ContentTitle3 = new System.Windows.Forms.Label();
-            this.ContentTitle2 = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
-            this.ProdIDinput1 = new System.Windows.Forms.TextBox();
+            this.EmpNameLabel = new System.Windows.Forms.Label();
+            this.EmpNameInput = new System.Windows.Forms.TextBox();
+            this.CustomerNameInput = new System.Windows.Forms.TextBox();
+            this.EmpIDLabel = new System.Windows.Forms.Label();
+            this.CustNameLabel = new System.Windows.Forms.Label();
+            this.CompanyName = new System.Windows.Forms.Label();
+            this.SaleIDLabel = new System.Windows.Forms.Label();
+            this.DescLabel = new System.Windows.Forms.Label();
+            this.SaleIDInput = new System.Windows.Forms.MaskedTextBox();
+            this.EmployeeSectionLabel = new System.Windows.Forms.Label();
+            this.TransactionSectionLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PriceInput5 = new System.Windows.Forms.TextBox();
+            this.QtyInput5 = new System.Windows.Forms.TextBox();
+            this.ProdNameInput5 = new System.Windows.Forms.TextBox();
+            this.prodIDinput5 = new System.Windows.Forms.TextBox();
+            this.PriceInput4 = new System.Windows.Forms.TextBox();
+            this.QtyInput4 = new System.Windows.Forms.TextBox();
+            this.ProdNameInput4 = new System.Windows.Forms.TextBox();
+            this.prodIDinput4 = new System.Windows.Forms.TextBox();
+            this.PriceInput3 = new System.Windows.Forms.TextBox();
+            this.QtyInput3 = new System.Windows.Forms.TextBox();
+            this.ProdNameInput3 = new System.Windows.Forms.TextBox();
+            this.prodIDinput3 = new System.Windows.Forms.TextBox();
+            this.PriceInput2 = new System.Windows.Forms.TextBox();
+            this.QtyInput2 = new System.Windows.Forms.TextBox();
+            this.ProdNameInput2 = new System.Windows.Forms.TextBox();
+            this.prodIDinput2 = new System.Windows.Forms.TextBox();
+            this.PriceInput1 = new System.Windows.Forms.TextBox();
+            this.QtyInput1 = new System.Windows.Forms.TextBox();
+            this.ProdNameInput1 = new System.Windows.Forms.TextBox();
+            this.prodIDinput1 = new System.Windows.Forms.TextBox();
             this.ProdIDLabel = new System.Windows.Forms.Label();
             this.QtyLabel = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
-            this.IDinputOne = new System.Windows.Forms.TableLayoutPanel();
-            this.PriceInput5 = new System.Windows.Forms.TextBox();
-            this.QTYinput5 = new System.Windows.Forms.TextBox();
-            this.IDinput5 = new System.Windows.Forms.TextBox();
-            this.PriceInput4 = new System.Windows.Forms.TextBox();
-            this.QTYinput4 = new System.Windows.Forms.TextBox();
-            this.IDinput4 = new System.Windows.Forms.TextBox();
-            this.PriceInput3 = new System.Windows.Forms.TextBox();
-            this.QTYinput3 = new System.Windows.Forms.TextBox();
-            this.IDinput3 = new System.Windows.Forms.TextBox();
-            this.PriceInput2 = new System.Windows.Forms.TextBox();
-            this.QTYinput2 = new System.Windows.Forms.TextBox();
-            this.IDinput2 = new System.Windows.Forms.TextBox();
-            this.PriceInput1 = new System.Windows.Forms.TextBox();
-            this.QTYinput1 = new System.Windows.Forms.TextBox();
+            this.ProdNameLabel = new System.Windows.Forms.Label();
             this.TotalLabel = new System.Windows.Forms.Label();
             this.TotalOutput = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.InvNumInput = new System.Windows.Forms.MaskedTextBox();
             this.EmpIDInput = new System.Windows.Forms.MaskedTextBox();
-            this.IDinputOne.SuspendLayout();
+            this.DateTimeLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CompanyName
-            // 
-            this.CompanyName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CompanyName.AutoSize = true;
-            this.CompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyName.Location = new System.Drawing.Point(260, 9);
-            this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Size = new System.Drawing.Size(241, 25);
-            this.CompanyName.TabIndex = 0;
-            this.CompanyName.Text = "People\'s Health Pharmacy";
-            this.CompanyName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // ContentTitle1
-            // 
-            this.ContentTitle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContentTitle1.AutoSize = true;
-            this.ContentTitle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContentTitle1.Location = new System.Drawing.Point(28, 43);
-            this.ContentTitle1.Name = "ContentTitle1";
-            this.ContentTitle1.Size = new System.Drawing.Size(100, 18);
-            this.ContentTitle1.TabIndex = 1;
-            this.ContentTitle1.Text = "Add New Sale";
-            // 
-            // Description
-            // 
-            this.Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Description.AutoSize = true;
-            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.Location = new System.Drawing.Point(44, 63);
-            this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(437, 15);
-            this.Description.TabIndex = 2;
-            this.Description.Text = "Fill out the details of the sales transaction below to add sale record to databas" +
-    "e.";
-            // 
-            // SaleDate
-            // 
-            this.SaleDate.Location = new System.Drawing.Point(477, 92);
-            this.SaleDate.MaxDate = new System.DateTime(2020, 9, 23, 1, 50, 46, 0);
-            this.SaleDate.Name = "SaleDate";
-            this.SaleDate.Size = new System.Drawing.Size(259, 20);
-            this.SaleDate.TabIndex = 3;
-            this.SaleDate.Value = new System.DateTime(2020, 9, 23, 0, 0, 0, 0);
-            // 
-            // InvoiceNumLabel
-            // 
-            this.InvoiceNumLabel.AutoSize = true;
-            this.InvoiceNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.InvoiceNumLabel.Location = new System.Drawing.Point(44, 91);
-            this.InvoiceNumLabel.Name = "InvoiceNumLabel";
-            this.InvoiceNumLabel.Size = new System.Drawing.Size(96, 15);
-            this.InvoiceNumLabel.TabIndex = 4;
-            this.InvoiceNumLabel.Text = "Invoice Number:";
-            // 
-            // EmployeeNameLabel
-            // 
-            this.EmployeeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.EmployeeNameLabel.AutoSize = true;
-            this.EmployeeNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.EmployeeNameLabel.Location = new System.Drawing.Point(369, 148);
-            this.EmployeeNameLabel.Name = "EmployeeNameLabel";
-            this.EmployeeNameLabel.Size = new System.Drawing.Size(102, 15);
-            this.EmployeeNameLabel.TabIndex = 6;
-            this.EmployeeNameLabel.Text = "Employee Name:";
-            // 
-            // EmployeeIDLabel
-            // 
-            this.EmployeeIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.EmployeeIDLabel.AutoSize = true;
-            this.EmployeeIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.EmployeeIDLabel.Location = new System.Drawing.Point(60, 147);
-            this.EmployeeIDLabel.Name = "EmployeeIDLabel";
-            this.EmployeeIDLabel.Size = new System.Drawing.Size(80, 15);
-            this.EmployeeIDLabel.TabIndex = 7;
-            this.EmployeeIDLabel.Text = "Employee ID:";
-            // 
-            // NameEntry
-            // 
-            this.NameEntry.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NameEntry.Location = new System.Drawing.Point(477, 148);
-            this.NameEntry.Name = "NameEntry";
-            this.NameEntry.Size = new System.Drawing.Size(259, 20);
-            this.NameEntry.TabIndex = 8;
-            this.NameEntry.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameEntry_KeyPress);
-            this.NameEntry.Validating += new System.ComponentModel.CancelEventHandler(this.NameEntry_Validating);
-            // 
-            // ContentTitle3
-            // 
-            this.ContentTitle3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContentTitle3.AutoSize = true;
-            this.ContentTitle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ContentTitle3.Location = new System.Drawing.Point(28, 189);
-            this.ContentTitle3.Name = "ContentTitle3";
-            this.ContentTitle3.Size = new System.Drawing.Size(135, 18);
-            this.ContentTitle3.TabIndex = 10;
-            this.ContentTitle3.Text = "Transaction Details";
-            // 
-            // ContentTitle2
-            // 
-            this.ContentTitle2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ContentTitle2.AutoSize = true;
-            this.ContentTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ContentTitle2.Location = new System.Drawing.Point(28, 125);
-            this.ContentTitle2.Name = "ContentTitle2";
-            this.ContentTitle2.Size = new System.Drawing.Size(123, 18);
-            this.ContentTitle2.TabIndex = 11;
-            this.ContentTitle2.Text = "Employee Details";
             // 
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.DateLabel.Location = new System.Drawing.Point(435, 92);
+            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateLabel.Location = new System.Drawing.Point(489, 99);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(36, 15);
-            this.DateLabel.TabIndex = 13;
+            this.DateLabel.Size = new System.Drawing.Size(33, 13);
+            this.DateLabel.TabIndex = 1;
             this.DateLabel.Text = "Date:";
             // 
-            // ProdIDinput1
+            // EmpNameLabel
             // 
-            this.ProdIDinput1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProdIDinput1.Location = new System.Drawing.Point(4, 27);
-            this.ProdIDinput1.Name = "ProdIDinput1";
-            this.ProdIDinput1.Size = new System.Drawing.Size(225, 20);
-            this.ProdIDinput1.TabIndex = 3;
+            this.EmpNameLabel.AutoSize = true;
+            this.EmpNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmpNameLabel.Location = new System.Drawing.Point(435, 164);
+            this.EmpNameLabel.Name = "EmpNameLabel";
+            this.EmpNameLabel.Size = new System.Drawing.Size(87, 13);
+            this.EmpNameLabel.TabIndex = 2;
+            this.EmpNameLabel.Text = "Employee Name:";
             // 
-            // ProdIDLabel
+            // EmpNameInput
             // 
-            this.ProdIDLabel.AutoSize = true;
-            this.ProdIDLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProdIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.ProdIDLabel.Location = new System.Drawing.Point(4, 1);
-            this.ProdIDLabel.Name = "ProdIDLabel";
-            this.ProdIDLabel.Size = new System.Drawing.Size(225, 22);
-            this.ProdIDLabel.TabIndex = 0;
-            this.ProdIDLabel.Text = "Product ID";
-            this.ProdIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EmpNameInput.Location = new System.Drawing.Point(544, 157);
+            this.EmpNameInput.Name = "EmpNameInput";
+            this.EmpNameInput.Size = new System.Drawing.Size(265, 20);
+            this.EmpNameInput.TabIndex = 3;
+            this.EmpNameInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmpNameInput_KeyPress);
+            this.EmpNameInput.Validating += new System.ComponentModel.CancelEventHandler(this.EmpNameInput_Validating);
             // 
-            // QtyLabel
+            // CustomerNameInput
             // 
-            this.QtyLabel.AutoSize = true;
-            this.QtyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QtyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.QtyLabel.Location = new System.Drawing.Point(236, 1);
-            this.QtyLabel.Name = "QtyLabel";
-            this.QtyLabel.Size = new System.Drawing.Size(225, 22);
-            this.QtyLabel.TabIndex = 1;
-            this.QtyLabel.Text = "Quantity";
-            this.QtyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CustomerNameInput.Location = new System.Drawing.Point(544, 219);
+            this.CustomerNameInput.Name = "CustomerNameInput";
+            this.CustomerNameInput.Size = new System.Drawing.Size(265, 20);
+            this.CustomerNameInput.TabIndex = 4;
+            this.CustomerNameInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomerNameInput_KeyPress);
+            this.CustomerNameInput.Validating += new System.ComponentModel.CancelEventHandler(this.CustomerNameInput_Validating);
             // 
-            // PriceLabel
+            // EmpIDLabel
             // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.PriceLabel.Location = new System.Drawing.Point(468, 1);
-            this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(225, 22);
-            this.PriceLabel.TabIndex = 2;
-            this.PriceLabel.Text = "Price ($)";
-            this.PriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EmpIDLabel.AutoSize = true;
+            this.EmpIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmpIDLabel.Location = new System.Drawing.Point(48, 157);
+            this.EmpIDLabel.Name = "EmpIDLabel";
+            this.EmpIDLabel.Size = new System.Drawing.Size(70, 13);
+            this.EmpIDLabel.TabIndex = 6;
+            this.EmpIDLabel.Text = "Employee ID:";
             // 
-            // IDinputOne
+            // CustNameLabel
             // 
-            this.IDinputOne.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDinputOne.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.IDinputOne.ColumnCount = 3;
-            this.IDinputOne.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.IDinputOne.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.IDinputOne.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.IDinputOne.Controls.Add(this.PriceInput5, 2, 5);
-            this.IDinputOne.Controls.Add(this.QTYinput5, 1, 5);
-            this.IDinputOne.Controls.Add(this.IDinput5, 0, 5);
-            this.IDinputOne.Controls.Add(this.PriceInput4, 2, 4);
-            this.IDinputOne.Controls.Add(this.QTYinput4, 1, 4);
-            this.IDinputOne.Controls.Add(this.IDinput4, 0, 4);
-            this.IDinputOne.Controls.Add(this.PriceInput3, 2, 3);
-            this.IDinputOne.Controls.Add(this.QTYinput3, 1, 3);
-            this.IDinputOne.Controls.Add(this.IDinput3, 0, 3);
-            this.IDinputOne.Controls.Add(this.PriceInput2, 2, 2);
-            this.IDinputOne.Controls.Add(this.QTYinput2, 1, 2);
-            this.IDinputOne.Controls.Add(this.IDinput2, 0, 2);
-            this.IDinputOne.Controls.Add(this.PriceInput1, 2, 1);
-            this.IDinputOne.Controls.Add(this.PriceLabel, 2, 0);
-            this.IDinputOne.Controls.Add(this.QtyLabel, 1, 0);
-            this.IDinputOne.Controls.Add(this.ProdIDLabel, 0, 0);
-            this.IDinputOne.Controls.Add(this.ProdIDinput1, 0, 1);
-            this.IDinputOne.Controls.Add(this.QTYinput1, 1, 1);
-            this.IDinputOne.Location = new System.Drawing.Point(43, 225);
-            this.IDinputOne.Name = "IDinputOne";
-            this.IDinputOne.RowCount = 6;
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.IDinputOne.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.IDinputOne.Size = new System.Drawing.Size(697, 141);
-            this.IDinputOne.TabIndex = 12;
+            this.CustNameLabel.AutoSize = true;
+            this.CustNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CustNameLabel.Location = new System.Drawing.Point(437, 226);
+            this.CustNameLabel.Name = "CustNameLabel";
+            this.CustNameLabel.Size = new System.Drawing.Size(85, 13);
+            this.CustNameLabel.TabIndex = 7;
+            this.CustNameLabel.Text = "Customer Name:";
+            // 
+            // CompanyName
+            // 
+            this.CompanyName.AutoSize = true;
+            this.CompanyName.BackColor = System.Drawing.Color.Transparent;
+            this.CompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.CompanyName.Location = new System.Drawing.Point(269, 9);
+            this.CompanyName.Name = "CompanyName";
+            this.CompanyName.Size = new System.Drawing.Size(227, 25);
+            this.CompanyName.TabIndex = 8;
+            this.CompanyName.Text = "People Health Pharmacy";
+            // 
+            // SaleIDLabel
+            // 
+            this.SaleIDLabel.AutoSize = true;
+            this.SaleIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SaleIDLabel.Location = new System.Drawing.Point(73, 92);
+            this.SaleIDLabel.Name = "SaleIDLabel";
+            this.SaleIDLabel.Size = new System.Drawing.Size(45, 13);
+            this.SaleIDLabel.TabIndex = 9;
+            this.SaleIDLabel.Text = "Sale ID:";
+            // 
+            // DescLabel
+            // 
+            this.DescLabel.AutoSize = true;
+            this.DescLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DescLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.DescLabel.Location = new System.Drawing.Point(27, 64);
+            this.DescLabel.Name = "DescLabel";
+            this.DescLabel.Size = new System.Drawing.Size(325, 18);
+            this.DescLabel.TabIndex = 12;
+            this.DescLabel.Text = "Please fill out all the details below to record sale.";
+            // 
+            // SaleIDInput
+            // 
+            this.SaleIDInput.Location = new System.Drawing.Point(134, 92);
+            this.SaleIDInput.Mask = "00000";
+            this.SaleIDInput.Name = "SaleIDInput";
+            this.SaleIDInput.Size = new System.Drawing.Size(38, 20);
+            this.SaleIDInput.TabIndex = 0;
+            this.SaleIDInput.ValidatingType = typeof(int);
+            // 
+            // EmployeeSectionLabel
+            // 
+            this.EmployeeSectionLabel.AutoSize = true;
+            this.EmployeeSectionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeeSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.EmployeeSectionLabel.Location = new System.Drawing.Point(27, 126);
+            this.EmployeeSectionLabel.Name = "EmployeeSectionLabel";
+            this.EmployeeSectionLabel.Size = new System.Drawing.Size(123, 18);
+            this.EmployeeSectionLabel.TabIndex = 14;
+            this.EmployeeSectionLabel.Text = "Employee Details";
+            // 
+            // TransactionSectionLabel
+            // 
+            this.TransactionSectionLabel.AutoSize = true;
+            this.TransactionSectionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TransactionSectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.TransactionSectionLabel.Location = new System.Drawing.Point(27, 194);
+            this.TransactionSectionLabel.Name = "TransactionSectionLabel";
+            this.TransactionSectionLabel.Size = new System.Drawing.Size(135, 18);
+            this.TransactionSectionLabel.TabIndex = 15;
+            this.TransactionSectionLabel.Text = "Transaction Details";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.PriceInput5, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.QtyInput5, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.ProdNameInput5, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.prodIDinput5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PriceInput4, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.QtyInput4, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ProdNameInput4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.prodIDinput4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PriceInput3, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.QtyInput3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ProdNameInput3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.prodIDinput3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PriceInput2, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.QtyInput2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ProdNameInput2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.prodIDinput2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PriceInput1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.QtyInput1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ProdNameInput1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.prodIDinput1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 280);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 170);
+            this.tableLayoutPanel1.TabIndex = 16;
             // 
             // PriceInput5
             // 
             this.PriceInput5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceInput5.Location = new System.Drawing.Point(468, 119);
+            this.PriceInput5.Location = new System.Drawing.Point(627, 139);
             this.PriceInput5.Name = "PriceInput5";
-            this.PriceInput5.Size = new System.Drawing.Size(225, 20);
-            this.PriceInput5.TabIndex = 17;
+            this.PriceInput5.Size = new System.Drawing.Size(152, 20);
+            this.PriceInput5.TabIndex = 24;
             this.PriceInput5.TextChanged += new System.EventHandler(this.PriceInput5_TextChanged);
             // 
-            // QTYinput5
+            // QtyInput5
             // 
-            this.QTYinput5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QTYinput5.Location = new System.Drawing.Point(236, 119);
-            this.QTYinput5.Name = "QTYinput5";
-            this.QTYinput5.Size = new System.Drawing.Size(225, 20);
-            this.QTYinput5.TabIndex = 16;
+            this.QtyInput5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QtyInput5.Location = new System.Drawing.Point(471, 139);
+            this.QtyInput5.Name = "QtyInput5";
+            this.QtyInput5.Size = new System.Drawing.Size(150, 20);
+            this.QtyInput5.TabIndex = 23;
             // 
-            // IDinput5
+            // ProdNameInput5
             // 
-            this.IDinput5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IDinput5.Location = new System.Drawing.Point(4, 119);
-            this.IDinput5.Name = "IDinput5";
-            this.IDinput5.Size = new System.Drawing.Size(225, 20);
-            this.IDinput5.TabIndex = 15;
+            this.ProdNameInput5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProdNameInput5.Location = new System.Drawing.Point(120, 139);
+            this.ProdNameInput5.Name = "ProdNameInput5";
+            this.ProdNameInput5.Size = new System.Drawing.Size(345, 20);
+            this.ProdNameInput5.TabIndex = 22;
+            // 
+            // prodIDinput5
+            // 
+            this.prodIDinput5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodIDinput5.Location = new System.Drawing.Point(3, 139);
+            this.prodIDinput5.Name = "prodIDinput5";
+            this.prodIDinput5.Size = new System.Drawing.Size(111, 20);
+            this.prodIDinput5.TabIndex = 21;
             // 
             // PriceInput4
             // 
             this.PriceInput4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceInput4.Location = new System.Drawing.Point(468, 96);
+            this.PriceInput4.Location = new System.Drawing.Point(627, 105);
             this.PriceInput4.Name = "PriceInput4";
-            this.PriceInput4.Size = new System.Drawing.Size(225, 20);
-            this.PriceInput4.TabIndex = 14;
+            this.PriceInput4.Size = new System.Drawing.Size(152, 20);
+            this.PriceInput4.TabIndex = 20;
             this.PriceInput4.TextChanged += new System.EventHandler(this.PriceInput4_TextChanged);
             // 
-            // QTYinput4
+            // QtyInput4
             // 
-            this.QTYinput4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QTYinput4.Location = new System.Drawing.Point(236, 96);
-            this.QTYinput4.Name = "QTYinput4";
-            this.QTYinput4.Size = new System.Drawing.Size(225, 20);
-            this.QTYinput4.TabIndex = 13;
+            this.QtyInput4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QtyInput4.Location = new System.Drawing.Point(471, 105);
+            this.QtyInput4.Name = "QtyInput4";
+            this.QtyInput4.Size = new System.Drawing.Size(150, 20);
+            this.QtyInput4.TabIndex = 19;
             // 
-            // IDinput4
+            // ProdNameInput4
             // 
-            this.IDinput4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IDinput4.Location = new System.Drawing.Point(4, 96);
-            this.IDinput4.Name = "IDinput4";
-            this.IDinput4.Size = new System.Drawing.Size(225, 20);
-            this.IDinput4.TabIndex = 12;
+            this.ProdNameInput4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProdNameInput4.Location = new System.Drawing.Point(120, 105);
+            this.ProdNameInput4.Name = "ProdNameInput4";
+            this.ProdNameInput4.Size = new System.Drawing.Size(345, 20);
+            this.ProdNameInput4.TabIndex = 18;
+            // 
+            // prodIDinput4
+            // 
+            this.prodIDinput4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodIDinput4.Location = new System.Drawing.Point(3, 105);
+            this.prodIDinput4.Name = "prodIDinput4";
+            this.prodIDinput4.Size = new System.Drawing.Size(111, 20);
+            this.prodIDinput4.TabIndex = 17;
             // 
             // PriceInput3
             // 
             this.PriceInput3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceInput3.Location = new System.Drawing.Point(468, 73);
+            this.PriceInput3.Location = new System.Drawing.Point(627, 71);
             this.PriceInput3.Name = "PriceInput3";
-            this.PriceInput3.Size = new System.Drawing.Size(225, 20);
-            this.PriceInput3.TabIndex = 11;
+            this.PriceInput3.Size = new System.Drawing.Size(152, 20);
+            this.PriceInput3.TabIndex = 16;
             this.PriceInput3.TextChanged += new System.EventHandler(this.PriceInput3_TextChanged);
             // 
-            // QTYinput3
+            // QtyInput3
             // 
-            this.QTYinput3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QTYinput3.Location = new System.Drawing.Point(236, 73);
-            this.QTYinput3.Name = "QTYinput3";
-            this.QTYinput3.Size = new System.Drawing.Size(225, 20);
-            this.QTYinput3.TabIndex = 10;
+            this.QtyInput3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QtyInput3.Location = new System.Drawing.Point(471, 71);
+            this.QtyInput3.Name = "QtyInput3";
+            this.QtyInput3.Size = new System.Drawing.Size(150, 20);
+            this.QtyInput3.TabIndex = 15;
             // 
-            // IDinput3
+            // ProdNameInput3
             // 
-            this.IDinput3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IDinput3.Location = new System.Drawing.Point(4, 73);
-            this.IDinput3.Name = "IDinput3";
-            this.IDinput3.Size = new System.Drawing.Size(225, 20);
-            this.IDinput3.TabIndex = 9;
+            this.ProdNameInput3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProdNameInput3.Location = new System.Drawing.Point(120, 71);
+            this.ProdNameInput3.Name = "ProdNameInput3";
+            this.ProdNameInput3.Size = new System.Drawing.Size(345, 20);
+            this.ProdNameInput3.TabIndex = 14;
+            // 
+            // prodIDinput3
+            // 
+            this.prodIDinput3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodIDinput3.Location = new System.Drawing.Point(3, 71);
+            this.prodIDinput3.Name = "prodIDinput3";
+            this.prodIDinput3.Size = new System.Drawing.Size(111, 20);
+            this.prodIDinput3.TabIndex = 13;
             // 
             // PriceInput2
             // 
             this.PriceInput2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceInput2.Location = new System.Drawing.Point(468, 50);
+            this.PriceInput2.Location = new System.Drawing.Point(627, 37);
             this.PriceInput2.Name = "PriceInput2";
-            this.PriceInput2.Size = new System.Drawing.Size(225, 20);
-            this.PriceInput2.TabIndex = 8;
+            this.PriceInput2.Size = new System.Drawing.Size(152, 20);
+            this.PriceInput2.TabIndex = 12;
             this.PriceInput2.TextChanged += new System.EventHandler(this.PriceInput2_TextChanged);
             // 
-            // QTYinput2
+            // QtyInput2
             // 
-            this.QTYinput2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QTYinput2.Location = new System.Drawing.Point(236, 50);
-            this.QTYinput2.Name = "QTYinput2";
-            this.QTYinput2.Size = new System.Drawing.Size(225, 20);
-            this.QTYinput2.TabIndex = 7;
+            this.QtyInput2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QtyInput2.Location = new System.Drawing.Point(471, 37);
+            this.QtyInput2.Name = "QtyInput2";
+            this.QtyInput2.Size = new System.Drawing.Size(150, 20);
+            this.QtyInput2.TabIndex = 11;
             // 
-            // IDinput2
+            // ProdNameInput2
             // 
-            this.IDinput2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IDinput2.Location = new System.Drawing.Point(4, 50);
-            this.IDinput2.Name = "IDinput2";
-            this.IDinput2.Size = new System.Drawing.Size(225, 20);
-            this.IDinput2.TabIndex = 6;
+            this.ProdNameInput2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProdNameInput2.Location = new System.Drawing.Point(120, 37);
+            this.ProdNameInput2.Name = "ProdNameInput2";
+            this.ProdNameInput2.Size = new System.Drawing.Size(345, 20);
+            this.ProdNameInput2.TabIndex = 10;
+            // 
+            // prodIDinput2
+            // 
+            this.prodIDinput2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodIDinput2.Location = new System.Drawing.Point(3, 37);
+            this.prodIDinput2.Name = "prodIDinput2";
+            this.prodIDinput2.Size = new System.Drawing.Size(111, 20);
+            this.prodIDinput2.TabIndex = 9;
             // 
             // PriceInput1
             // 
             this.PriceInput1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PriceInput1.Location = new System.Drawing.Point(468, 27);
+            this.PriceInput1.Location = new System.Drawing.Point(627, 3);
             this.PriceInput1.Name = "PriceInput1";
-            this.PriceInput1.Size = new System.Drawing.Size(225, 20);
-            this.PriceInput1.TabIndex = 5;
+            this.PriceInput1.Size = new System.Drawing.Size(152, 20);
+            this.PriceInput1.TabIndex = 8;
             this.PriceInput1.TextChanged += new System.EventHandler(this.PriceInput1_TextChanged);
             // 
-            // QTYinput1
+            // QtyInput1
             // 
-            this.QTYinput1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QTYinput1.Location = new System.Drawing.Point(236, 27);
-            this.QTYinput1.Name = "QTYinput1";
-            this.QTYinput1.Size = new System.Drawing.Size(225, 20);
-            this.QTYinput1.TabIndex = 4;
+            this.QtyInput1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QtyInput1.Location = new System.Drawing.Point(471, 3);
+            this.QtyInput1.Name = "QtyInput1";
+            this.QtyInput1.Size = new System.Drawing.Size(150, 20);
+            this.QtyInput1.TabIndex = 7;
+            // 
+            // ProdNameInput1
+            // 
+            this.ProdNameInput1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProdNameInput1.Location = new System.Drawing.Point(120, 3);
+            this.ProdNameInput1.Name = "ProdNameInput1";
+            this.ProdNameInput1.Size = new System.Drawing.Size(345, 20);
+            this.ProdNameInput1.TabIndex = 6;
+            // 
+            // prodIDinput1
+            // 
+            this.prodIDinput1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prodIDinput1.Location = new System.Drawing.Point(3, 3);
+            this.prodIDinput1.Name = "prodIDinput1";
+            this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
+            this.prodIDinput1.TabIndex = 5;
+            // 
+            // ProdIDLabel
+            // 
+            this.ProdIDLabel.AutoSize = true;
+            this.ProdIDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ProdIDLabel.Location = new System.Drawing.Point(65, 261);
+            this.ProdIDLabel.Name = "ProdIDLabel";
+            this.ProdIDLabel.Size = new System.Drawing.Size(58, 13);
+            this.ProdIDLabel.TabIndex = 17;
+            this.ProdIDLabel.Text = "Product ID";
+            // 
+            // QtyLabel
+            // 
+            this.QtyLabel.AutoSize = true;
+            this.QtyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.QtyLabel.Location = new System.Drawing.Point(556, 261);
+            this.QtyLabel.Name = "QtyLabel";
+            this.QtyLabel.Size = new System.Drawing.Size(46, 13);
+            this.QtyLabel.TabIndex = 18;
+            this.QtyLabel.Text = "Quantity";
+            // 
+            // PriceLabel
+            // 
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PriceLabel.Location = new System.Drawing.Point(718, 261);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(31, 13);
+            this.PriceLabel.TabIndex = 19;
+            this.PriceLabel.Text = "Price";
+            // 
+            // ProdNameLabel
+            // 
+            this.ProdNameLabel.AutoSize = true;
+            this.ProdNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ProdNameLabel.Location = new System.Drawing.Point(286, 261);
+            this.ProdNameLabel.Name = "ProdNameLabel";
+            this.ProdNameLabel.Size = new System.Drawing.Size(75, 13);
+            this.ProdNameLabel.TabIndex = 20;
+            this.ProdNameLabel.Text = "Product Name";
             // 
             // TotalLabel
             // 
-            this.TotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.TotalLabel.Location = new System.Drawing.Point(511, 394);
+            this.TotalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TotalLabel.Location = new System.Drawing.Point(654, 462);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(37, 15);
-            this.TotalLabel.TabIndex = 14;
+            this.TotalLabel.Size = new System.Drawing.Size(34, 13);
+            this.TotalLabel.TabIndex = 21;
             this.TotalLabel.Text = "Total:";
             // 
             // TotalOutput
             // 
-            this.TotalOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalOutput.AutoSize = true;
-            this.TotalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.TotalOutput.Location = new System.Drawing.Point(669, 394);
+            this.TotalOutput.Location = new System.Drawing.Point(760, 462);
             this.TotalOutput.Name = "TotalOutput";
-            this.TotalOutput.Size = new System.Drawing.Size(55, 15);
-            this.TotalOutput.TabIndex = 15;
+            this.TotalOutput.Size = new System.Drawing.Size(49, 13);
+            this.TotalOutput.TabIndex = 22;
             this.TotalOutput.Text = "$ ___.__";
             // 
             // SaveButton
             // 
-            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.SaveButton.Location = new System.Drawing.Point(584, 437);
+            this.SaveButton.Location = new System.Drawing.Point(657, 487);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(144, 23);
-            this.SaveButton.TabIndex = 16;
+            this.SaveButton.Size = new System.Drawing.Size(147, 23);
+            this.SaveButton.TabIndex = 25;
             this.SaveButton.Text = "Save and Proceed";
             this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // InvNumInput
-            // 
-            this.InvNumInput.BackColor = System.Drawing.SystemColors.Window;
-            this.InvNumInput.Location = new System.Drawing.Point(146, 92);
-            this.InvNumInput.Mask = "00000";
-            this.InvNumInput.Name = "InvNumInput";
-            this.InvNumInput.Size = new System.Drawing.Size(35, 20);
-            this.InvNumInput.TabIndex = 17;
-            this.InvNumInput.ValidatingType = typeof(int);
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click_1);
             // 
             // EmpIDInput
             // 
-            this.EmpIDInput.Location = new System.Drawing.Point(146, 147);
+            this.EmpIDInput.Location = new System.Drawing.Point(134, 153);
             this.EmpIDInput.Mask = "00000";
             this.EmpIDInput.Name = "EmpIDInput";
-            this.EmpIDInput.Size = new System.Drawing.Size(35, 20);
-            this.EmpIDInput.TabIndex = 18;
+            this.EmpIDInput.Size = new System.Drawing.Size(38, 20);
+            this.EmpIDInput.TabIndex = 2;
             this.EmpIDInput.ValidatingType = typeof(int);
+            // 
+            // DateTimeLabel
+            // 
+            this.DateTimeLabel.AutoSize = true;
+            this.DateTimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateTimeLabel.Location = new System.Drawing.Point(544, 99);
+            this.DateTimeLabel.Name = "DateTimeLabel";
+            this.DateTimeLabel.Size = new System.Drawing.Size(129, 13);
+            this.DateTimeLabel.TabIndex = 26;
+            this.DateTimeLabel.Text = "30/09/2020 09:47:00 PM";
             // 
             // AddTransaction
             // 
-            this.AcceptButton = this.SaveButton;
-            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(769, 491);
+            this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
+            this.ClientSize = new System.Drawing.Size(821, 513);
+            this.Controls.Add(this.DateTimeLabel);
             this.Controls.Add(this.EmpIDInput);
-            this.Controls.Add(this.InvNumInput);
-            this.Controls.Add(this.SaleDate);
-            this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.InvoiceNumLabel);
             this.Controls.Add(this.TotalOutput);
             this.Controls.Add(this.TotalLabel);
-            this.Controls.Add(this.IDinputOne);
-            this.Controls.Add(this.ContentTitle2);
-            this.Controls.Add(this.ContentTitle3);
-            this.Controls.Add(this.NameEntry);
-            this.Controls.Add(this.EmployeeIDLabel);
-            this.Controls.Add(this.EmployeeNameLabel);
-            this.Controls.Add(this.Description);
-            this.Controls.Add(this.ContentTitle1);
+            this.Controls.Add(this.ProdNameLabel);
+            this.Controls.Add(this.PriceLabel);
+            this.Controls.Add(this.QtyLabel);
+            this.Controls.Add(this.ProdIDLabel);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.TransactionSectionLabel);
+            this.Controls.Add(this.EmployeeSectionLabel);
+            this.Controls.Add(this.SaleIDInput);
+            this.Controls.Add(this.DescLabel);
+            this.Controls.Add(this.SaleIDLabel);
             this.Controls.Add(this.CompanyName);
-            this.MaximumSize = new System.Drawing.Size(785, 530);
-            this.MinimumSize = new System.Drawing.Size(785, 530);
+            this.Controls.Add(this.CustNameLabel);
+            this.Controls.Add(this.EmpIDLabel);
+            this.Controls.Add(this.CustomerNameInput);
+            this.Controls.Add(this.EmpNameInput);
+            this.Controls.Add(this.EmpNameLabel);
+            this.Controls.Add(this.DateLabel);
             this.Name = "AddTransaction";
-            this.Text = "Add Transaction";
-            this.IDinputOne.ResumeLayout(false);
-            this.IDinputOne.PerformLayout();
+            this.Text = "AddTransaction";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label CompanyName;
-        private System.Windows.Forms.Label ContentTitle1;
-        private System.Windows.Forms.Label Description;
-        private System.Windows.Forms.DateTimePicker SaleDate;
-        private System.Windows.Forms.Label InvoiceNumLabel;
-        private System.Windows.Forms.Label EmployeeNameLabel;
-        private System.Windows.Forms.Label EmployeeIDLabel;
-        private System.Windows.Forms.TextBox NameEntry;
-        private System.Windows.Forms.Label ContentTitle3;
-        private System.Windows.Forms.Label ContentTitle2;
         private System.Windows.Forms.Label DateLabel;
-        private System.Windows.Forms.TextBox ProdIDinput1;
+        private System.Windows.Forms.Label EmpNameLabel;
+        private System.Windows.Forms.TextBox EmpNameInput;
+        private System.Windows.Forms.TextBox CustomerNameInput;
+        private System.Windows.Forms.Label EmpIDLabel;
+        private System.Windows.Forms.Label CustNameLabel;
+        private System.Windows.Forms.Label CompanyName;
+        private System.Windows.Forms.Label SaleIDLabel;
+        private System.Windows.Forms.Label DescLabel;
+        private System.Windows.Forms.MaskedTextBox SaleIDInput;
+        private System.Windows.Forms.Label EmployeeSectionLabel;
+        private System.Windows.Forms.Label TransactionSectionLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox prodIDinput1;
         private System.Windows.Forms.Label ProdIDLabel;
         private System.Windows.Forms.Label QtyLabel;
         private System.Windows.Forms.Label PriceLabel;
-        private System.Windows.Forms.TableLayoutPanel IDinputOne;
-        private System.Windows.Forms.TextBox PriceInput5;
-        private System.Windows.Forms.TextBox QTYinput5;
-        private System.Windows.Forms.TextBox IDinput5;
-        private System.Windows.Forms.TextBox PriceInput4;
-        private System.Windows.Forms.TextBox QTYinput4;
-        private System.Windows.Forms.TextBox IDinput4;
-        private System.Windows.Forms.TextBox PriceInput3;
-        private System.Windows.Forms.TextBox QTYinput3;
-        private System.Windows.Forms.TextBox IDinput3;
-        private System.Windows.Forms.TextBox PriceInput2;
-        private System.Windows.Forms.TextBox QTYinput2;
-        private System.Windows.Forms.TextBox IDinput2;
-        private System.Windows.Forms.TextBox PriceInput1;
-        private System.Windows.Forms.TextBox QTYinput1;
+        private System.Windows.Forms.Label ProdNameLabel;
         private System.Windows.Forms.Label TotalLabel;
+        private System.Windows.Forms.TextBox PriceInput5;
+        private System.Windows.Forms.TextBox QtyInput5;
+        private System.Windows.Forms.TextBox ProdNameInput5;
+        private System.Windows.Forms.TextBox prodIDinput5;
+        private System.Windows.Forms.TextBox PriceInput4;
+        private System.Windows.Forms.TextBox QtyInput4;
+        private System.Windows.Forms.TextBox ProdNameInput4;
+        private System.Windows.Forms.TextBox prodIDinput4;
+        private System.Windows.Forms.TextBox PriceInput3;
+        private System.Windows.Forms.TextBox QtyInput3;
+        private System.Windows.Forms.TextBox ProdNameInput3;
+        private System.Windows.Forms.TextBox prodIDinput3;
+        private System.Windows.Forms.TextBox PriceInput2;
+        private System.Windows.Forms.TextBox QtyInput2;
+        private System.Windows.Forms.TextBox ProdNameInput2;
+        private System.Windows.Forms.TextBox prodIDinput2;
+        private System.Windows.Forms.TextBox PriceInput1;
+        private System.Windows.Forms.TextBox QtyInput1;
+        private System.Windows.Forms.TextBox ProdNameInput1;
         private System.Windows.Forms.Label TotalOutput;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.MaskedTextBox InvNumInput;
         private System.Windows.Forms.MaskedTextBox EmpIDInput;
+        private System.Windows.Forms.Label DateTimeLabel;
     }
 }

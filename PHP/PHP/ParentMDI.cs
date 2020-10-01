@@ -39,7 +39,7 @@ namespace PHP
             }
 			if (isOpen == false)
             {
-				AddTransaction AddTransaction = new AddTransaction();
+				AddTransaction AddTransaction = new AddTransaction(_pHPRepo);
 				AddTransaction.MdiParent = this;
 				AddTransaction.Show();
             }
@@ -242,7 +242,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				ViewStock ViewStockItems = new ViewStock();
+				ViewStock ViewStockItems = new ViewStock(_pHPRepo);
 				ViewStockItems.MdiParent = this;
 				ViewStockItems.Show();
 			}
