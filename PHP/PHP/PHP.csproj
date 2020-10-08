@@ -287,6 +287,10 @@
       <Project>{ba8c6cad-7446-421d-a78a-8607d083c19c}</Project>
       <Name>PHP.Database</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PHP.Functions\PHP.Functions.csproj">
+      <Project>{f3592923-b9d4-4384-a3fb-f74f80af890a}</Project>
+      <Name>PHP.Functions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
