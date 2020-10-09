@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,18 +27,49 @@ namespace PHP
         Product prod3 = new Product();
         Product prod4 = new Product();
         Product prod5 = new Product();
+        private HelpProvider helpProvider;
 
         public AddTransaction(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             setEmpDetails();
-
             //initialise autocomplete
             _ProductList = pHPRepo.GetProducts();
             initialiseAutocomplete();
 
             
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\AddTransaction.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(CustomerNameInput, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput5, HelpNavigator.TableOfContents);
         }
 
         //Methods to validate data entry into form

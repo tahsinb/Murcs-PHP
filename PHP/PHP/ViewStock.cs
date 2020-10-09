@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,14 +21,25 @@ namespace PHP
         private Product _product;
         List<Product> _ProductList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
 
-        
         public ViewStock(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _ProductList = pHPRepo.GetProducts();
             DisplayProducts();
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\ViewProduct.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(ProdIDInput, HelpNavigator.TableOfContents);
         }
 
         /// <summary>
