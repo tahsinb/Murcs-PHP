@@ -31,17 +31,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Product_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Product_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Stock_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(288, 382);
+            this.button2.Location = new System.Drawing.Point(298, 382);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 40);
             this.button2.TabIndex = 6;
@@ -54,63 +52,51 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label1.Location = new System.Drawing.Point(302, 18);
+            this.label1.Location = new System.Drawing.Point(320, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 51);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Sales";
+            this.label1.Text = "Stock";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
+            this.Product_ID,
+            this.Product_Name,
+            this.Price,
+            this.Stock_Count});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(97, 89);
+            this.listView1.Location = new System.Drawing.Point(199, 89);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(606, 287);
+            this.listView1.Size = new System.Drawing.Size(406, 287);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // columnHeader1
+            // Product_ID
             // 
-            this.columnHeader1.Text = "Sale ID";
-            this.columnHeader1.Width = 100;
+            this.Product_ID.Text = "Product ID";
+            this.Product_ID.Width = 100;
             // 
-            // columnHeader2
+            // Product_Name
             // 
-            this.columnHeader2.Text = "Sale Date";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 100;
+            this.Product_Name.Text = "Product Name";
+            this.Product_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Product_Name.Width = 100;
             // 
-            // columnHeader3
+            // Price
             // 
-            this.columnHeader3.Text = "Sale Time";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 100;
+            this.Price.Text = "Price";
+            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Price.Width = 100;
             // 
-            // columnHeader4
+            // Stock_Count
             // 
-            this.columnHeader4.Text = "Total Cost";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Customer name";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Employee Name";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 100;
+            this.Stock_Count.Text = "Stock_Count";
+            this.Stock_Count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Stock_Count.Width = 100;
             // 
             // DeleteItem
             // 
@@ -123,6 +109,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "DeleteItem";
             this.Text = "DeleteItem";
+            this.Load += new System.EventHandler(this.DeleteItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,11 +120,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader Product_ID;
+        private System.Windows.Forms.ColumnHeader Product_Name;
+        private System.Windows.Forms.ColumnHeader Price;
+        private System.Windows.Forms.ColumnHeader Stock_Count;
     }
 }

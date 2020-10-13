@@ -192,7 +192,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				DeleteItem DeleteItemStock = new DeleteItem();
+				DeleteItem DeleteItemStock = new DeleteItem(_pHPRepo);
 				DeleteItemStock.MdiParent = this;
 				DeleteItemStock.Show();
 			}

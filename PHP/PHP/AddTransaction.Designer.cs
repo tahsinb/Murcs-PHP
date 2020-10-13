@@ -516,6 +516,7 @@
             this.Controls.Add(this.DateLabel);
             this.Name = "AddTransaction";
             this.Text = "AddTransaction";
+            this.Load += new System.EventHandler(this.AddTransaction_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
