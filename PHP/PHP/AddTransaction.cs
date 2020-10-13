@@ -21,6 +21,7 @@ namespace PHP
         {
             InitializeComponent();
             _PHPRepo = pHPRepo;
+            
         }
 
 
@@ -297,6 +298,16 @@ namespace PHP
         #endregion
 
         private void AddTransaction_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prodIDinput1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProdNameInput1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -35,13 +35,15 @@
             this.Product_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Stock_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(298, 382);
+            this.button2.Location = new System.Drawing.Point(160, 232);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 40);
+            this.button2.Size = new System.Drawing.Size(110, 33);
             this.button2.TabIndex = 6;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
@@ -52,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label1.Location = new System.Drawing.Point(320, 23);
+            this.label1.Location = new System.Drawing.Point(452, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 51);
             this.label1.TabIndex = 5;
@@ -67,7 +69,7 @@
             this.Price,
             this.Stock_Count});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(199, 89);
+            this.listView1.Location = new System.Drawing.Point(331, 85);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(406, 287);
             this.listView1.TabIndex = 4;
@@ -98,12 +100,32 @@
             this.Stock_Count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Stock_Count.Width = 100;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(160, 188);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(110, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 29);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Product ID:";
+            // 
             // DeleteItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
@@ -124,5 +146,7 @@
         private System.Windows.Forms.ColumnHeader Product_Name;
         private System.Windows.Forms.ColumnHeader Price;
         private System.Windows.Forms.ColumnHeader Stock_Count;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

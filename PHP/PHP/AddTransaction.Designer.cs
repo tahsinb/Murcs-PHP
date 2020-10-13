@@ -389,6 +389,7 @@
             this.ProdNameInput1.Name = "ProdNameInput1";
             this.ProdNameInput1.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput1.TabIndex = 6;
+            this.ProdNameInput1.TextChanged += new System.EventHandler(this.ProdNameInput1_TextChanged);
             // 
             // prodIDinput1
             // 
@@ -397,6 +398,7 @@
             this.prodIDinput1.Name = "prodIDinput1";
             this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput1.TabIndex = 5;
+            this.prodIDinput1.TextChanged += new System.EventHandler(this.prodIDinput1_TextChanged);
             // 
             // ProdIDLabel
             // 
