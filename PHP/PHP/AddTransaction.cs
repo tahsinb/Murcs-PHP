@@ -296,7 +296,9 @@ namespace PHP
 
         #endregion
 
-    
+        private void AddTransaction_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
