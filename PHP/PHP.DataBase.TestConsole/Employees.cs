@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using PHP.Database.Classes;
 using PHP.Database;
-using PHP.Database.Classes;
 using System.Text.Json;
 
 namespace PHP.DataBase.TestConsole

@@ -147,10 +147,6 @@
     <Compile Include="AddTransaction.Designer.cs">
       <DependentUpon>AddTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Employee.cs" />
-    <Compile Include="Classes\Product.cs" />
-    <Compile Include="Classes\ProductSale.cs" />
-    <Compile Include="Classes\Sale.cs" />
     <Compile Include="DeleteItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +170,12 @@
     </Compile>
     <Compile Include="LowStock.Designer.cs">
       <DependentUpon>LowStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlyReport.Designer.cs">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ParentMDI.cs">
       <SubType>Form</SubType>
@@ -213,6 +215,12 @@
     <Compile Include="ViewStock.Designer.cs">
       <DependentUpon>ViewStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklyReport.Designer.cs">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +248,9 @@
     <EmbeddedResource Include="LowStock.resx">
       <DependentUpon>LowStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.resx">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParentMDI.resx">
       <DependentUpon>ParentMDI.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyReport.resx">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

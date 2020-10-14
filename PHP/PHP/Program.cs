@@ -32,14 +32,12 @@ namespace PHP
 			{
 				Console.WriteLine(ex.Message);
 			}
+			
 			PHPRepo pHPRepo = new PHPRepo(pHPConext);
-
-
-
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Login(pHPRepo));
+			Application.Run(new WeeklyReport(pHPRepo));
 		}
 	}
 	public class AppSettings : IDatabaseAppSettings

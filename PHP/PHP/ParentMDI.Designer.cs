@@ -158,19 +158,21 @@
             // weeklyReportToolStripMenuItem
             // 
             this.weeklyReportToolStripMenuItem.Name = "weeklyReportToolStripMenuItem";
-            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.weeklyReportToolStripMenuItem.Text = "Weekly Report";
+            this.weeklyReportToolStripMenuItem.Click += new System.EventHandler(this.weeklyReportToolStripMenuItem_Click);
             // 
             // monthlyReportToolStripMenuItem
             // 
             this.monthlyReportToolStripMenuItem.Name = "monthlyReportToolStripMenuItem";
-            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.monthlyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.monthlyReportToolStripMenuItem.Text = "Monthly Report";
+            this.monthlyReportToolStripMenuItem.Click += new System.EventHandler(this.monthlyReportToolStripMenuItem_Click);
             // 
             // salesPredictionsToolStripMenuItem
             // 
             this.salesPredictionsToolStripMenuItem.Name = "salesPredictionsToolStripMenuItem";
-            this.salesPredictionsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.salesPredictionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salesPredictionsToolStripMenuItem.Text = "Sales Predictions";
             // 
             // ParentMDI
