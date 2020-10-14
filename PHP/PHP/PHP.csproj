@@ -147,10 +147,6 @@
     <Compile Include="AddTransaction.Designer.cs">
       <DependentUpon>AddTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Employee.cs" />
-    <Compile Include="Classes\Product.cs" />
-    <Compile Include="Classes\ProductSale.cs" />
-    <Compile Include="Classes\Sale.cs" />
     <Compile Include="DeleteItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,7 +159,6 @@
     <Compile Include="EditItem.Designer.cs">
       <DependentUpon>EditItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDatabaseAppSettings.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,8 +189,6 @@
     <Compile Include="EditSale.Designer.cs">
       <DependentUpon>EditSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="PHPContext.cs" />
-    <Compile Include="PHPRepo.cs" />
     <Compile Include="ViewSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +277,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PHP.Database\PHP.Database.csproj">
+      <Project>{ba8c6cad-7446-421d-a78a-8607d083c19c}</Project>
+      <Name>PHP.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PHP.Functions\PHP.Functions.csproj">
+      <Project>{f3592923-b9d4-4384-a3fb-f74f80af890a}</Project>
+      <Name>PHP.Functions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

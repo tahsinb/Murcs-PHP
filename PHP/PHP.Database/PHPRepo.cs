@@ -80,6 +80,7 @@ namespace PHP.Database
         {
             string HashedPassword = Employee.ComputeSha256Hash(password);
             Employee employee = _pHPContext.Employees.Where(e=>e.EmployeeId == id).FirstOrDefault();
+            if (employee == default) return false;
             return HashedPassword == employee.Employee_Password;
 
         }
