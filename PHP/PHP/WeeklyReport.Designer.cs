@@ -37,6 +37,8 @@
             this.TotalCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
+            this.TotalSales = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TotalRevanue
@@ -45,7 +47,6 @@
             this.TotalRevanue.Name = "TotalRevanue";
             this.TotalRevanue.Size = new System.Drawing.Size(100, 20);
             this.TotalRevanue.TabIndex = 10;
-            this.TotalRevanue.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -56,7 +57,6 @@
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Weekly revenue";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -115,12 +115,31 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Weekly Sales Report";
             // 
+            // TotalSales
+            // 
+            this.TotalSales.Location = new System.Drawing.Point(603, 304);
+            this.TotalSales.Name = "TotalSales";
+            this.TotalSales.Size = new System.Drawing.Size(100, 20);
+            this.TotalSales.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(600, 287);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Weekly sales";
+            // 
             // WeeklyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TotalSales);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SaleTable);
             this.Controls.Add(this.button1);
@@ -144,5 +163,7 @@
         private System.Windows.Forms.ColumnHeader TotalCost;
         private System.Windows.Forms.ColumnHeader CustomerName;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TotalSales;
+        private System.Windows.Forms.Label label2;
     }
 }

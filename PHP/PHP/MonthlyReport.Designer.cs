@@ -37,6 +37,9 @@
             this.TotalRevanue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.TotalSales = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CurrentToggle = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // SaleTable
@@ -113,12 +116,45 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Monthly Sales Report";
             // 
+            // TotalSales
+            // 
+            this.TotalSales.Location = new System.Drawing.Point(603, 304);
+            this.TotalSales.Name = "TotalSales";
+            this.TotalSales.Size = new System.Drawing.Size(100, 20);
+            this.TotalSales.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(600, 287);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Monthly sales";
+            // 
+            // CurrentToggle
+            // 
+            this.CurrentToggle.AutoSize = true;
+            this.CurrentToggle.Checked = global::PHP.Properties.Settings.Default.True;
+            this.CurrentToggle.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::PHP.Properties.Settings.Default, "True", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.CurrentToggle.Location = new System.Drawing.Point(168, 374);
+            this.CurrentToggle.Name = "CurrentToggle";
+            this.CurrentToggle.Size = new System.Drawing.Size(92, 17);
+            this.CurrentToggle.TabIndex = 26;
+            this.CurrentToggle.Text = "Current month";
+            this.CurrentToggle.UseVisualStyleBackColor = true;
+            this.CurrentToggle.CheckedChanged += new System.EventHandler(this.CurrentToggle_CheckedChanged);
+            // 
             // MonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CurrentToggle);
+            this.Controls.Add(this.TotalSales);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SaleTable);
             this.Controls.Add(this.button1);
@@ -142,5 +178,8 @@
         private System.Windows.Forms.TextBox TotalRevanue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TotalSales;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox CurrentToggle;
     }
 }

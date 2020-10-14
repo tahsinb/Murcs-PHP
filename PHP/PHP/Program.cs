@@ -37,7 +37,7 @@ namespace PHP
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new WeeklyReport(pHPRepo));
+			Application.Run(new Login(pHPRepo));
 		}
 	}
 	public class AppSettings : IDatabaseAppSettings
