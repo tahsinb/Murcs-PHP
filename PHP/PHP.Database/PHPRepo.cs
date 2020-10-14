@@ -76,12 +76,14 @@ namespace PHP.Database
         {
             return _pHPContext.Employees.ToList();
         }
+
+        public Employee currentEmployee = new Employee();
         public bool VerifyPassword(int id, string password)
         {
             string HashedPassword = Employee.ComputeSha256Hash(password);
-            Employee employee = _pHPContext.Employees.Where(e=>e.EmployeeId == id).FirstOrDefault();
-            if (employee == default) return false;
-            return HashedPassword == employee.Employee_Password;
+            currentEmployee = _pHPContext.Employees.Where(e=>e.EmployeeId == id).FirstOrDefault();
+            if (currentEmployee == default) return false;
+            return HashedPassword == currentEmployee.Employee_Password;
 
         }
         public void DeleteEmployee(Employee employee)
