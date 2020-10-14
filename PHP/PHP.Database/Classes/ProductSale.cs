@@ -17,5 +17,6 @@ namespace PHP.Database.Classes
         public Sale Sale { get; set; } 
         [ForeignKey("Sale")]
         public int SaleId { get; set; }
+        public int Quantity { get; set; }
     }
 }

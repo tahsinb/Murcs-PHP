@@ -39,6 +39,20 @@ namespace PHP.Database
             _pHPContext.Sales.Remove(sale);
             _pHPContext.SaveChanges();
         }
+        /// <summary>
+        /// Gets Sales between dates "intial date" and "endDate"
+        /// </summary>
+        /// <param name="initialDate"> the start date </param>
+        /// <param name="endDate">the end date </param>
+        /// <returns></returns>
+        public List<Sale> GetSaleByDate(DateTime initialDate, DateTime endDate)
+        {
+            return _pHPContext.Sales.Where(s => DateTime.Compare(s.Sale_Date, initialDate) > 0 && DateTime.Compare(s.Sale_Date, endDate) < 0).Include(s => s.ProductSales).ThenInclude(p => p.Product).ToList();
+        }
+        public int GetMaxSaleId()
+        {
+            return _pHPContext.Sales.Select(s=>s.SaleId).DefaultIfEmpty(0).Max(); ;
+        }
         #endregion
 
         #region Employees 
