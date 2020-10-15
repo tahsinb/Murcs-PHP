@@ -30,7 +30,6 @@
         {
             this.TotalRevanue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SaleTable = new System.Windows.Forms.ListView();
             this.SaleID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SaleDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TotalSales = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TotalRevanue
@@ -57,15 +58,6 @@
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Weekly revenue";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(628, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Export CSV";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // SaleTable
             // 
@@ -132,17 +124,37 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Weekly sales";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(603, 418);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Select Filepath";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(603, 373);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 39);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Export CSV";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // WeeklyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.TotalSales);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SaleTable);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.TotalRevanue);
             this.Controls.Add(this.label1);
             this.Name = "WeeklyReport";
@@ -156,7 +168,6 @@
         #endregion
         private System.Windows.Forms.TextBox TotalRevanue;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView SaleTable;
         public System.Windows.Forms.ColumnHeader SaleID;
         private System.Windows.Forms.ColumnHeader SaleDate;
@@ -165,5 +176,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TotalSales;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

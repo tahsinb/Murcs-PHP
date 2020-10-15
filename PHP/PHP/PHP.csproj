@@ -195,6 +195,12 @@
     <Compile Include="EditSale.Designer.cs">
       <DependentUpon>EditSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Popup_FileGenerated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup_FileGenerated.Designer.cs">
+      <DependentUpon>Popup_FileGenerated.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ParentMDI.resx">
       <DependentUpon>ParentMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup_FileGenerated.resx">
+      <DependentUpon>Popup_FileGenerated.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHP.Database;
 using PHP.Database.Classes;
+using PHP.Functions;
 
 namespace PHP
 {
@@ -25,6 +26,9 @@ namespace PHP
         DateTime firstDayOfThisMonth;
         DateTime _to;
         DateTime _from;
+
+        string folder = null;
+        string default_filepath = "C:/Monthly Reports/";
 
         public MonthlyReport(PHPRepo pHPRepo)
         {
@@ -112,6 +116,34 @@ namespace PHP
             DisplayTotalSales();
             DisplayTotalRevenue();
             SaleTable.Update();
+        }
+
+        //generate csv button
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            string month = _from.ToString("MMMM");
+            if(folder == null)
+            {
+                folder = default_filepath;
+            }
+              
+            string filename = folder +"\\"+ month + ".csv";
+            System.IO.Directory.CreateDirectory(folder);
+            PHP.Functions.GenerateCSV.ListViewToCSV(SaleTable, filename);
+
+            var ConfirmationPopup = new Popup_FileGenerated(folder);
+            ConfirmationPopup.Show(this);
+        }
+        //select filepath button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog diag = new FolderBrowserDialog();
+            if (diag.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                folder = diag.SelectedPath;  
+
+            }
         }
     }
 }

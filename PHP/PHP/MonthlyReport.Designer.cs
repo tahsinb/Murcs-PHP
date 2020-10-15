@@ -33,13 +33,14 @@
             this.SaleDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ExportCSV = new System.Windows.Forms.Button();
             this.TotalRevanue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TotalSales = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CurrentToggle = new System.Windows.Forms.CheckBox();
+            this.btn_SelectFilepath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SaleTable
@@ -79,14 +80,15 @@
             this.CustomerName.Text = "Customer Name";
             this.CustomerName.Width = 100;
             // 
-            // button1
+            // btn_ExportCSV
             // 
-            this.button1.Location = new System.Drawing.Point(628, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Export CSV";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ExportCSV.Location = new System.Drawing.Point(603, 373);
+            this.btn_ExportCSV.Name = "btn_ExportCSV";
+            this.btn_ExportCSV.Size = new System.Drawing.Size(100, 39);
+            this.btn_ExportCSV.TabIndex = 18;
+            this.btn_ExportCSV.Text = "Export CSV";
+            this.btn_ExportCSV.UseVisualStyleBackColor = true;
+            this.btn_ExportCSV.Click += new System.EventHandler(this.button1_Click);
             // 
             // TotalRevanue
             // 
@@ -146,18 +148,29 @@
             this.CurrentToggle.UseVisualStyleBackColor = true;
             this.CurrentToggle.CheckedChanged += new System.EventHandler(this.CurrentToggle_CheckedChanged);
             // 
+            // btn_SelectFilepath
+            // 
+            this.btn_SelectFilepath.Location = new System.Drawing.Point(603, 418);
+            this.btn_SelectFilepath.Name = "btn_SelectFilepath";
+            this.btn_SelectFilepath.Size = new System.Drawing.Size(100, 23);
+            this.btn_SelectFilepath.TabIndex = 27;
+            this.btn_SelectFilepath.Text = "Select Filepath";
+            this.btn_SelectFilepath.UseVisualStyleBackColor = true;
+            this.btn_SelectFilepath.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_SelectFilepath);
             this.Controls.Add(this.CurrentToggle);
             this.Controls.Add(this.TotalSales);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SaleTable);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ExportCSV);
             this.Controls.Add(this.TotalRevanue);
             this.Controls.Add(this.label1);
             this.Name = "MonthlyReport";
@@ -174,12 +187,13 @@
         private System.Windows.Forms.ColumnHeader SaleDate;
         private System.Windows.Forms.ColumnHeader TotalCost;
         private System.Windows.Forms.ColumnHeader CustomerName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ExportCSV;
         private System.Windows.Forms.TextBox TotalRevanue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TotalSales;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox CurrentToggle;
+        private System.Windows.Forms.Button btn_SelectFilepath;
     }
 }
