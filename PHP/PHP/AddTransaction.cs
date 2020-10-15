@@ -21,24 +21,14 @@ namespace PHP
         {
             InitializeComponent();
             _PHPRepo = pHPRepo;
+            setEmpDetails();
         }
 
+        
 
         //Methods to validate data entry into form
         #region Validation Checks
 
-        /// <summary>
-        /// Validates that Employee Name field is not empty.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void EmpNameInput_Validating(object sender, CancelEventArgs e)
-        {
-            if (this.EmpNameInput.Text == string.Empty)
-            {
-                MessageBox.Show("Please enter employee name.");
-            }
-        }
 
         /// <summary>
         /// Validates that Customer Name field is not empty.
@@ -84,42 +74,85 @@ namespace PHP
         private void SaveButton_Click_1(object sender, EventArgs e)
         {
             //checks if all fields are completed 
-            if (SaleIDInput.MaskCompleted && !string.IsNullOrEmpty(EmpNameInput.Text)
-                && !string.IsNullOrEmpty(CustomerNameInput.Text) && EmpIDInput.MaskCompleted && row1Complete())
+            if (SaleIDInput.MaskCompleted && !string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
             {
                 _sale.SaleId = Int32.Parse(SaleIDInput.Text);
                 _sale.Sale_Date = DateTime.Now;
-                _sale.EmployeeId = Int32.Parse(EmpIDInput.Text);
-                _sale.Employee = _PHPRepo.GetEmployeeById(Int32.Parse(EmpIDInput.Text));
+               
                 _sale.Customer_Name = CustomerNameInput.Text;
                 _sale.Total_Cost = saleTotal;
 
                 //generate row1 product
                 Product product1 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput1.Text));
+                if (product1 != null)
+                {
+                    _sale.ProductSales.Add(new ProductSale()
+                    {
+                        Product = product1,
+                        Quantity = Int32.Parse(QtyInput1.Text)
+
+                    });
+                }
                 //TODO: pass this product to relevant db, reduce stock count 
 
                 if (row2Complete())
                 {
                     //generate row2 product
                     Product product2 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput2.Text));
+                    if (product2 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product2,
+                            Quantity = Int32.Parse(QtyInput2.Text)
+
+                        });
+                    }
                 }
 
                 if (row3Complete())
                 {
                     //generate row3 product
                     Product product3 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput3.Text));
+                    if (product3 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product1,
+                            Quantity = Int32.Parse(QtyInput3.Text)
+
+                        });
+                    }
                 }
 
                 if (row4Complete())
                 {
                     //generate row4 product
                     Product product4 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput4.Text));
+                    if (product4 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product4,
+                            Quantity = Int32.Parse(QtyInput4.Text)
+
+                        });
+                    }
                 }
 
                 if (row5Complete())
                 {
                     //generate row5 product
                     Product product5 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput5.Text));
+                    if (product5 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product5,
+                            Quantity = Int32.Parse(QtyInput5.Text)
+
+                        });
+                    }
                 }
 
                 _PHPRepo.AddSalesRecord(_sale);
@@ -136,6 +169,17 @@ namespace PHP
 
         //Extra functions that are used throughout the form.
         #region Helper Functions
+
+        //automatically sets the employee ID and name
+        private void setEmpDetails()
+        {
+            EmpIDDisplay.Text = _PHPRepo.currentEmployee.EmployeeId.ToString();
+            EmpNameDisplay.Text = _PHPRepo.currentEmployee.Employee_Name;
+            _sale.EmployeeId = _PHPRepo.currentEmployee.EmployeeId;
+            _sale.Employee = _PHPRepo.currentEmployee;
+        }
+
+
 
         /// <summary>
         /// This function will verify that the input text string contains all integers.
@@ -293,9 +337,9 @@ namespace PHP
 
 
 
+
         #endregion
 
-    
     }
 }
 
