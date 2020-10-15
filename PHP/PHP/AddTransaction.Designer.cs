@@ -30,7 +30,6 @@
         {
             this.DateLabel = new System.Windows.Forms.Label();
             this.EmpNameLabel = new System.Windows.Forms.Label();
-            this.EmpNameInput = new System.Windows.Forms.TextBox();
             this.CustomerNameInput = new System.Windows.Forms.TextBox();
             this.EmpIDLabel = new System.Windows.Forms.Label();
             this.CustNameLabel = new System.Windows.Forms.Label();
@@ -68,8 +67,9 @@
             this.TotalLabel = new System.Windows.Forms.Label();
             this.TotalOutput = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.EmpIDInput = new System.Windows.Forms.MaskedTextBox();
             this.DateTimeLabel = new System.Windows.Forms.Label();
+            this.EmpIDDisplay = new System.Windows.Forms.Label();
+            this.EmpNameDisplay = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,15 +93,6 @@
             this.EmpNameLabel.TabIndex = 2;
             this.EmpNameLabel.Text = "Employee Name:";
             // 
-            // EmpNameInput
-            // 
-            this.EmpNameInput.Location = new System.Drawing.Point(544, 157);
-            this.EmpNameInput.Name = "EmpNameInput";
-            this.EmpNameInput.Size = new System.Drawing.Size(265, 20);
-            this.EmpNameInput.TabIndex = 3;
-            this.EmpNameInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmpNameInput_KeyPress);
-            this.EmpNameInput.Validating += new System.ComponentModel.CancelEventHandler(this.EmpNameInput_Validating);
-            // 
             // CustomerNameInput
             // 
             this.CustomerNameInput.Location = new System.Drawing.Point(544, 219);
@@ -115,7 +106,7 @@
             // 
             this.EmpIDLabel.AutoSize = true;
             this.EmpIDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EmpIDLabel.Location = new System.Drawing.Point(48, 157);
+            this.EmpIDLabel.Location = new System.Drawing.Point(48, 164);
             this.EmpIDLabel.Name = "EmpIDLabel";
             this.EmpIDLabel.Size = new System.Drawing.Size(70, 13);
             this.EmpIDLabel.TabIndex = 6;
@@ -389,7 +380,6 @@
             this.ProdNameInput1.Name = "ProdNameInput1";
             this.ProdNameInput1.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput1.TabIndex = 6;
-            this.ProdNameInput1.TextChanged += new System.EventHandler(this.ProdNameInput1_TextChanged);
             // 
             // prodIDinput1
             // 
@@ -398,7 +388,6 @@
             this.prodIDinput1.Name = "prodIDinput1";
             this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput1.TabIndex = 5;
-            this.prodIDinput1.TextChanged += new System.EventHandler(this.prodIDinput1_TextChanged);
             // 
             // ProdIDLabel
             // 
@@ -469,15 +458,6 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click_1);
             // 
-            // EmpIDInput
-            // 
-            this.EmpIDInput.Location = new System.Drawing.Point(134, 153);
-            this.EmpIDInput.Mask = "00000";
-            this.EmpIDInput.Name = "EmpIDInput";
-            this.EmpIDInput.Size = new System.Drawing.Size(38, 20);
-            this.EmpIDInput.TabIndex = 2;
-            this.EmpIDInput.ValidatingType = typeof(int);
-            // 
             // DateTimeLabel
             // 
             this.DateTimeLabel.AutoSize = true;
@@ -488,14 +468,36 @@
             this.DateTimeLabel.TabIndex = 26;
             this.DateTimeLabel.Text = "30/09/2020 09:47:00 PM";
             // 
+            // EmpIDDisplay
+            // 
+            this.EmpIDDisplay.AutoSize = true;
+            this.EmpIDDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.EmpIDDisplay.Location = new System.Drawing.Point(140, 164);
+            this.EmpIDDisplay.Name = "EmpIDDisplay";
+            this.EmpIDDisplay.Size = new System.Drawing.Size(22, 13);
+            this.EmpIDDisplay.TabIndex = 27;
+            this.EmpIDDisplay.Text = "     ";
+            // 
+            // EmpNameDisplay
+            // 
+            this.EmpNameDisplay.AutoSize = true;
+            this.EmpNameDisplay.BackColor = System.Drawing.Color.Transparent;
+            this.EmpNameDisplay.Location = new System.Drawing.Point(544, 164);
+            this.EmpNameDisplay.Name = "EmpNameDisplay";
+            this.EmpNameDisplay.Size = new System.Drawing.Size(262, 13);
+            this.EmpNameDisplay.TabIndex = 28;
+            this.EmpNameDisplay.Text = "                                                                                 " +
+    "    ";
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(821, 513);
+            this.Controls.Add(this.EmpNameDisplay);
+            this.Controls.Add(this.EmpIDDisplay);
             this.Controls.Add(this.DateTimeLabel);
-            this.Controls.Add(this.EmpIDInput);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.TotalOutput);
             this.Controls.Add(this.TotalLabel);
@@ -513,12 +515,10 @@
             this.Controls.Add(this.CustNameLabel);
             this.Controls.Add(this.EmpIDLabel);
             this.Controls.Add(this.CustomerNameInput);
-            this.Controls.Add(this.EmpNameInput);
             this.Controls.Add(this.EmpNameLabel);
             this.Controls.Add(this.DateLabel);
             this.Name = "AddTransaction";
             this.Text = "AddTransaction";
-            this.Load += new System.EventHandler(this.AddTransaction_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -529,7 +529,6 @@
         #endregion
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label EmpNameLabel;
-        private System.Windows.Forms.TextBox EmpNameInput;
         private System.Windows.Forms.TextBox CustomerNameInput;
         private System.Windows.Forms.Label EmpIDLabel;
         private System.Windows.Forms.Label CustNameLabel;
@@ -567,7 +566,8 @@
         private System.Windows.Forms.TextBox ProdNameInput1;
         private System.Windows.Forms.Label TotalOutput;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.MaskedTextBox EmpIDInput;
         private System.Windows.Forms.Label DateTimeLabel;
+        private System.Windows.Forms.Label EmpIDDisplay;
+        private System.Windows.Forms.Label EmpNameDisplay;
     }
 }
