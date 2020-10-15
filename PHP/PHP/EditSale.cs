@@ -109,5 +109,10 @@ namespace PHP
             CostBox.Enabled = true;
             NameBox.Enabled = true;
         }
+
+        private void NameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
