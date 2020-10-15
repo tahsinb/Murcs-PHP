@@ -55,6 +55,7 @@
             this.ProductTable.TabIndex = 13;
             this.ProductTable.UseCompatibleStateImageBehavior = false;
             this.ProductTable.View = System.Windows.Forms.View.Details;
+            this.ProductTable.SelectedIndexChanged += new System.EventHandler(this.ProductTable_SelectedIndexChanged);
             // 
             // Header1
             // 
@@ -124,6 +125,7 @@
             this.MinimumSize = new System.Drawing.Size(760, 400);
             this.Name = "ViewStock";
             this.Text = "ViewStock";
+            this.Load += new System.EventHandler(this.ViewStock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

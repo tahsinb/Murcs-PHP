@@ -49,7 +49,7 @@ namespace PHP
             string[] row = {prodToAdd.ProductId.ToString(), prodToAdd.Product_Name.ToString(),
                             prodToAdd.Price.ToString(), prodToAdd.Stock_Level.ToString()};
             var listViewItem = new ListViewItem(row);
-            ProductTable.Items.Add(listViewItem);
+            ProductTable.Items.Add(listViewItem); 
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -90,6 +90,16 @@ namespace PHP
                 }
             }
             DisplayProducts();
+        }
+
+        private void ProductTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewStock_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

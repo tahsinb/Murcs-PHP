@@ -109,6 +109,7 @@
             this.SaleTable.TabIndex = 12;
             this.SaleTable.UseCompatibleStateImageBehavior = false;
             this.SaleTable.View = System.Windows.Forms.View.Details;
+            this.SaleTable.SelectedIndexChanged += new System.EventHandler(this.SaleTable_SelectedIndexChanged);
             // 
             // ViewSale
             // 
@@ -122,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewSale";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.ViewSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
