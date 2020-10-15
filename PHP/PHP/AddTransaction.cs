@@ -96,30 +96,75 @@ namespace PHP
 
                 //generate row1 product
                 Product product1 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput1.Text));
+                if (product1 != null)
+                {
+                    _sale.ProductSales.Add(new ProductSale()
+                    {
+                        Product = product1,
+                        Quantity = Int32.Parse(QtyInput1.Text)
+
+                    });
+                }
                 //TODO: pass this product to relevant db, reduce stock count 
 
                 if (row2Complete())
                 {
                     //generate row2 product
                     Product product2 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput2.Text));
+                    if (product2 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product2,
+                            Quantity = Int32.Parse(QtyInput2.Text)
+
+                        });
+                    }
                 }
 
                 if (row3Complete())
                 {
                     //generate row3 product
                     Product product3 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput3.Text));
+                    if (product3 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product1,
+                            Quantity = Int32.Parse(QtyInput3.Text)
+
+                        });
+                    }
                 }
 
                 if (row4Complete())
                 {
                     //generate row4 product
                     Product product4 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput4.Text));
+                    if (product4 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product4,
+                            Quantity = Int32.Parse(QtyInput4.Text)
+
+                        });
+                    }
                 }
 
                 if (row5Complete())
                 {
                     //generate row5 product
                     Product product5 = _PHPRepo.GetProductbyId(Int32.Parse(prodIDinput5.Text));
+                    if (product5 != null)
+                    {
+                        _sale.ProductSales.Add(new ProductSale()
+                        {
+                            Product = product5,
+                            Quantity = Int32.Parse(QtyInput5.Text)
+
+                        });
+                    }
                 }
 
                 _PHPRepo.AddSalesRecord(_sale);
