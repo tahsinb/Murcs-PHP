@@ -13,6 +13,7 @@ namespace PHP.Database.Classes
         public string Product_Name { get; set; }
         public double Price { get; set; }
         public int Stock_Level { get; set; }
+        public string Type { get; set; }
 
     }
 }
