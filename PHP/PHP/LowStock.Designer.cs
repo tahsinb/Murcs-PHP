@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(713, 415);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 0;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // LowStock
             // 
@@ -36,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CloseButton);
             this.Name = "LowStock";
             this.Text = "LowStock";
             this.ResumeLayout(false);
@@ -43,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button CloseButton;
     }
 }

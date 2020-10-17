@@ -43,6 +43,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -173,12 +174,23 @@
             this.Name.Size = new System.Drawing.Size(100, 20);
             this.Name.TabIndex = 14;
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(815, 448);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 26;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(902, 483);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -190,6 +202,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.Name);
+            //this.Name = "AddItem";
             this.Text = "AddItem";
             this.Load += new System.EventHandler(this.AddItem_Load);
             this.ResumeLayout(false);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.Button CloseButton;
     }
 }
