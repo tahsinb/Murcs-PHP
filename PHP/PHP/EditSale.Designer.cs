@@ -41,6 +41,7 @@
             this.CostBox = new System.Windows.Forms.TextBox();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.Edit = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SaleTable
@@ -146,12 +147,23 @@
             this.Edit.UseVisualStyleBackColor = true;
             this.Edit.Click += new System.EventHandler(this.ClickConfirm);
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(713, 415);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 23;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // EditSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.CostBox);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.TextBox CostBox;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Button Edit;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

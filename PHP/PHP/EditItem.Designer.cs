@@ -42,6 +42,7 @@
             this.Product_Price = new System.Windows.Forms.TextBox();
             this.Product_Stock = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListView1
@@ -163,12 +164,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(713, 415);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 24;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // EditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Product_Stock);
             this.Controls.Add(this.Product_Price);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.TextBox Product_Price;
         private System.Windows.Forms.TextBox Product_Stock;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

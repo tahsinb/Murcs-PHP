@@ -102,5 +102,21 @@ namespace PHP
                 ListView1.Items.Add(listViewItem);
             };
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            //confirm closing of forms
+            if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
+                                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //confirmed exit
+                this.Close();
+
+            }
+            else
+            {
+                //do nothing after dialog box is closed
+            }
+        }
     }
 }
