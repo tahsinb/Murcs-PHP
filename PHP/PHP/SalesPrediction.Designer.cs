@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TotalCostText = new System.Windows.Forms.TextBox();
             this.SalesPredictionText = new System.Windows.Forms.TextBox();
             this.PredictionPeriod = new System.Windows.Forms.TextBox();
             this.ProductTypeTextBox = new System.Windows.Forms.TextBox();
@@ -80,6 +80,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Predict Monthly Sales";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.PredictMonthlySales);
             // 
             // label2
             // 
@@ -129,8 +130,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63636F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 3, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.Controls.Add(this.TotalCostText, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.SalesPredictionText, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.PredictionPeriod, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ProductTypeTextBox, 0, 0);
@@ -144,23 +145,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(514, 26);
             this.tableLayoutPanel1.TabIndex = 24;
             // 
-            // textBox4
+            // TotalCostText
             // 
-            this.textBox4.Location = new System.Drawing.Point(439, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 20);
-            this.textBox4.TabIndex = 28;
+            this.TotalCostText.Location = new System.Drawing.Point(438, 3);
+            this.TotalCostText.Name = "TotalCostText";
+            this.TotalCostText.Size = new System.Drawing.Size(70, 20);
+            this.TotalCostText.TabIndex = 28;
             // 
             // SalesPredictionText
             // 
-            this.SalesPredictionText.Location = new System.Drawing.Point(327, 3);
+            this.SalesPredictionText.Location = new System.Drawing.Point(326, 3);
             this.SalesPredictionText.Name = "SalesPredictionText";
             this.SalesPredictionText.Size = new System.Drawing.Size(106, 20);
             this.SalesPredictionText.TabIndex = 27;
             // 
             // PredictionPeriod
             // 
-            this.PredictionPeriod.Location = new System.Drawing.Point(121, 3);
+            this.PredictionPeriod.Location = new System.Drawing.Point(120, 3);
             this.PredictionPeriod.Name = "PredictionPeriod";
             this.PredictionPeriod.Size = new System.Drawing.Size(200, 20);
             this.PredictionPeriod.TabIndex = 26;
@@ -169,7 +170,7 @@
             // 
             this.ProductTypeTextBox.Location = new System.Drawing.Point(3, 3);
             this.ProductTypeTextBox.Name = "ProductTypeTextBox";
-            this.ProductTypeTextBox.Size = new System.Drawing.Size(112, 20);
+            this.ProductTypeTextBox.Size = new System.Drawing.Size(111, 20);
             this.ProductTypeTextBox.TabIndex = 25;
             // 
             // SalesPrediction
@@ -208,7 +209,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TotalCostText;
         private System.Windows.Forms.TextBox SalesPredictionText;
         private System.Windows.Forms.TextBox PredictionPeriod;
         private System.Windows.Forms.TextBox ProductTypeTextBox;
