@@ -18,7 +18,7 @@ namespace PHP
         List<Product> ProductTypeList;
         List<Sale> WeeklySalesList;
         double[] WeeklySales = new double[4]{ 0, 0, 0, 0 };
-        double PredictedWeeklySales;
+        double PredictedWeeklySales = 0;
         string _productType;
         public SalesPrediction(PHPRepo pHPRepo)
         {
@@ -33,26 +33,25 @@ namespace PHP
 
         private void PredictWeeklySales(object sender, EventArgs e)
         {
-            PredictionPeriod.Text = DateTime.Now.AddDays(-7).ToString() + " - " + DateTime.Now.ToString();
-            if (_PHPRepo.GetProductByType(_productType) == null)
+            ProductTypeList = _PHPRepo.GetProductByType(_productType);
+            if (!(ProductTypeList.Any()))
                 MessageBox.Show("Invalid Product Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                ProductTypeList = _PHPRepo.GetProductByType(_productType);
                 ProductTypeTextBox.Text = _productType;
+                PredictionPeriod.Text = DateTime.Now.AddDays(-7).ToString() + " - " + DateTime.Now.ToString();
             }
             for (int i = 0; i < 4; i++)
             {
-                WeeklySalesList = _PHPRepo.GetSaleByDate(DateTime.Today.AddDays(-7*(i+1)), DateTime.Today.AddDays(-7*i));
+                WeeklySalesList = _PHPRepo.GetSaleByDate(DateTime.Now.AddDays(-7*(i+1)), DateTime.Now.AddDays(-7*i));
                 foreach (Product p in ProductTypeList)
                 {
                     foreach (Sale s in WeeklySalesList)
                     {
                         foreach (ProductSale ps in s.ProductSales)
                         {
-                            Console.WriteLine(WeeklySales[i]);
                             if (ps.Product == p)
-                                WeeklySales[i]++;
+                                WeeklySales[i] = WeeklySales[i] + ps.Quantity;
                         }
                     }
                 }
@@ -60,10 +59,11 @@ namespace PHP
             }
             for (int i = 0; i < 4; i++)
             {
-                PredictedWeeklySales = +WeeklySales[i];
+                PredictedWeeklySales += WeeklySales[i];
             }
-            PredictedWeeklySales = PredictedWeeklySales / 4;
+            PredictedWeeklySales = Math.Ceiling(PredictedWeeklySales / 4);
             SalesPredictionText.Text = PredictedWeeklySales.ToString();
+
 
 
         }
