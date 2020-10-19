@@ -183,6 +183,12 @@
     <Compile Include="EditSale.Designer.cs">
       <DependentUpon>EditSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesPrediction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPrediction.Designer.cs">
+      <DependentUpon>SalesPrediction.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SalesPrediction.resx">
+      <DependentUpon>SalesPrediction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewSale.resx">
       <DependentUpon>ViewSale.cs</DependentUpon>
     </EmbeddedResource>
