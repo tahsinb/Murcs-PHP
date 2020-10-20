@@ -119,7 +119,7 @@ namespace PHP.Database
         }
         public List<Product> GetProductByType(string productType)
         {
-            return _pHPContext.Products.Where(p => p.Type == productType).ToList() ;
+            return _pHPContext.Products.Where(p => p.Type.ToLower() == productType.ToLower()).ToList() ;
         }
         #endregion
     }

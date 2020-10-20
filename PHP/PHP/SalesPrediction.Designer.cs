@@ -35,12 +35,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PredictedSales = new System.Windows.Forms.TextBox();
             this.TotalCostText = new System.Windows.Forms.TextBox();
-            this.SalesPredictionText = new System.Windows.Forms.TextBox();
-            this.PredictionPeriod = new System.Windows.Forms.TextBox();
             this.ProductTypeTextBox = new System.Windows.Forms.TextBox();
+            this.PredictionPeriod = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(76, 262);
+            this.button2.Location = new System.Drawing.Point(76, 270);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 35);
             this.button2.TabIndex = 19;
@@ -86,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(276, 159);
+            this.label2.Location = new System.Drawing.Point(255, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 20;
@@ -97,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(432, 159);
+            this.label3.Location = new System.Drawing.Point(447, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 21;
@@ -107,71 +108,85 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(589, 159);
+            this.label4.Location = new System.Drawing.Point(606, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 13);
             this.label4.TabIndex = 22;
             this.label4.Text = "Predicted Units Sold";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(705, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Total Cost";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63636F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel1.Controls.Add(this.TotalCostText, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SalesPredictionText, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.PredictionPeriod, 1, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.63989F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.36011F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.Controls.Add(this.ProductTypeTextBox, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(257, 202);
+            this.tableLayoutPanel1.Controls.Add(this.PredictionPeriod, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PredictedSales, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.TotalCostText, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(240, 202);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(514, 26);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(536, 26);
             this.tableLayoutPanel1.TabIndex = 24;
+            // 
+            // PredictedSales
+            // 
+            this.PredictedSales.Location = new System.Drawing.Point(368, 3);
+            this.PredictedSales.Name = "PredictedSales";
+            this.PredictedSales.ReadOnly = true;
+            this.PredictedSales.Size = new System.Drawing.Size(94, 20);
+            this.PredictedSales.TabIndex = 28;
             // 
             // TotalCostText
             // 
-            this.TotalCostText.Location = new System.Drawing.Point(438, 3);
+            this.TotalCostText.Location = new System.Drawing.Point(468, 3);
             this.TotalCostText.Name = "TotalCostText";
-            this.TotalCostText.Size = new System.Drawing.Size(70, 20);
-            this.TotalCostText.TabIndex = 28;
-            // 
-            // SalesPredictionText
-            // 
-            this.SalesPredictionText.Location = new System.Drawing.Point(326, 3);
-            this.SalesPredictionText.Name = "SalesPredictionText";
-            this.SalesPredictionText.Size = new System.Drawing.Size(106, 20);
-            this.SalesPredictionText.TabIndex = 27;
-            // 
-            // PredictionPeriod
-            // 
-            this.PredictionPeriod.Location = new System.Drawing.Point(120, 3);
-            this.PredictionPeriod.Name = "PredictionPeriod";
-            this.PredictionPeriod.Size = new System.Drawing.Size(200, 20);
-            this.PredictionPeriod.TabIndex = 26;
+            this.TotalCostText.ReadOnly = true;
+            this.TotalCostText.Size = new System.Drawing.Size(64, 20);
+            this.TotalCostText.TabIndex = 27;
             // 
             // ProductTypeTextBox
             // 
             this.ProductTypeTextBox.Location = new System.Drawing.Point(3, 3);
             this.ProductTypeTextBox.Name = "ProductTypeTextBox";
-            this.ProductTypeTextBox.Size = new System.Drawing.Size(111, 20);
+            this.ProductTypeTextBox.ReadOnly = true;
+            this.ProductTypeTextBox.Size = new System.Drawing.Size(101, 20);
             this.ProductTypeTextBox.TabIndex = 25;
+            // 
+            // PredictionPeriod
+            // 
+            this.PredictionPeriod.Location = new System.Drawing.Point(111, 3);
+            this.PredictionPeriod.Name = "PredictionPeriod";
+            this.PredictionPeriod.ReadOnly = true;
+            this.PredictionPeriod.Size = new System.Drawing.Size(251, 20);
+            this.PredictionPeriod.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(645, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 35);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(715, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Total Cost";
             // 
             // SalesPrediction
             // 
@@ -179,9 +194,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -207,11 +223,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox TotalCostText;
-        private System.Windows.Forms.TextBox SalesPredictionText;
         private System.Windows.Forms.TextBox PredictionPeriod;
         private System.Windows.Forms.TextBox ProductTypeTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox PredictedSales;
+        private System.Windows.Forms.Label label5;
     }
 }
