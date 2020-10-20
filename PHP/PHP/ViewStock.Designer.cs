@@ -37,6 +37,7 @@
             this.ProdIDLabel = new System.Windows.Forms.Label();
             this.ProdIDInput = new System.Windows.Forms.TextBox();
             this.SearchButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProductTable
@@ -55,6 +56,7 @@
             this.ProductTable.TabIndex = 13;
             this.ProductTable.UseCompatibleStateImageBehavior = false;
             this.ProductTable.View = System.Windows.Forms.View.Details;
+            this.ProductTable.SelectedIndexChanged += new System.EventHandler(this.ProductTable_SelectedIndexChanged);
             // 
             // Header1
             // 
@@ -110,6 +112,16 @@
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(721, 370);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 17;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // ViewStock
             // 
             this.AcceptButton = this.SearchButton;
@@ -117,6 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(808, 405);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.ProdIDInput);
             this.Controls.Add(this.ProdIDLabel);
@@ -124,6 +137,7 @@
             this.MinimumSize = new System.Drawing.Size(760, 400);
             this.Name = "ViewStock";
             this.Text = "ViewStock";
+            this.Load += new System.EventHandler(this.ViewStock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +154,6 @@
         private System.Windows.Forms.Label ProdIDLabel;
         private System.Windows.Forms.TextBox ProdIDInput;
         private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

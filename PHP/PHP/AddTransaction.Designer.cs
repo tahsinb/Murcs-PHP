@@ -70,6 +70,7 @@
             this.DateTimeLabel = new System.Windows.Forms.Label();
             this.EmpIDDisplay = new System.Windows.Forms.Label();
             this.EmpNameDisplay = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -450,7 +451,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(657, 487);
+            this.SaveButton.Location = new System.Drawing.Point(584, 487);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(147, 23);
             this.SaveButton.TabIndex = 25;
@@ -489,12 +490,23 @@
             this.EmpNameDisplay.Text = "                                                                                 " +
     "    ";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(737, 487);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 29;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(821, 513);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.EmpNameDisplay);
             this.Controls.Add(this.EmpIDDisplay);
             this.Controls.Add(this.DateTimeLabel);
@@ -569,5 +581,6 @@
         private System.Windows.Forms.Label DateTimeLabel;
         private System.Windows.Forms.Label EmpIDDisplay;
         private System.Windows.Forms.Label EmpNameDisplay;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

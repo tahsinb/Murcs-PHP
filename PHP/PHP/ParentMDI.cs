@@ -142,7 +142,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				AddItem AddItemStock = new AddItem();
+				AddItem AddItemStock = new AddItem(_pHPRepo);
 				AddItemStock.MdiParent = this;
 				AddItemStock.Show();
 			}
@@ -167,7 +167,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				EditItem EditItemStock = new EditItem();
+				EditItem EditItemStock = new EditItem(_pHPRepo);
 				EditItemStock.MdiParent = this;
 				EditItemStock.Show();
 			}
@@ -192,7 +192,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				DeleteItem DeleteItemStock = new DeleteItem();
+				DeleteItem DeleteItemStock = new DeleteItem(_pHPRepo);
 				DeleteItemStock.MdiParent = this;
 				DeleteItemStock.Show();
 			}
