@@ -68,5 +68,15 @@ namespace PHP
                 SaleID = int.Parse(SaleIDtext.Text);
             }
         }
+
+        private void SaleTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewSale_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

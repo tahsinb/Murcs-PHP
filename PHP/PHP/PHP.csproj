@@ -183,12 +183,6 @@
     <Compile Include="ParentMDI.Designer.cs">
       <DependentUpon>ParentMDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddSale.Designer.cs">
-      <DependentUpon>AddSale.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,9 +223,6 @@
     </Compile>
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddSale.resx">
-      <DependentUpon>AddSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTransaction.resx">
       <DependentUpon>AddTransaction.cs</DependentUpon>
