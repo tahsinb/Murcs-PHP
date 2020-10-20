@@ -19,6 +19,10 @@ namespace PHP.Database
         public void AddSalesRecord(Sale sale)
         {
             _pHPContext.Sales.Add(sale);
+            foreach(var productsale in sale.ProductSales)
+            {
+                productsale.Product.Stock_Level = productsale.Product.Stock_Level - productsale.Quantity;
+            }
             _pHPContext.SaveChanges();
         }
         public void EditSalesRecord(Sale sale)
@@ -129,7 +133,12 @@ namespace PHP.Database
         }
         public List<Product> GetProductByType(string productType)
         {
-            return _pHPContext.Products.Where(p => p.Type == productType).ToList() ;
+            return _pHPContext.Products.Where(p => p.Type.ToLower() == productType.ToLower()).ToList() ;
+        }
+
+        public List<Product> GetLowStockProducts()
+        {
+            return _pHPContext.Products.Where(p => p.Stock_Level < p.Low_Stock_Number).ToList();
         }
         #endregion
     }
