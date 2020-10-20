@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.SaleIdLabel = new System.Windows.Forms.Label();
             this.SaleIDtext = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.Header1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,15 +40,15 @@
             this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // SaleIdLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(66, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Sale ID";
+            this.SaleIdLabel.AutoSize = true;
+            this.SaleIdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SaleIdLabel.Location = new System.Drawing.Point(66, 148);
+            this.SaleIdLabel.Name = "SaleIdLabel";
+            this.SaleIdLabel.Size = new System.Drawing.Size(42, 13);
+            this.SaleIdLabel.TabIndex = 6;
+            this.SaleIdLabel.Text = "Sale ID";
             // 
             // SaleIDtext
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.SaleTable);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SaleIDtext);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SaleIdLabel);
             this.Name = "ViewSale";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.ViewSale_Load);
@@ -143,7 +143,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SaleIdLabel;
         private System.Windows.Forms.TextBox SaleIDtext;
         private System.Windows.Forms.Button Search;
         public System.Windows.Forms.ColumnHeader Header1;

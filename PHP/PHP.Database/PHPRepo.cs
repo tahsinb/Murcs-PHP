@@ -104,9 +104,19 @@ namespace PHP.Database
             var productToEdit = _pHPContext.Products.Update(product);
             _pHPContext.SaveChanges();
         }
+        public Product CurrentProduct = new Product();
         public Product GetProductbyId(int id)
         {
             return _pHPContext.Products.Where(s => s.ProductId == id).FirstOrDefault();
+        }
+        public bool VarifyProductID(int id)
+        {
+            CurrentProduct = _pHPContext.Products.Where(s => s.ProductId == id).FirstOrDefault();
+            if (CurrentProduct == default)
+            {
+                return false;
+            }
+            else return true;
         }
         public void deleteProduct(Product product)
         {

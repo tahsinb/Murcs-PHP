@@ -24,15 +24,43 @@ namespace PHP
             _pHPRepo = pHPRepo;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void RemoveButton_Click(object sender, EventArgs e)
         {
             int id;
-            int.TryParse(textBox1.Text, out id);
-            sale = _pHPRepo.GetSaleById(id);
-            _pHPRepo.RemoveSales(sale);
-            MessageBox.Show("Sucessful", "Sale has been deleted", MessageBoxButtons.OK, MessageBoxIcon.None);
+            if (int.TryParse(SaleID.Text, out id))
+            {
+                if (_pHPRepo.GetSaleById(id) != null)
+                {
+                    sale = _pHPRepo.GetSaleById(id);
+                    _pHPRepo.RemoveSales(sale);
+                    MessageBox.Show("Sucessful", "Sale has been deleted", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    SaleID.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Could not find Sale: " + SaleID.Text);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid ID");
+            }
+            
         }
-
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            //confirm closing of forms
+            if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
+                                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //confirmed exit
+                this.Close();
+            }
+            else
+            {
+                //do nothing after dialog box is closed
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -46,22 +74,6 @@ namespace PHP
         private void DeleteSale_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            //confirm closing of forms
-            if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
-                                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                //confirmed exit
-                this.Close();
-
-            }
-            else
-            {
-                //do nothing after dialog box is closed
-            }
         }
     }
 }

@@ -356,7 +356,15 @@ namespace PHP
 
         }
 
+        private void QtyInput1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void AddTransaction_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
