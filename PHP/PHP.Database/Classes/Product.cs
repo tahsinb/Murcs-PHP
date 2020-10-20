@@ -14,6 +14,7 @@ namespace PHP.Database.Classes
         public double Price { get; set; }
         public int Stock_Level { get; set; }
         public string Type { get; set; }
+        public int Low_Stock_Number { get; set; }
 
     }
 }
