@@ -36,7 +36,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Search = new System.Windows.Forms.Button();
             this.SaleIDtext = new System.Windows.Forms.TextBox();
-            this.SaleIdLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.DateBox = new System.Windows.Forms.TextBox();
             this.CostBox = new System.Windows.Forms.TextBox();
             this.NameBox = new System.Windows.Forms.TextBox();
@@ -106,15 +106,15 @@
             this.SaleIDtext.TabIndex = 14;
             this.SaleIDtext.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
-            // SaleIdLabel
+            // label1
             // 
-            this.SaleIdLabel.AutoSize = true;
-            this.SaleIdLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SaleIdLabel.Location = new System.Drawing.Point(60, 168);
-            this.SaleIdLabel.Name = "SaleIdLabel";
-            this.SaleIdLabel.Size = new System.Drawing.Size(42, 13);
-            this.SaleIdLabel.TabIndex = 13;
-            this.SaleIdLabel.Text = "Sale ID";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(55, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Sale ID";
             // 
             // DateBox
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.SaleTable);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.SaleIDtext);
-            this.Controls.Add(this.SaleIdLabel);
+            this.Controls.Add(this.label1);
             this.Name = "EditSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form3";
@@ -202,7 +202,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.TextBox SaleIDtext;
-        private System.Windows.Forms.Label SaleIdLabel;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DateBox;
         private System.Windows.Forms.TextBox CostBox;
         private System.Windows.Forms.TextBox NameBox;
