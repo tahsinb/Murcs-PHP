@@ -38,6 +38,7 @@
             this.ProdIDInput = new System.Windows.Forms.TextBox();
             this.SearchButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProductTable
@@ -122,6 +123,16 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(721, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 18;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // ViewStock
             // 
             this.AcceptButton = this.SearchButton;
@@ -129,6 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(808, 405);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.ProdIDInput);
@@ -136,6 +148,7 @@
             this.Controls.Add(this.ProductTable);
             this.MinimumSize = new System.Drawing.Size(760, 400);
             this.Name = "ViewStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ViewStock";
             this.Load += new System.EventHandler(this.ViewStock_Load);
             this.ResumeLayout(false);
@@ -155,5 +168,6 @@
         private System.Windows.Forms.TextBox ProdIDInput;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }

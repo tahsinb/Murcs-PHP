@@ -43,6 +43,7 @@
             this.Product_Stock = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListView1
@@ -174,12 +175,23 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(713, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 25;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // EditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Product_Stock);
@@ -192,6 +204,7 @@
             this.Controls.Add(this.ID);
             this.Controls.Add(this.ListView1);
             this.Name = "EditItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "EditItem";
             this.Load += new System.EventHandler(this.EditItem_Load);
             this.ResumeLayout(false);
@@ -216,5 +229,6 @@
         private System.Windows.Forms.TextBox Product_Stock;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }

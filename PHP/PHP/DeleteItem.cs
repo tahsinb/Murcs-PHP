@@ -82,5 +82,27 @@ namespace PHP
                 //do nothing after dialog box is closed
             }
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+            if (logoutResult == DialogResult.Yes)
+            {
+
+                //close current page
+                this.Close();
+
+                //close homepage
+                ParentMDI.ActiveForm.Close();
+
+                //return to login page
+                new Login(_PHPRepo).Show();
+
+            }
+            else if (logoutResult == DialogResult.No)
+            {
+                //do nothing
+            }
+        }
     }
 }
