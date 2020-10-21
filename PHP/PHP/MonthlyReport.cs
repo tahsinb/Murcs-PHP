@@ -42,6 +42,7 @@ namespace PHP
             _PHPRepo = pHPRepo;
             _SalesList = _PHPRepo.GetSaleByDate(_from, _to);
             DisplaySales();
+            
         }
         private void DisplaySales()
         {
@@ -51,11 +52,13 @@ namespace PHP
             }
 
             AddSaleToTable(prod_data);
+            AddTotalsToTable();
         }
 
         // sort data so no duplicates appear and quantities are calculated
         private void SortData(Sale sale)
         {
+          
             foreach (ProductSale p in sale.ProductSales)
             {
                 string p_name = p.Product.Product_Name;
@@ -75,6 +78,7 @@ namespace PHP
         // add sorted data to list view table
         private void AddSaleToTable(Dictionary<string, List<double>> sale_data)
         {
+            
             foreach (KeyValuePair<string, List<double>> k in sale_data)
             {
                 string p_name = k.Key;
@@ -88,25 +92,35 @@ namespace PHP
 
                 _totalRevenue += p_price * p_quantity;
             }
+           
+        }
+        void AddTotalsToTable()
+        {
             string[] totalsRow = { _totalSales.ToString(), _totalRevenue.ToString() };
             var TotalListItem = new ListViewItem(totalsRow);
             TotalsTable.Items.Add(TotalListItem);
         }
 
-        private void CurrentToggle_CheckedChanged(object sender, EventArgs e)
+        void ClearTables()
         {
-            current_month = !current_month;
-            // clear data and tables, reset sales and renenue count
-            _totalSales = 0;
-            _totalRevenue = 0;
-            foreach(ListViewItem i in TotalsTable.Items)
+            foreach (ListViewItem i in TotalsTable.Items)
             {
                 i.Remove();
             }
             foreach (ListViewItem i in ReportTable.Items)
             {
-                ReportTable.Items.Remove(i);
+                i.Remove();
             }
+        }
+        private void CurrentToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            ClearTables();
+            prod_data.Clear();
+            current_month = !current_month;
+            // clear data and tables, reset sales and renenue count
+            _totalSales = 0;
+            _totalRevenue = 0;
+
             if (current_month)
             {
                 _to = DateTime.Now;
@@ -118,9 +132,11 @@ namespace PHP
                 _from = firstDayOfThisMonth.AddMonths(-1);
             }
 
+            _SalesList.Clear();
             _SalesList = _PHPRepo.GetSaleByDate(_from, _to);
             DisplaySales();
             ReportTable.Update();
+            TotalsTable.Update();
         }
 
         //generate csv button
