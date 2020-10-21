@@ -101,6 +101,7 @@
             this.ProdIDInput.Size = new System.Drawing.Size(100, 20);
             this.ProdIDInput.TabIndex = 15;
             this.ProdIDInput.TextChanged += new System.EventHandler(this.ProdIDInput_TextChanged);
+            this.ProdIDInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProdIDInput_KeyPress);
             // 
             // SearchButton
             // 

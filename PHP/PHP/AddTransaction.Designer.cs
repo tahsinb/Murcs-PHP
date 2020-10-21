@@ -245,6 +245,7 @@
             this.prodIDinput5.Name = "prodIDinput5";
             this.prodIDinput5.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput5.TabIndex = 21;
+            this.prodIDinput5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prodIDinput5_KeyPress);
             this.prodIDinput5.Leave += new System.EventHandler(this.prodIDinput5_Leave);
             // 
             // PriceInput4
@@ -287,6 +288,7 @@
             this.prodIDinput4.Name = "prodIDinput4";
             this.prodIDinput4.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput4.TabIndex = 17;
+            this.prodIDinput4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prodIDinput4_KeyPress);
             this.prodIDinput4.Leave += new System.EventHandler(this.prodIDinput4_Leave);
             // 
             // PriceInput3
@@ -329,6 +331,7 @@
             this.prodIDinput3.Name = "prodIDinput3";
             this.prodIDinput3.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput3.TabIndex = 13;
+            this.prodIDinput3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prodIDinput3_KeyPress);
             this.prodIDinput3.Leave += new System.EventHandler(this.prodIDinput3_Leave);
             // 
             // PriceInput2
@@ -371,6 +374,7 @@
             this.prodIDinput2.Name = "prodIDinput2";
             this.prodIDinput2.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput2.TabIndex = 9;
+            this.prodIDinput2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prodIDinput2_KeyPress);
             this.prodIDinput2.Leave += new System.EventHandler(this.prodIDinput2_Leave);
             // 
             // PriceInput1
@@ -413,6 +417,7 @@
             this.prodIDinput1.Name = "prodIDinput1";
             this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput1.TabIndex = 5;
+            this.prodIDinput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.prodIDinput1_KeyPress);
             this.prodIDinput1.Leave += new System.EventHandler(this.prodIDinput1_Leave);
             // 
             // ProdIDLabel

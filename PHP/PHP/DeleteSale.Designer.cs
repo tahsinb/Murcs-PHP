@@ -109,7 +109,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DeleteSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form5";
+            this.Text = "DeleteSale";
             this.Load += new System.EventHandler(this.DeleteSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

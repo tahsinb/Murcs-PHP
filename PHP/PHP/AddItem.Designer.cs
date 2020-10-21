@@ -55,9 +55,9 @@
             this.Header3,
             this.Header4});
             this.StockList.HideSelection = false;
-            this.StockList.Location = new System.Drawing.Point(281, 81);
+            this.StockList.Location = new System.Drawing.Point(244, 79);
             this.StockList.Name = "StockList";
-            this.StockList.Size = new System.Drawing.Size(609, 297);
+            this.StockList.Size = new System.Drawing.Size(568, 297);
             this.StockList.TabIndex = 24;
             this.StockList.UseCompatibleStateImageBehavior = false;
             this.StockList.View = System.Windows.Forms.View.Details;
@@ -88,7 +88,7 @@
             this.StockLabel.AutoSize = true;
             this.StockLabel.BackColor = System.Drawing.Color.Transparent;
             this.StockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.StockLabel.Location = new System.Drawing.Point(516, 9);
+            this.StockLabel.Location = new System.Drawing.Point(464, 9);
             this.StockLabel.Name = "StockLabel";
             this.StockLabel.Size = new System.Drawing.Size(131, 51);
             this.StockLabel.TabIndex = 25;
@@ -177,7 +177,7 @@
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(815, 448);
+            this.CloseButton.Location = new System.Drawing.Point(737, 448);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(75, 23);
             this.CloseButton.TabIndex = 26;
@@ -187,7 +187,7 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(815, 12);
+            this.LogOutButton.Location = new System.Drawing.Point(737, 9);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(75, 23);
             this.LogOutButton.TabIndex = 27;
@@ -200,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
-            this.ClientSize = new System.Drawing.Size(902, 483);
+            this.ClientSize = new System.Drawing.Size(826, 483);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.StockList);
@@ -214,6 +214,7 @@
             this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.Name);
+            //this.Name = "AddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddItem";
             this.Load += new System.EventHandler(this.AddItem_Load);
