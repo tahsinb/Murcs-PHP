@@ -98,7 +98,7 @@
             this.CustomerNameInput.Location = new System.Drawing.Point(544, 219);
             this.CustomerNameInput.Name = "CustomerNameInput";
             this.CustomerNameInput.Size = new System.Drawing.Size(265, 20);
-            this.CustomerNameInput.TabIndex = 4;
+            this.CustomerNameInput.TabIndex = 0;
             this.CustomerNameInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustomerNameInput_KeyPress);
             this.CustomerNameInput.Validating += new System.ComponentModel.CancelEventHandler(this.CustomerNameInput_Validating);
             // 

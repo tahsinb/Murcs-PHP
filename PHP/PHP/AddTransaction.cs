@@ -139,10 +139,10 @@ namespace PHP
         /// <param name="e"></param>
         private void CustomerNameInput_Validating(object sender, CancelEventArgs e)
         {
-            if (this.CustomerNameInput.Text == string.Empty)
-            {
-                MessageBox.Show("Please enter customer name.");
-            }
+            //if (this.CustomerNameInput.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Please enter customer name.");
+            //}
         }
 
         /// <summary>
