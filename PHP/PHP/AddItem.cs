@@ -59,18 +59,18 @@ namespace PHP
                     }
                     else
                     {
-                        MessageBox.Show("Not an acceptible ID");
+                        MessageBox.Show("Not an acceptable ID");
                         Fail = false;
                         break;
                     }
 
-                    if (Int32.TryParse(Price.Text, out IntTest))
+                    if (Double.TryParse(Price.Text, out DoubleTest))
                     {
                         _Product.Price = Int32.Parse(Price.Text);
                     }
                     else
                     {
-                        MessageBox.Show("Not an acceptible price");
+                        MessageBox.Show("Not an acceptable price");
                         Fail = false;
                         break;
                     }
@@ -81,7 +81,7 @@ namespace PHP
                     }
                     else
                     {
-                        MessageBox.Show("Not an acceptible stock level");
+                        MessageBox.Show("Not an acceptable stock level");
                         Fail = false;
                         break;
                     }
