@@ -263,6 +263,58 @@ namespace PHP
 
         }
 
+		//open weekly report
+        private void weeklyReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			foreach (Form frm in this.MdiChildren)
+			{
+				frm.Visible = false;
+				frm.Dispose();
+			}
+			bool isOpen = false;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f.Text == "ViewStock")
+				{
+					isOpen = true;
+					f.Focus();
+					break;
+				}
+			}
+			if (isOpen == false)
+			{
+				WeeklyReport weeklyReport = new WeeklyReport(_pHPRepo);
+				weeklyReport.MdiParent = this;
+				weeklyReport.Show();
+			}
+		}
+		//open monthly report
+        private void monthlyReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			foreach (Form frm in this.MdiChildren)
+			{
+				frm.Visible = false;
+				frm.Dispose();
+			}
+			bool isOpen = false;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f.Text == "ViewStock")
+				{
+					isOpen = true;
+					f.Focus();
+					break;
+				}
+			}
+			if (isOpen == false)
+			{
+
+				MonthlyReport monthlyReport = new MonthlyReport(_pHPRepo);
+				monthlyReport.MdiParent = this;
+				monthlyReport.Show();
+			}
+		}
+
 
         private void HomepageLogOutButton_Click(object sender, EventArgs e)
         {
