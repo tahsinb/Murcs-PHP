@@ -1,4 +1,5 @@
 ﻿using PHP.Database;
+using PHP.Database.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,34 @@ namespace PHP
     public partial class LowStock : Form
     {
         PHPRepo _PHPRepo;
+        private int prodID;
+        private Product _product;
+        List<Product> _lowStockList;
+
         public LowStock(PHPRepo pHPRepo)
         {
             InitializeComponent();
             _PHPRepo = pHPRepo;
+            _lowStockList = pHPRepo.GetLowStockProducts();
+            DisplayLowStock();
         }
+
+        private void DisplayLowStock()
+        {
+            foreach(Product p in _lowStockList)
+            {
+                AddProductToTable(p);
+            }
+        }
+
+        private void AddProductToTable(Product prod)
+        {
+            string[] row = { prod.ProductId.ToString(), prod.Product_Name, prod.Stock_Level.ToString() };
+            var listViewItem = new ListViewItem(row);
+            LowStockTable.Items.Add(listViewItem);
+        }
+
+
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -56,6 +80,60 @@ namespace PHP
             {
                 //do nothing
             }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            LowStockTable.Items.Clear();
+            if (_PHPRepo.GetProductbyId(prodID) == null || textBox1.Text == "")
+            {
+                MessageBox.Show("Please enter a valid product ID.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplayLowStock();
+                textBox1.Text = "";
+            }
+            else
+            {
+                _product = _PHPRepo.GetProductbyId(prodID);
+                if(_lowStockList.Contains(_product))
+                {
+                    AddProductToTable(_product);
+                }
+                else
+                {
+
+                    MessageBox.Show("This product has not been flagged for low stock.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DisplayLowStock();
+                    textBox1.Text = "";
+                }
+                
+
+               
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                textBox1.Text = "";
+                LowStockTable.Items.Clear();
+                DisplayLowStock();
+            }
+            else
+            {
+                try
+                {
+                    prodID = Int32.Parse(textBox1.Text);
+
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Please enter a valid product ID.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Text = "";
+                }
+            }
+            LowStockTable.Items.Clear();
+            DisplayLowStock();
         }
     }
 }
