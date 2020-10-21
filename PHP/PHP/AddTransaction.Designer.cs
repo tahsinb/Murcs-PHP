@@ -34,9 +34,7 @@
             this.EmpIDLabel = new System.Windows.Forms.Label();
             this.CustNameLabel = new System.Windows.Forms.Label();
             this.CompanyName = new System.Windows.Forms.Label();
-            this.SaleIDLabel = new System.Windows.Forms.Label();
             this.DescLabel = new System.Windows.Forms.Label();
-            this.SaleIDInput = new System.Windows.Forms.MaskedTextBox();
             this.EmployeeSectionLabel = new System.Windows.Forms.Label();
             this.TransactionSectionLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -70,6 +68,8 @@
             this.DateTimeLabel = new System.Windows.Forms.Label();
             this.EmpIDDisplay = new System.Windows.Forms.Label();
             this.EmpNameDisplay = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Location = new System.Drawing.Point(489, 99);
+            this.DateLabel.Location = new System.Drawing.Point(48, 99);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(33, 13);
             this.DateLabel.TabIndex = 1;
@@ -133,16 +133,6 @@
             this.CompanyName.TabIndex = 8;
             this.CompanyName.Text = "People Health Pharmacy";
             // 
-            // SaleIDLabel
-            // 
-            this.SaleIDLabel.AutoSize = true;
-            this.SaleIDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SaleIDLabel.Location = new System.Drawing.Point(73, 92);
-            this.SaleIDLabel.Name = "SaleIDLabel";
-            this.SaleIDLabel.Size = new System.Drawing.Size(45, 13);
-            this.SaleIDLabel.TabIndex = 9;
-            this.SaleIDLabel.Text = "Sale ID:";
-            // 
             // DescLabel
             // 
             this.DescLabel.AutoSize = true;
@@ -153,15 +143,6 @@
             this.DescLabel.Size = new System.Drawing.Size(325, 18);
             this.DescLabel.TabIndex = 12;
             this.DescLabel.Text = "Please fill out all the details below to record sale.";
-            // 
-            // SaleIDInput
-            // 
-            this.SaleIDInput.Location = new System.Drawing.Point(134, 92);
-            this.SaleIDInput.Mask = "00000";
-            this.SaleIDInput.Name = "SaleIDInput";
-            this.SaleIDInput.Size = new System.Drawing.Size(38, 20);
-            this.SaleIDInput.TabIndex = 0;
-            this.SaleIDInput.ValidatingType = typeof(int);
             // 
             // EmployeeSectionLabel
             // 
@@ -240,22 +221,31 @@
             this.QtyInput5.Name = "QtyInput5";
             this.QtyInput5.Size = new System.Drawing.Size(150, 20);
             this.QtyInput5.TabIndex = 23;
+            this.QtyInput5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput5_KeyPress);
+            this.QtyInput5.Leave += new System.EventHandler(this.QtyInput5_Leave);
             // 
             // ProdNameInput5
             // 
+            this.ProdNameInput5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput5.Location = new System.Drawing.Point(120, 139);
             this.ProdNameInput5.Name = "ProdNameInput5";
             this.ProdNameInput5.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput5.TabIndex = 22;
+            this.ProdNameInput5.TextChanged += new System.EventHandler(this.ProdNameInput5_TextChanged);
+            this.ProdNameInput5.Leave += new System.EventHandler(this.ProdNameInput5_Leave);
             // 
             // prodIDinput5
             // 
+            this.prodIDinput5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput5.Location = new System.Drawing.Point(3, 139);
             this.prodIDinput5.Name = "prodIDinput5";
             this.prodIDinput5.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput5.TabIndex = 21;
+            this.prodIDinput5.Leave += new System.EventHandler(this.prodIDinput5_Leave);
             // 
             // PriceInput4
             // 
@@ -273,22 +263,31 @@
             this.QtyInput4.Name = "QtyInput4";
             this.QtyInput4.Size = new System.Drawing.Size(150, 20);
             this.QtyInput4.TabIndex = 19;
+            this.QtyInput4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput4_KeyPress);
+            this.QtyInput4.Leave += new System.EventHandler(this.QtyInput4_Leave);
             // 
             // ProdNameInput4
             // 
+            this.ProdNameInput4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput4.Location = new System.Drawing.Point(120, 105);
             this.ProdNameInput4.Name = "ProdNameInput4";
             this.ProdNameInput4.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput4.TabIndex = 18;
+            this.ProdNameInput4.TextChanged += new System.EventHandler(this.ProdNameInput4_TextChanged);
+            this.ProdNameInput4.Leave += new System.EventHandler(this.ProdNameInput4_Leave);
             // 
             // prodIDinput4
             // 
+            this.prodIDinput4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput4.Location = new System.Drawing.Point(3, 105);
             this.prodIDinput4.Name = "prodIDinput4";
             this.prodIDinput4.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput4.TabIndex = 17;
+            this.prodIDinput4.Leave += new System.EventHandler(this.prodIDinput4_Leave);
             // 
             // PriceInput3
             // 
@@ -306,22 +305,31 @@
             this.QtyInput3.Name = "QtyInput3";
             this.QtyInput3.Size = new System.Drawing.Size(150, 20);
             this.QtyInput3.TabIndex = 15;
+            this.QtyInput3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput3_KeyPress);
+            this.QtyInput3.Leave += new System.EventHandler(this.QtyInput3_Leave);
             // 
             // ProdNameInput3
             // 
+            this.ProdNameInput3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput3.Location = new System.Drawing.Point(120, 71);
             this.ProdNameInput3.Name = "ProdNameInput3";
             this.ProdNameInput3.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput3.TabIndex = 14;
+            this.ProdNameInput3.TextChanged += new System.EventHandler(this.ProdNameInput3_TextChanged);
+            this.ProdNameInput3.Leave += new System.EventHandler(this.ProdNameInput3_Leave);
             // 
             // prodIDinput3
             // 
+            this.prodIDinput3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput3.Location = new System.Drawing.Point(3, 71);
             this.prodIDinput3.Name = "prodIDinput3";
             this.prodIDinput3.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput3.TabIndex = 13;
+            this.prodIDinput3.Leave += new System.EventHandler(this.prodIDinput3_Leave);
             // 
             // PriceInput2
             // 
@@ -339,22 +347,31 @@
             this.QtyInput2.Name = "QtyInput2";
             this.QtyInput2.Size = new System.Drawing.Size(150, 20);
             this.QtyInput2.TabIndex = 11;
+            this.QtyInput2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput2_KeyPress);
+            this.QtyInput2.Leave += new System.EventHandler(this.QtyInput2_Leave);
             // 
             // ProdNameInput2
             // 
+            this.ProdNameInput2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput2.Location = new System.Drawing.Point(120, 37);
             this.ProdNameInput2.Name = "ProdNameInput2";
             this.ProdNameInput2.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput2.TabIndex = 10;
+            this.ProdNameInput2.TextChanged += new System.EventHandler(this.ProdNameInput2_TextChanged);
+            this.ProdNameInput2.Leave += new System.EventHandler(this.ProdNameInput2_Leave);
             // 
             // prodIDinput2
             // 
+            this.prodIDinput2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput2.Location = new System.Drawing.Point(3, 37);
             this.prodIDinput2.Name = "prodIDinput2";
             this.prodIDinput2.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput2.TabIndex = 9;
+            this.prodIDinput2.Leave += new System.EventHandler(this.prodIDinput2_Leave);
             // 
             // PriceInput1
             // 
@@ -372,22 +389,31 @@
             this.QtyInput1.Name = "QtyInput1";
             this.QtyInput1.Size = new System.Drawing.Size(150, 20);
             this.QtyInput1.TabIndex = 7;
+            this.QtyInput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput1_KeyPress);
+            this.QtyInput1.Leave += new System.EventHandler(this.QtyInput1_Leave);
             // 
             // ProdNameInput1
             // 
+            this.ProdNameInput1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput1.Location = new System.Drawing.Point(120, 3);
             this.ProdNameInput1.Name = "ProdNameInput1";
             this.ProdNameInput1.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput1.TabIndex = 6;
+            this.ProdNameInput1.TextChanged += new System.EventHandler(this.ProdNameInput1_TextChanged);
+            this.ProdNameInput1.Leave += new System.EventHandler(this.ProdNameInput1_Leave);
             // 
             // prodIDinput1
             // 
+            this.prodIDinput1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput1.Location = new System.Drawing.Point(3, 3);
             this.prodIDinput1.Name = "prodIDinput1";
             this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput1.TabIndex = 5;
+            this.prodIDinput1.Leave += new System.EventHandler(this.prodIDinput1_Leave);
             // 
             // ProdIDLabel
             // 
@@ -450,7 +476,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(657, 487);
+            this.SaveButton.Location = new System.Drawing.Point(584, 487);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(147, 23);
             this.SaveButton.TabIndex = 25;
@@ -462,7 +488,7 @@
             // 
             this.DateTimeLabel.AutoSize = true;
             this.DateTimeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateTimeLabel.Location = new System.Drawing.Point(544, 99);
+            this.DateTimeLabel.Location = new System.Drawing.Point(107, 99);
             this.DateTimeLabel.Name = "DateTimeLabel";
             this.DateTimeLabel.Size = new System.Drawing.Size(129, 13);
             this.DateTimeLabel.TabIndex = 26;
@@ -489,12 +515,34 @@
             this.EmpNameDisplay.Text = "                                                                                 " +
     "    ";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(737, 487);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 29;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(734, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 30;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(821, 513);
+            this.Controls.Add(this.LogOutButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.EmpNameDisplay);
             this.Controls.Add(this.EmpIDDisplay);
             this.Controls.Add(this.DateTimeLabel);
@@ -508,9 +556,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.TransactionSectionLabel);
             this.Controls.Add(this.EmployeeSectionLabel);
-            this.Controls.Add(this.SaleIDInput);
             this.Controls.Add(this.DescLabel);
-            this.Controls.Add(this.SaleIDLabel);
             this.Controls.Add(this.CompanyName);
             this.Controls.Add(this.CustNameLabel);
             this.Controls.Add(this.EmpIDLabel);
@@ -518,6 +564,7 @@
             this.Controls.Add(this.EmpNameLabel);
             this.Controls.Add(this.DateLabel);
             this.Name = "AddTransaction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddTransaction";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -533,9 +580,7 @@
         private System.Windows.Forms.Label EmpIDLabel;
         private System.Windows.Forms.Label CustNameLabel;
         private System.Windows.Forms.Label CompanyName;
-        private System.Windows.Forms.Label SaleIDLabel;
         private System.Windows.Forms.Label DescLabel;
-        private System.Windows.Forms.MaskedTextBox SaleIDInput;
         private System.Windows.Forms.Label EmployeeSectionLabel;
         private System.Windows.Forms.Label TransactionSectionLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -569,5 +614,7 @@
         private System.Windows.Forms.Label DateTimeLabel;
         private System.Windows.Forms.Label EmpIDDisplay;
         private System.Windows.Forms.Label EmpNameDisplay;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }

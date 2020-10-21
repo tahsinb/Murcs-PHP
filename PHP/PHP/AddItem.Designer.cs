@@ -28,38 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.StockList = new System.Windows.Forms.ListView();
             this.Header1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.StockLabel = new System.Windows.Forms.Label();
+            this.StockLevelLabel = new System.Windows.Forms.Label();
             this.Price = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PriceLabel = new System.Windows.Forms.Label();
             this.Stock = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.AddItemButton = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // StockList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.StockList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Header1,
             this.Header2,
             this.Header3,
             this.Header4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(281, 81);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(609, 297);
-            this.listView1.TabIndex = 24;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.StockList.HideSelection = false;
+            this.StockList.Location = new System.Drawing.Point(281, 81);
+            this.StockList.Name = "StockList";
+            this.StockList.Size = new System.Drawing.Size(609, 297);
+            this.StockList.TabIndex = 24;
+            this.StockList.UseCompatibleStateImageBehavior = false;
+            this.StockList.View = System.Windows.Forms.View.Details;
+            this.StockList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Header1
             // 
@@ -81,28 +83,28 @@
             this.Header4.Text = "Stock Level";
             this.Header4.Width = 150;
             // 
-            // label5
+            // StockLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label5.Location = new System.Drawing.Point(516, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 51);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Stock";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.StockLabel.AutoSize = true;
+            this.StockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.StockLabel.Location = new System.Drawing.Point(516, 9);
+            this.StockLabel.Name = "StockLabel";
+            this.StockLabel.Size = new System.Drawing.Size(131, 51);
+            this.StockLabel.TabIndex = 25;
+            this.StockLabel.Text = "Stock";
+            this.StockLabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // StockLevelLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(43, 252);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Stock Level";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.StockLevelLabel.AutoSize = true;
+            this.StockLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StockLevelLabel.Location = new System.Drawing.Point(43, 252);
+            this.StockLevelLabel.Name = "StockLevelLabel";
+            this.StockLevelLabel.Size = new System.Drawing.Size(64, 13);
+            this.StockLevelLabel.TabIndex = 23;
+            this.StockLevelLabel.Text = "Stock Level";
+            this.StockLevelLabel.Click += new System.EventHandler(this.label4_Click);
             // 
             // Price
             // 
@@ -111,15 +113,15 @@
             this.Price.Size = new System.Drawing.Size(100, 20);
             this.Price.TabIndex = 22;
             // 
-            // label3
+            // PriceLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(67, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Price";
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PriceLabel.Location = new System.Drawing.Point(67, 215);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(31, 13);
+            this.PriceLabel.TabIndex = 21;
+            this.PriceLabel.Text = "Price";
             // 
             // Stock
             // 
@@ -128,35 +130,35 @@
             this.Stock.Size = new System.Drawing.Size(100, 20);
             this.Stock.TabIndex = 20;
             // 
-            // label2
+            // IDLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(79, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "ID";
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IDLabel.Location = new System.Drawing.Point(79, 173);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(18, 13);
+            this.IDLabel.TabIndex = 19;
+            this.IDLabel.Text = "ID";
             // 
-            // label1
+            // NameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(72, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Name";
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NameLabel.Location = new System.Drawing.Point(72, 135);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(35, 13);
+            this.NameLabel.TabIndex = 18;
+            this.NameLabel.Text = "Name";
             // 
-            // button2
+            // AddItemButton
             // 
-            this.button2.Location = new System.Drawing.Point(113, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Add Item";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.AddItemButton.Location = new System.Drawing.Point(113, 305);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(100, 38);
+            this.AddItemButton.TabIndex = 17;
+            this.AddItemButton.Text = "Add Item";
+            this.AddItemButton.UseVisualStyleBackColor = true;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
             // ID
             // 
@@ -173,23 +175,46 @@
             this.Name.Size = new System.Drawing.Size(100, 20);
             this.Name.TabIndex = 14;
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(815, 448);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 26;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(815, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 27;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(902, 483);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LogOutButton);
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.StockList);
+            this.Controls.Add(this.StockLabel);
+            this.Controls.Add(this.StockLevelLabel);
             this.Controls.Add(this.Price);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.Stock);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.IDLabel);
+            this.Controls.Add(this.NameLabel);
+            this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.Name);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddItem";
             this.Load += new System.EventHandler(this.AddItem_Load);
             this.ResumeLayout(false);
@@ -198,20 +223,22 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView StockList;
         public System.Windows.Forms.ColumnHeader Header1;
         private System.Windows.Forms.ColumnHeader Header2;
         private System.Windows.Forms.ColumnHeader Header3;
         private System.Windows.Forms.ColumnHeader Header4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label StockLabel;
+        private System.Windows.Forms.Label StockLevelLabel;
         private System.Windows.Forms.TextBox Price;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.TextBox Stock;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label IDLabel;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Button AddItemButton;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }

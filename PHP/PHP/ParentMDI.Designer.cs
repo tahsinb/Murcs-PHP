@@ -44,6 +44,7 @@
             this.weeklyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesPredictionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HomepageLogOutButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,6 +176,16 @@
             this.salesPredictionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salesPredictionsToolStripMenuItem.Text = "Sales Predictions";
             // 
+            // HomepageLogOutButton
+            // 
+            this.HomepageLogOutButton.Location = new System.Drawing.Point(887, 40);
+            this.HomepageLogOutButton.Name = "HomepageLogOutButton";
+            this.HomepageLogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.HomepageLogOutButton.TabIndex = 3;
+            this.HomepageLogOutButton.Text = "Log Out";
+            this.HomepageLogOutButton.UseVisualStyleBackColor = true;
+            this.HomepageLogOutButton.Click += new System.EventHandler(this.HomepageLogOutButton_Click);
+            // 
             // ParentMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,12 +193,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PHP.Properties.Resources.Background1;
             this.ClientSize = new System.Drawing.Size(974, 582);
+            this.Controls.Add(this.HomepageLogOutButton);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ParentMDI";
-            this.Text = "Form1";
+            this.Text = "People Health Pharmacy Application";
+            this.Activated += new System.EventHandler(this.ParentMDI_Activated);
             this.Load += new System.EventHandler(this.ParentMDI_Load);
+            this.VisibleChanged += new System.EventHandler(this.ParentMDI_VisibleChanged);
+            this.Enter += new System.EventHandler(this.ParentMDI_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -213,6 +228,7 @@
         private System.Windows.Forms.ToolStripMenuItem monthlyReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesPredictionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewStockToolStripMenuItem;
+        private System.Windows.Forms.Button HomepageLogOutButton;
     }
 }
 
