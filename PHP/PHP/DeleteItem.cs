@@ -40,7 +40,7 @@ namespace PHP
             int ID;
             if (int.TryParse(ProductID.Text, out ID))
             {
-                if (_PHPRepo.VarifyProductID(ID))
+                if (_PHPRepo.VerifyProductID(ID))
                 {
                     _PHPRepo.GetProductbyId(ID);
                     Product _Product = _PHPRepo.GetProductbyId(ID);

@@ -113,7 +113,7 @@ namespace PHP.Database
         {
             return _pHPContext.Products.Where(s => s.ProductId == id).FirstOrDefault();
         }
-        public bool VarifyProductID(int id)
+        public bool VerifyProductID(int id)
         {
             CurrentProduct = _pHPContext.Products.Where(s => s.ProductId == id).FirstOrDefault();
             if (CurrentProduct == default)
