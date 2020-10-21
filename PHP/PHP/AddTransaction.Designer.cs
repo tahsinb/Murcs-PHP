@@ -71,6 +71,7 @@
             this.EmpIDDisplay = new System.Windows.Forms.Label();
             this.EmpNameDisplay = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -500,12 +501,23 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(734, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 30;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(821, 513);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.EmpNameDisplay);
             this.Controls.Add(this.EmpIDDisplay);
@@ -530,6 +542,7 @@
             this.Controls.Add(this.EmpNameLabel);
             this.Controls.Add(this.DateLabel);
             this.Name = "AddTransaction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddTransaction";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -582,5 +595,6 @@
         private System.Windows.Forms.Label EmpIDDisplay;
         private System.Windows.Forms.Label EmpNameDisplay;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }
