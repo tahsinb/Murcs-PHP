@@ -668,9 +668,6 @@ namespace PHP
                     //do nothing after dialog box is closed
                 }
         }
-<<<<<<< HEAD
-=======
-
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
@@ -692,7 +689,7 @@ namespace PHP
                 //do nothing
             }
         }
->>>>>>> master
+
     }
 }
 
