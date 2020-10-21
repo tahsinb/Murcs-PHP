@@ -64,6 +64,17 @@ namespace PHP
                         break;
                     }
 
+                    if (Int32.TryParse(Price.Text, out IntTest))
+                    {
+                        _Product.Price = Int32.Parse(Price.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not an acceptible price");
+                        Fail = false;
+                        break;
+                    }
+
                     if (Int32.TryParse(Stock.Text, out IntTest))
                     {
                         _Product.Stock_Level = Int32.Parse(Stock.Text);
