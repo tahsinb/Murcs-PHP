@@ -35,12 +35,9 @@ namespace PHP
             //initialise autocomplete
             _ProductList = pHPRepo.GetProducts();
             initialiseAutocomplete();
+
             
-
         }
-
-
-
 
         //Methods to validate data entry into form
         #region Validation Checks
@@ -138,9 +135,9 @@ namespace PHP
         private void SaveButton_Click_1(object sender, EventArgs e)
         {
             //checks if all fields are completed 
-            if (SaleIDInput.MaskCompleted && !string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
+            if (!string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
             {
-                _sale.SaleId = Int32.Parse(SaleIDInput.Text);
+                //_sale.SaleId = Int32.Parse(SaleIDInput.Text);
                 _sale.Sale_Date = DateTime.Now;
                
                 _sale.Customer_Name = CustomerNameInput.Text;

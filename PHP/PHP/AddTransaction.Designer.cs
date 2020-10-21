@@ -34,9 +34,7 @@
             this.EmpIDLabel = new System.Windows.Forms.Label();
             this.CustNameLabel = new System.Windows.Forms.Label();
             this.CompanyName = new System.Windows.Forms.Label();
-            this.SaleIDLabel = new System.Windows.Forms.Label();
             this.DescLabel = new System.Windows.Forms.Label();
-            this.SaleIDInput = new System.Windows.Forms.MaskedTextBox();
             this.EmployeeSectionLabel = new System.Windows.Forms.Label();
             this.TransactionSectionLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -79,7 +77,7 @@
             // 
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Location = new System.Drawing.Point(489, 99);
+            this.DateLabel.Location = new System.Drawing.Point(48, 99);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(33, 13);
             this.DateLabel.TabIndex = 1;
@@ -135,16 +133,6 @@
             this.CompanyName.TabIndex = 8;
             this.CompanyName.Text = "People Health Pharmacy";
             // 
-            // SaleIDLabel
-            // 
-            this.SaleIDLabel.AutoSize = true;
-            this.SaleIDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SaleIDLabel.Location = new System.Drawing.Point(73, 92);
-            this.SaleIDLabel.Name = "SaleIDLabel";
-            this.SaleIDLabel.Size = new System.Drawing.Size(45, 13);
-            this.SaleIDLabel.TabIndex = 9;
-            this.SaleIDLabel.Text = "Sale ID:";
-            // 
             // DescLabel
             // 
             this.DescLabel.AutoSize = true;
@@ -155,15 +143,6 @@
             this.DescLabel.Size = new System.Drawing.Size(325, 18);
             this.DescLabel.TabIndex = 12;
             this.DescLabel.Text = "Please fill out all the details below to record sale.";
-            // 
-            // SaleIDInput
-            // 
-            this.SaleIDInput.Location = new System.Drawing.Point(134, 92);
-            this.SaleIDInput.Mask = "00000";
-            this.SaleIDInput.Name = "SaleIDInput";
-            this.SaleIDInput.Size = new System.Drawing.Size(38, 20);
-            this.SaleIDInput.TabIndex = 0;
-            this.SaleIDInput.ValidatingType = typeof(int);
             // 
             // EmployeeSectionLabel
             // 
@@ -509,7 +488,7 @@
             // 
             this.DateTimeLabel.AutoSize = true;
             this.DateTimeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateTimeLabel.Location = new System.Drawing.Point(544, 99);
+            this.DateTimeLabel.Location = new System.Drawing.Point(107, 99);
             this.DateTimeLabel.Name = "DateTimeLabel";
             this.DateTimeLabel.Size = new System.Drawing.Size(129, 13);
             this.DateTimeLabel.TabIndex = 26;
@@ -577,9 +556,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.TransactionSectionLabel);
             this.Controls.Add(this.EmployeeSectionLabel);
-            this.Controls.Add(this.SaleIDInput);
             this.Controls.Add(this.DescLabel);
-            this.Controls.Add(this.SaleIDLabel);
             this.Controls.Add(this.CompanyName);
             this.Controls.Add(this.CustNameLabel);
             this.Controls.Add(this.EmpIDLabel);
@@ -603,9 +580,7 @@
         private System.Windows.Forms.Label EmpIDLabel;
         private System.Windows.Forms.Label CustNameLabel;
         private System.Windows.Forms.Label CompanyName;
-        private System.Windows.Forms.Label SaleIDLabel;
         private System.Windows.Forms.Label DescLabel;
-        private System.Windows.Forms.MaskedTextBox SaleIDInput;
         private System.Windows.Forms.Label EmployeeSectionLabel;
         private System.Windows.Forms.Label TransactionSectionLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
