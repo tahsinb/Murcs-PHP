@@ -30,7 +30,7 @@ namespace PHP
             {
                 string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
                 var listViewItem = new ListViewItem(row);
-                listView1.Items.Add(listViewItem);
+                StockList.Items.Add(listViewItem);
             };
         }
 
@@ -44,32 +44,67 @@ namespace PHP
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void AddItemButton_Click(object sender, EventArgs e)
         {
-
-
-            _Product.ProductId = Int32.Parse(ID.Text);
-            _Product.Product_Name = Name.Text;
-            _Product.Price = Double.Parse(Price.Text);
-            _Product.Stock_Level = Int32.Parse(Stock.Text);
-            _PHPRepo.AddProductRecord(_Product);
-            
-            MessageBox.Show("New product added successfully.");
-
-            listView1.Items.Clear();
-            List<Product> _NewList = _PHPRepo.GetProducts();
-            foreach (Product p in _NewList)
+            if (!string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(ID.Text) && !string.IsNullOrEmpty(Price.Text) && !string.IsNullOrEmpty(Stock.Text))
             {
-                string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
-                var listViewItem = new ListViewItem(row);
-                listView1.Items.Add(listViewItem);
-            };
-            Name.Clear();
-            Price.Clear();
-            ID.Clear();
-            Stock.Clear();
+                int IntTest;
+                Double DoubleTest;
+                Boolean Fail = true;
+                while (Fail)
+                {
+                    if (Int32.TryParse(ID.Text, out IntTest))
+                    {
+                        _Product.ProductId = Int32.Parse(ID.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not an acceptible ID");
+                        Fail = false;
+                        break;
+                    }
+
+                    if (Int32.TryParse(Stock.Text, out IntTest))
+                    {
+                        _Product.Stock_Level = Int32.Parse(Stock.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not an acceptible stock level");
+                        Fail = false;
+                        break;
+                    }
+
+                    _Product.Product_Name = Name.Text;
+                    _PHPRepo.AddProductRecord(_Product);
+
+                    MessageBox.Show("New product added successfully.");
+
+                    StockList.Items.Clear();
+                    List<Product> _NewList = _PHPRepo.GetProducts();
+                    foreach (Product p in _NewList)
+                    {
+                        string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
+                        var listViewItem = new ListViewItem(row);
+                        StockList.Items.Add(listViewItem);
+                    };
+
+                    Name.Clear();
+                    Price.Clear();
+                    ID.Clear();
+                    Stock.Clear();
+
+                    Fail = false;
+                    break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all fields");
+            }
+
         }
-private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
