@@ -196,7 +196,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ParentMDI";
-            this.Text = "Form1";
+            this.Text = "People Health Pharmacy Application";
             this.Activated += new System.EventHandler(this.ParentMDI_Activated);
             this.Load += new System.EventHandler(this.ParentMDI_Load);
             this.menuStrip1.ResumeLayout(false);
