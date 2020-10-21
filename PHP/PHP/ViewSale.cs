@@ -31,7 +31,10 @@ namespace PHP
         {
             SaleTable.Items.Clear();
             if (_PHPRepo.GetSaleById(SaleID) == null)
+            {
                 MessageBox.Show("Could not find sale", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplaySales();
+            }
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
@@ -65,7 +68,15 @@ namespace PHP
             }
             else
             {
-                SaleID = int.Parse(SaleIDtext.Text);
+                try
+                {
+                    SaleID = int.Parse(SaleIDtext.Text);
+                }
+                catch(FormatException)
+                {
+                    MessageBox.Show("Please enter a valid sale ID.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SaleIDtext.Text = "";
+                }
             }
         }
 
@@ -81,18 +92,8 @@ namespace PHP
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            //confirm closing of forms
-            if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
-                                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 //confirmed exit
                 this.Close();
-
-            }
-            else
-            {
-                //do nothing after dialog box is closed
-            }
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -115,6 +116,11 @@ namespace PHP
             {
                 //do nothing
             }
+        }
+
+        private void SaleIDtext_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

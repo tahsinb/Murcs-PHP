@@ -42,6 +42,36 @@ namespace PHP
         //Methods to validate data entry into form
         #region Validation Checks
 
+        //only allows integer input on product id fields
+        private void prodIDinput1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
         //only allows integer input on quantity fields
         private void QtyInput1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -694,6 +724,7 @@ namespace PHP
             }
         }
 
+       
     }
 }
 

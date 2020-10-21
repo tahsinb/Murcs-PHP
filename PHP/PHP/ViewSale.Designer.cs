@@ -58,6 +58,7 @@
             this.SaleIDtext.Size = new System.Drawing.Size(100, 20);
             this.SaleIDtext.TabIndex = 8;
             this.SaleIDtext.TextChanged += new System.EventHandler(this.SaleID_TexChanged);
+            this.SaleIDtext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaleIDtext_KeyPress);
             // 
             // Search
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form4";
+            this.Text = "ViewSale";
             this.Load += new System.EventHandler(this.ViewSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
