@@ -19,16 +19,17 @@ namespace PHP
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
 
-        private double _totalSales;
-        private double _totalRevenue;
-
         bool current_month = false;
         DateTime firstDayOfThisMonth;
         DateTime _to;
         DateTime _from;
 
         string folder = null;
-        string default_filepath = "C:/Monthly Reports/";
+        string default_filepath = "C:/Reports/Monthly Reports/";
+
+        Dictionary<string, List<double>> prod_data = new Dictionary<string, List<double>>();
+        private double _totalSales;
+        private double _totalRevenue;
 
         public MonthlyReport(PHPRepo pHPRepo)
         {
@@ -40,65 +41,71 @@ namespace PHP
 
             _PHPRepo = pHPRepo;
             _SalesList = _PHPRepo.GetSaleByDate(_from, _to);
-
             DisplaySales();
-            DisplayTotalSales();
-            DisplayTotalRevenue();
         }
         private void DisplaySales()
         {
             foreach (Sale sale in _SalesList)
             {
-                AddSaleToTable(sale);
+                SortData(sale);
             }
-        }
-        private void AddSaleToTable(Sale sale)
-        {
-            string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
-                            sale.Total_Cost.ToString(), sale.Customer_Name};
-            var listViewItem = new ListViewItem(row);
-            SaleTable.Items.Add(listViewItem);
+
+            AddSaleToTable(prod_data);
         }
 
-        //calculate and display total sales (not working at the moment, maybe not needed?)
-        private void DisplayTotalSales()
+        // sort data so no duplicates appear and quantities are calculated
+        private void SortData(Sale sale)
         {
-            _totalSales = 0;
-            TotalSales.Text = _totalSales.ToString();
-           /* foreach (Sale sale in _SalesList)
+            foreach (ProductSale p in sale.ProductSales)
             {
-                for (int i = 0; i < sale.ProductSales.Count; i++)
+                string p_name = p.Product.Product_Name;
+                int p_quantity = p.Quantity;
+                double p_price = p.Product.Price;
+
+                if (prod_data.ContainsKey(p_name))
                 {
-                    int num = sale.ProductSales.ElementAt(i).Quantity;
-                    _totalSales += num;
+                    prod_data[p_name][0] += p_quantity;
+                    _totalSales += p_quantity;
+                    continue;
                 }
-
-            }*/
-            //_totalSales += Convert.ToInt32(s_count);
-            TotalSales.Text = _totalSales.ToString();
-        }
-
-        //calculate and display total revanue
-        private void DisplayTotalRevenue()
-        {
-            _totalRevenue = 0;
-            TotalRevanue.Text = _totalRevenue.ToString();
-
-            for (int j = 0; j < this.SaleTable.Items.Count; j++)
-            {
-                string s_value = SaleTable.Items[j].SubItems[2].Text;
-                _totalRevenue += Convert.ToDouble(s_value);
+                prod_data.Add(p_name, new List<double> { p_quantity, p_price });
+                _totalSales += p_quantity;
             }
+        }
+        // add sorted data to list view table
+        private void AddSaleToTable(Dictionary<string, List<double>> sale_data)
+        {
+            foreach (KeyValuePair<string, List<double>> k in sale_data)
+            {
+                string p_name = k.Key;
+                int p_quantity = (Int32)k.Value[0];
+                double p_price = k.Value[1];
 
-            TotalRevanue.Text = _totalRevenue.ToString();
+                string[] reportRow = { p_name, p_quantity.ToString(), p_price.ToString(), (p_price * p_quantity).ToString() };
+                var salesReportItem = new ListViewItem(reportRow);
+
+                ReportTable.Items.Add(salesReportItem);
+
+                _totalRevenue += p_price * p_quantity;
+            }
+            string[] totalsRow = { _totalSales.ToString(), _totalRevenue.ToString() };
+            var TotalListItem = new ListViewItem(totalsRow);
+            TotalsTable.Items.Add(TotalListItem);
         }
 
         private void CurrentToggle_CheckedChanged(object sender, EventArgs e)
         {
             current_month = !current_month;
-            foreach(ListViewItem i in SaleTable.Items)
+            // clear data and tables, reset sales and renenue count
+            _totalSales = 0;
+            _totalRevenue = 0;
+            foreach(ListViewItem i in TotalsTable.Items)
             {
-                SaleTable.Items.Remove(i);
+                i.Remove();
+            }
+            foreach (ListViewItem i in ReportTable.Items)
+            {
+                ReportTable.Items.Remove(i);
             }
             if (current_month)
             {
@@ -110,27 +117,26 @@ namespace PHP
                 _to = firstDayOfThisMonth.AddDays(-1);
                 _from = firstDayOfThisMonth.AddMonths(-1);
             }
-           
+
             _SalesList = _PHPRepo.GetSaleByDate(_from, _to);
             DisplaySales();
-            DisplayTotalSales();
-            DisplayTotalRevenue();
-            SaleTable.Update();
+            ReportTable.Update();
         }
 
         //generate csv button
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             string month = _from.ToString("MMMM");
-            if(folder == null)
+            string year = DateTime.Now.Year.ToString();
+            if (folder == null)
             {
                 folder = default_filepath;
             }
-              
-            string filename = folder +"\\"+ month + ".csv";
+
+            string filename = folder + "\\" + year +"-"+month + ".csv";
             System.IO.Directory.CreateDirectory(folder);
-            PHP.Functions.GenerateCSV.ListViewToCSV(SaleTable, filename);
+            PHP.Functions.GenerateCSV.ListViewToCSV(ReportTable, TotalsTable,filename);
 
             var ConfirmationPopup = new Popup_FileGenerated(folder);
             ConfirmationPopup.Show(this);
@@ -141,9 +147,13 @@ namespace PHP
             FolderBrowserDialog diag = new FolderBrowserDialog();
             if (diag.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                folder = diag.SelectedPath;  
+                folder = diag.SelectedPath;
 
             }
+        }
+        private void MonthlyReport_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            CurrentToggle.Checked = false;
         }
     }
 }

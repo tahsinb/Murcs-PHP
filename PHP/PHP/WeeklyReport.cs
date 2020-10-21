@@ -19,6 +19,14 @@ namespace PHP
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
 
+        DateTime _from;
+        DateTime _to;
+
+        string folder = null;
+        string default_filepath = "C:/Reports/Weekly Reports/";
+
+        Dictionary<string, List<double>> prod_data = new Dictionary<string, List<double>>();
+
         private int _totalSales;
         private double _totalRevenue;
 
@@ -26,65 +34,90 @@ namespace PHP
         {
             InitializeComponent();
             _PHPRepo = pHPRepo;
-            _SalesList = pHPRepo.GetSaleByDate(DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek), DateTime.Now);
+            _from = DateTime.Now.AddDays(-(int)DateTime.Now.DayOfWeek);
+            _to = DateTime.Now;
+            _SalesList = pHPRepo.GetSaleByDate(_from, _to);
             DisplaySales();
-            DisplayTotalSales();
-            DisplayTotalRevenue();
         }
 
         private void DisplaySales()
         {
             foreach (Sale sale in _SalesList)
             {
-                AddSaleToTable(sale); 
+                SortData(sale); 
             }
-        }
-   
-        private void AddSaleToTable(Sale sale)
-        {
-            string[] row = {sale.SaleId.ToString(), sale.Sale_Date.ToString(),
-                    sale.Total_Cost.ToString(), sale.Customer_Name};
-            var listViewItem = new ListViewItem(row);
-            SaleTable.Items.Add(listViewItem);
+            AddSaleToTable(prod_data);
         }
 
-        //calculate and display total sales (maybe not needed?)
-        private void DisplayTotalSales()
+        // sort data so no duplicates appear and quantities are calculated
+        private void SortData(Sale sale)
         {
-            foreach(Sale sale in _SalesList)
+            foreach (ProductSale p in sale.ProductSales)
             {
-                for (int i = 0; i < sale.ProductSales.Count; i++)
+                string p_name = p.Product.Product_Name;
+                int p_quantity = p.Quantity;
+                double p_price = p.Product.Price;
+
+                if (prod_data.ContainsKey(p_name))
                 {
-                    int num = sale.ProductSales.ElementAt(i).Quantity;
-                    _totalSales += num;
+                    prod_data[p_name][0] += p_quantity;
+                    _totalSales += p_quantity;
+                    continue;
                 }
-               
+                prod_data.Add(p_name, new List<double> { p_quantity, p_price });
+                _totalSales += p_quantity;
             }
-            //_totalSales += Convert.ToInt32(s_count);
-            TotalSales.Text = _totalSales.ToString();
         }
 
-        //calculate and display total revanue
-        private void DisplayTotalRevenue()
+        // add sorted data to list view table
+        private void AddSaleToTable(Dictionary<string, List<double>> sale_data)
         {
-            for (int j = 0; j < this.SaleTable.Items.Count; j++)
+            foreach (KeyValuePair<string, List<double>> k in sale_data)
             {
-                string s_value = SaleTable.Items[j].SubItems[2].Text;
-                _totalRevenue += Convert.ToDouble(s_value);
+                string p_name = k.Key;
+                int p_quantity = (Int32)k.Value[0];
+                double p_price = k.Value[1];
+
+                string[] reportRow = { p_name, p_quantity.ToString(), p_price.ToString(), (p_price * p_quantity).ToString() };
+                var salesReportItem = new ListViewItem(reportRow);
+
+                ReportTable.Items.Add(salesReportItem);
+
+                _totalRevenue += p_price * p_quantity;
             }
-
-            TotalRevanue.Text = _totalRevenue.ToString();
+            string[] totalsRow = { _totalSales.ToString(), _totalRevenue.ToString() };
+            var TotalListItem = new ListViewItem(totalsRow);
+            TotalsTable.Items.Add(TotalListItem);
         }
 
-
-        private void WeeklyReport_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // generate csv button
         private void button1_Click(object sender, EventArgs e)
         {
+            string date = DateTime.Now.Date.DayOfWeek.ToString();
+            string date_from = _from.ToString("d").Replace('/','-');
+            string date_to = _to.ToString("d").Replace('/','-');
+            if (folder == null)
+            {
+                folder = default_filepath;
+            }
 
+            string filename = folder + "\\" + date_from +" to " +date_to + ".csv";
+            System.IO.Directory.CreateDirectory(folder);
+            PHP.Functions.GenerateCSV.ListViewToCSV(ReportTable, TotalsTable,filename);
+
+            var ConfirmationPopup = new Popup_FileGenerated(folder);
+            ConfirmationPopup.Show(this);
+        }
+
+        // select filepath button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog diag = new FolderBrowserDialog();
+            if (diag.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                folder = diag.SelectedPath;
+
+            }
         }
     }
 }

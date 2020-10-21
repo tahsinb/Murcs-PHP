@@ -297,6 +297,7 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
+
 				MonthlyReport monthlyReport = new MonthlyReport(_pHPRepo);
 				monthlyReport.MdiParent = this;
 				monthlyReport.Show();
