@@ -66,7 +66,7 @@ namespace PHP
 
                     if (Double.TryParse(Price.Text, out DoubleTest))
                     {
-                        _Product.Price = Int32.Parse(Price.Text);
+                        _Product.Price = Double.Parse(Price.Text);
                     }
                     else
                     {
