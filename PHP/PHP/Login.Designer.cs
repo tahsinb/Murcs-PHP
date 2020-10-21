@@ -54,9 +54,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(72, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 24);
+            this.label2.Size = new System.Drawing.Size(100, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Pasword";
+            this.label2.Text = "Password";
             // 
             // login_id_box
             // 
