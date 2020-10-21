@@ -18,6 +18,7 @@ namespace PHP
         private double saleTotal;
         PHPRepo _PHPRepo;
         AutoCompleteStringCollection ACprodNames = new AutoCompleteStringCollection();
+        AutoCompleteStringCollection ACprodIDs = new AutoCompleteStringCollection();
         List<Product> _ProductList;
         Product prod1 = new Product();
         Product prod2 = new Product();
@@ -123,17 +124,6 @@ namespace PHP
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CustomerNameInput_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back
-                         || e.KeyChar == (char)Keys.Space);
-        }
-
-        /// <summary>
-        /// Only allows letters to be entered in the employee name field.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void EmpNameInput_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back
                          || e.KeyChar == (char)Keys.Space);
@@ -476,18 +466,28 @@ namespace PHP
         private void initialiseAutocomplete()
         {
             List<string> nameList = new List<string>();
+            List<string> idList = new List<string>();
 
-            //sorts product names by alphabetical order and stores in list
+            //sorts product names and ids and stores in respective list
             foreach (Product p in _ProductList)
             {
                 nameList.Add(p.Product_Name);
+                idList.Add(p.ProductId.ToString());
             }
             nameList.Sort();
+            idList.Sort();
+            
 
             //adds sorted names to autocomplete suggestion list
             foreach (string s in nameList)
             {
                 ACprodNames.Add(s);
+            }
+
+            //adds sorted product IDs to autocomplete suggestion list
+            foreach(string s in idList)
+            {
+                ACprodIDs.Add(s);
             }
 
             //gives each product name input field access to autocomplete suggestion list
@@ -496,6 +496,13 @@ namespace PHP
             ProdNameInput3.AutoCompleteCustomSource = ACprodNames;
             ProdNameInput4.AutoCompleteCustomSource = ACprodNames;
             ProdNameInput5.AutoCompleteCustomSource = ACprodNames;
+
+            //gives each product ID field access to autocomplete suggestion list
+            prodIDinput1.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput2.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput3.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput4.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput5.AutoCompleteCustomSource = ACprodIDs;
         }
 
         //autofills product name when id is entered

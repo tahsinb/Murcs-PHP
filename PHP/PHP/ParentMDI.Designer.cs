@@ -176,7 +176,7 @@
             // 
             // HomepageLogOutButton
             // 
-            this.HomepageLogOutButton.Location = new System.Drawing.Point(12, 38);
+            this.HomepageLogOutButton.Location = new System.Drawing.Point(887, 40);
             this.HomepageLogOutButton.Name = "HomepageLogOutButton";
             this.HomepageLogOutButton.Size = new System.Drawing.Size(75, 23);
             this.HomepageLogOutButton.TabIndex = 3;
@@ -199,6 +199,8 @@
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.ParentMDI_Activated);
             this.Load += new System.EventHandler(this.ParentMDI_Load);
+            this.VisibleChanged += new System.EventHandler(this.ParentMDI_VisibleChanged);
+            this.Enter += new System.EventHandler(this.ParentMDI_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

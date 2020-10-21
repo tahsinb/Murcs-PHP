@@ -259,6 +259,8 @@
             // 
             // prodIDinput5
             // 
+            this.prodIDinput5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput5.Location = new System.Drawing.Point(3, 139);
             this.prodIDinput5.Name = "prodIDinput5";
@@ -299,6 +301,8 @@
             // 
             // prodIDinput4
             // 
+            this.prodIDinput4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput4.Location = new System.Drawing.Point(3, 105);
             this.prodIDinput4.Name = "prodIDinput4";
@@ -339,6 +343,8 @@
             // 
             // prodIDinput3
             // 
+            this.prodIDinput3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput3.Location = new System.Drawing.Point(3, 71);
             this.prodIDinput3.Name = "prodIDinput3";
@@ -379,6 +385,8 @@
             // 
             // prodIDinput2
             // 
+            this.prodIDinput2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput2.Location = new System.Drawing.Point(3, 37);
             this.prodIDinput2.Name = "prodIDinput2";
@@ -419,6 +427,8 @@
             // 
             // prodIDinput1
             // 
+            this.prodIDinput1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.prodIDinput1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.prodIDinput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prodIDinput1.Location = new System.Drawing.Point(3, 3);
             this.prodIDinput1.Name = "prodIDinput1";

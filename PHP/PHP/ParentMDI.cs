@@ -40,7 +40,7 @@ namespace PHP
 			if (isOpen == false)
             {
 				AddTransaction AddTransaction = new AddTransaction(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				AddTransaction.MdiParent = this;
 				AddTransaction.Show();
 
@@ -48,7 +48,7 @@ namespace PHP
 
 		}
 
-        private void editSaleToolStripMenuItem_Click(object sender, EventArgs e)
+		private void editSaleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			foreach (Form frm in this.MdiChildren)
 			{
@@ -68,7 +68,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				EditSale EditSaleRecord = new EditSale(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				EditSaleRecord.MdiParent = this;
 				EditSaleRecord.Show();
 			}
@@ -94,7 +94,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				ViewSale ViewSaleRecord = new ViewSale(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				ViewSaleRecord.MdiParent = this;
 				ViewSaleRecord.Show();
 			}
@@ -121,7 +121,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				DeleteSale DeleteSaleRecord = new DeleteSale(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				DeleteSaleRecord.MdiParent = this;
 				DeleteSaleRecord.Show();
 			}
@@ -148,7 +148,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				AddItem AddItemStock = new AddItem(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				AddItemStock.MdiParent = this;
 				AddItemStock.Show();
 			}
@@ -174,7 +174,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				EditItem EditItemStock = new EditItem(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				EditItemStock.MdiParent = this;
 				EditItemStock.Show();
 			}
@@ -200,7 +200,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				DeleteItem DeleteItemStock = new DeleteItem(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				DeleteItemStock.MdiParent = this;
 				DeleteItemStock.Show();
 			}
@@ -226,7 +226,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				LowStock LowStockItems = new LowStock(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				LowStockItems.MdiParent = this;
 				LowStockItems.Show();
 			}
@@ -252,7 +252,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				ViewStock ViewStockItems = new ViewStock(_pHPRepo);
-				HomepageLogOutButton.Hide();
+				HomepageLogOutButton.Enabled = false;
 				ViewStockItems.MdiParent = this;
 				ViewStockItems.Show();
 			}
@@ -285,7 +285,21 @@ namespace PHP
 
         private void ParentMDI_Activated(object sender, EventArgs e)
         {
-			HomepageLogOutButton.Show();
+			HomepageLogOutButton.Enabled = true;
+        }
+
+        private void ParentMDI_Enter(object sender, EventArgs e)
+        {
+			//HomepageLogOutButton.Enabled = true;
+        }
+
+        private void ParentMDI_VisibleChanged(object sender, EventArgs e)
+        {
+			if (Application.OpenForms.Count > 1)
+				HomepageLogOutButton.Enabled = false;
+			else
+				HomepageLogOutButton.Enabled = true;
         }
     }
+
 }
