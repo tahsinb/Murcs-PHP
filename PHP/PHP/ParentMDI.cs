@@ -40,10 +40,12 @@ namespace PHP
 			if (isOpen == false)
             {
 				AddTransaction AddTransaction = new AddTransaction(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				AddTransaction.MdiParent = this;
 				AddTransaction.Show();
-            }
-			
+
+			}
+
 		}
 
         private void editSaleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,6 +68,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				EditSale EditSaleRecord = new EditSale(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				EditSaleRecord.MdiParent = this;
 				EditSaleRecord.Show();
 			}
@@ -91,6 +94,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				ViewSale ViewSaleRecord = new ViewSale(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				ViewSaleRecord.MdiParent = this;
 				ViewSaleRecord.Show();
 			}
@@ -117,6 +121,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				DeleteSale DeleteSaleRecord = new DeleteSale(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				DeleteSaleRecord.MdiParent = this;
 				DeleteSaleRecord.Show();
 			}
@@ -143,6 +148,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				AddItem AddItemStock = new AddItem(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				AddItemStock.MdiParent = this;
 				AddItemStock.Show();
 			}
@@ -168,6 +174,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				EditItem EditItemStock = new EditItem(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				EditItemStock.MdiParent = this;
 				EditItemStock.Show();
 			}
@@ -193,6 +200,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				DeleteItem DeleteItemStock = new DeleteItem(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				DeleteItemStock.MdiParent = this;
 				DeleteItemStock.Show();
 			}
@@ -217,7 +225,8 @@ namespace PHP
 			}
 			if (isOpen == false)
 			{
-				LowStock LowStockItems = new LowStock();
+				LowStock LowStockItems = new LowStock(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				LowStockItems.MdiParent = this;
 				LowStockItems.Show();
 			}
@@ -243,6 +252,7 @@ namespace PHP
 			if (isOpen == false)
 			{
 				ViewStock ViewStockItems = new ViewStock(_pHPRepo);
+				HomepageLogOutButton.Hide();
 				ViewStockItems.MdiParent = this;
 				ViewStockItems.Show();
 			}
@@ -251,6 +261,31 @@ namespace PHP
         private void ParentMDI_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void HomepageLogOutButton_Click(object sender, EventArgs e)
+        {
+			DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+			if (logoutResult == DialogResult.Yes)
+			{
+
+				//close current page
+				this.Close();
+
+				//return to login page
+				new Login(_pHPRepo).Show();
+
+			}
+			else if (logoutResult == DialogResult.No)
+			{
+				//do nothing
+			}
+		}
+
+        private void ParentMDI_Activated(object sender, EventArgs e)
+        {
+			HomepageLogOutButton.Show();
         }
     }
 }

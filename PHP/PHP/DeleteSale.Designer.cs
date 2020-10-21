@@ -33,6 +33,7 @@
             this.SaleIDLabel = new System.Windows.Forms.Label();
             this.SaleID = new System.Windows.Forms.TextBox();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,18 +86,30 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(713, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 7;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // DeleteSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.SaleID);
             this.Controls.Add(this.SaleIDLabel);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.label1);
             this.Name = "DeleteSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.DeleteSale_Load);
             this.ResumeLayout(false);
@@ -110,5 +123,6 @@
         private System.Windows.Forms.Label SaleIDLabel;
         private System.Windows.Forms.TextBox SaleID;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }
