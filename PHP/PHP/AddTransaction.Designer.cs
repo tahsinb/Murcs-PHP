@@ -374,7 +374,6 @@
             this.QtyInput1.Name = "QtyInput1";
             this.QtyInput1.Size = new System.Drawing.Size(150, 20);
             this.QtyInput1.TabIndex = 7;
-            this.QtyInput1.TextChanged += new System.EventHandler(this.QtyInput1_TextChanged);
             // 
             // ProdNameInput1
             // 
@@ -545,7 +544,6 @@
             this.Name = "AddTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddTransaction";
-            this.Load += new System.EventHandler(this.AddTransaction_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

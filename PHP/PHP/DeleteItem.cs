@@ -32,42 +32,40 @@ namespace PHP
             {
                 string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
                 var listViewItem = new ListViewItem(row);
-                StockList.Items.Add(listViewItem);
+                listView1.Items.Add(listViewItem);
             };
         }
-        private void RemoveButton_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             int ID;
-            if (int.TryParse(ProductID.Text, out ID))
+            int.TryParse(textBox1.Text, out ID);
+            Product _Product = _PHPRepo.GetProductbyId(ID);
+            _PHPRepo.deleteProduct(_Product);
+            MessageBox.Show("Product has been deleted ", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.None);
+            listView1.Items.Clear();
+            List<Product> _NewList = _PHPRepo.GetProducts();
+            foreach (Product p in _NewList)
             {
-                if (_PHPRepo.VerifyProductID(ID))
-                {
-                    _PHPRepo.GetProductbyId(ID);
-                    Product _Product = _PHPRepo.GetProductbyId(ID);
-                    _PHPRepo.deleteProduct(_Product);
-                    MessageBox.Show("Product has been deleted ", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.None);
-                    StockList.Items.Clear();
-                    List<Product> _NewList = _PHPRepo.GetProducts();
-                    foreach (Product p in _NewList)
-                    {
-                        string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
-                        var listViewItem = new ListViewItem(row);
-                        StockList.Items.Add(listViewItem);
-                    };
-                    ProductID.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Could not find item: " + ID);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid ID");
-            }
+                string[] row = { p.ProductId.ToString(), p.Product_Name.ToString(), p.Price.ToString(), p.Stock_Level.ToString() };
+                var listViewItem = new ListViewItem(row);
+                listView1.Items.Add(listViewItem);
+            };
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteItem_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -84,19 +82,27 @@ namespace PHP
                 //do nothing after dialog box is closed
             }
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        private void LogOutButton_Click(object sender, EventArgs e)
         {
+            DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+            if (logoutResult == DialogResult.Yes)
+            {
 
-        }
+                //close current page
+                this.Close();
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                //close homepage
+                ParentMDI.ActiveForm.Close();
 
-        }
+                //return to login page
+                new Login(_PHPRepo).Show();
 
-        private void DeleteItem_Load(object sender, EventArgs e)
-        {
-
+            }
+            else if (logoutResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
     }
 }
