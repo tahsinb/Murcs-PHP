@@ -241,14 +241,20 @@
             this.QtyInput5.Name = "QtyInput5";
             this.QtyInput5.Size = new System.Drawing.Size(150, 20);
             this.QtyInput5.TabIndex = 23;
+            this.QtyInput5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput5_KeyPress);
+            this.QtyInput5.Leave += new System.EventHandler(this.QtyInput5_Leave);
             // 
             // ProdNameInput5
             // 
+            this.ProdNameInput5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput5.Location = new System.Drawing.Point(120, 139);
             this.ProdNameInput5.Name = "ProdNameInput5";
             this.ProdNameInput5.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput5.TabIndex = 22;
+            this.ProdNameInput5.TextChanged += new System.EventHandler(this.ProdNameInput5_TextChanged);
+            this.ProdNameInput5.Leave += new System.EventHandler(this.ProdNameInput5_Leave);
             // 
             // prodIDinput5
             // 
@@ -257,6 +263,7 @@
             this.prodIDinput5.Name = "prodIDinput5";
             this.prodIDinput5.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput5.TabIndex = 21;
+            this.prodIDinput5.Leave += new System.EventHandler(this.prodIDinput5_Leave);
             // 
             // PriceInput4
             // 
@@ -274,14 +281,20 @@
             this.QtyInput4.Name = "QtyInput4";
             this.QtyInput4.Size = new System.Drawing.Size(150, 20);
             this.QtyInput4.TabIndex = 19;
+            this.QtyInput4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput4_KeyPress);
+            this.QtyInput4.Leave += new System.EventHandler(this.QtyInput4_Leave);
             // 
             // ProdNameInput4
             // 
+            this.ProdNameInput4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput4.Location = new System.Drawing.Point(120, 105);
             this.ProdNameInput4.Name = "ProdNameInput4";
             this.ProdNameInput4.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput4.TabIndex = 18;
+            this.ProdNameInput4.TextChanged += new System.EventHandler(this.ProdNameInput4_TextChanged);
+            this.ProdNameInput4.Leave += new System.EventHandler(this.ProdNameInput4_Leave);
             // 
             // prodIDinput4
             // 
@@ -290,6 +303,7 @@
             this.prodIDinput4.Name = "prodIDinput4";
             this.prodIDinput4.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput4.TabIndex = 17;
+            this.prodIDinput4.Leave += new System.EventHandler(this.prodIDinput4_Leave);
             // 
             // PriceInput3
             // 
@@ -307,14 +321,20 @@
             this.QtyInput3.Name = "QtyInput3";
             this.QtyInput3.Size = new System.Drawing.Size(150, 20);
             this.QtyInput3.TabIndex = 15;
+            this.QtyInput3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput3_KeyPress);
+            this.QtyInput3.Leave += new System.EventHandler(this.QtyInput3_Leave);
             // 
             // ProdNameInput3
             // 
+            this.ProdNameInput3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput3.Location = new System.Drawing.Point(120, 71);
             this.ProdNameInput3.Name = "ProdNameInput3";
             this.ProdNameInput3.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput3.TabIndex = 14;
+            this.ProdNameInput3.TextChanged += new System.EventHandler(this.ProdNameInput3_TextChanged);
+            this.ProdNameInput3.Leave += new System.EventHandler(this.ProdNameInput3_Leave);
             // 
             // prodIDinput3
             // 
@@ -323,6 +343,7 @@
             this.prodIDinput3.Name = "prodIDinput3";
             this.prodIDinput3.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput3.TabIndex = 13;
+            this.prodIDinput3.Leave += new System.EventHandler(this.prodIDinput3_Leave);
             // 
             // PriceInput2
             // 
@@ -340,14 +361,20 @@
             this.QtyInput2.Name = "QtyInput2";
             this.QtyInput2.Size = new System.Drawing.Size(150, 20);
             this.QtyInput2.TabIndex = 11;
+            this.QtyInput2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput2_KeyPress);
+            this.QtyInput2.Leave += new System.EventHandler(this.QtyInput2_Leave);
             // 
             // ProdNameInput2
             // 
+            this.ProdNameInput2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput2.Location = new System.Drawing.Point(120, 37);
             this.ProdNameInput2.Name = "ProdNameInput2";
             this.ProdNameInput2.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput2.TabIndex = 10;
+            this.ProdNameInput2.TextChanged += new System.EventHandler(this.ProdNameInput2_TextChanged);
+            this.ProdNameInput2.Leave += new System.EventHandler(this.ProdNameInput2_Leave);
             // 
             // prodIDinput2
             // 
@@ -356,6 +383,7 @@
             this.prodIDinput2.Name = "prodIDinput2";
             this.prodIDinput2.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput2.TabIndex = 9;
+            this.prodIDinput2.Leave += new System.EventHandler(this.prodIDinput2_Leave);
             // 
             // PriceInput1
             // 
@@ -373,14 +401,20 @@
             this.QtyInput1.Name = "QtyInput1";
             this.QtyInput1.Size = new System.Drawing.Size(150, 20);
             this.QtyInput1.TabIndex = 7;
+            this.QtyInput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QtyInput1_KeyPress);
+            this.QtyInput1.Leave += new System.EventHandler(this.QtyInput1_Leave);
             // 
             // ProdNameInput1
             // 
+            this.ProdNameInput1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ProdNameInput1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ProdNameInput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProdNameInput1.Location = new System.Drawing.Point(120, 3);
             this.ProdNameInput1.Name = "ProdNameInput1";
             this.ProdNameInput1.Size = new System.Drawing.Size(345, 20);
             this.ProdNameInput1.TabIndex = 6;
+            this.ProdNameInput1.TextChanged += new System.EventHandler(this.ProdNameInput1_TextChanged);
+            this.ProdNameInput1.Leave += new System.EventHandler(this.ProdNameInput1_Leave);
             // 
             // prodIDinput1
             // 
@@ -389,6 +423,7 @@
             this.prodIDinput1.Name = "prodIDinput1";
             this.prodIDinput1.Size = new System.Drawing.Size(111, 20);
             this.prodIDinput1.TabIndex = 5;
+            this.prodIDinput1.Leave += new System.EventHandler(this.prodIDinput1_Leave);
             // 
             // ProdIDLabel
             // 
