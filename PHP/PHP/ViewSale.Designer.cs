@@ -147,7 +147,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form4";
+            this.Text = "ViewSale";
             this.Load += new System.EventHandler(this.ViewSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
