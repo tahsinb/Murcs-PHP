@@ -352,6 +352,30 @@ namespace PHP
 			else
 				HomepageLogOutButton.Enabled = true;
         }
+        private void salesPredictionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Visible = false;
+                frm.Dispose();
+            }
+            bool isOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "SalesPrediction")
+                {
+                    isOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+            if (isOpen == false)
+            {
+                SalesPrediction salesPrediction = new SalesPrediction(_pHPRepo);
+                salesPrediction.MdiParent = this;
+                salesPrediction.Show();
+            }
+        }
     }
 
 }
