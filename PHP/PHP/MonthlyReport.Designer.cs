@@ -40,6 +40,8 @@
             this.TotalsTable = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LogOutButton = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_ExportCSV
@@ -149,12 +151,34 @@
             this.columnHeader8.Text = "Month Revenue Total";
             this.columnHeader8.Width = 138;
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(713, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 35;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(632, 12);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 36;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // MonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.TotalsTable);
             this.Controls.Add(this.ReportTable);
             this.Controls.Add(this.btn_SelectFilepath);
@@ -162,6 +186,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_ExportCSV);
             this.Name = "MonthlyReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MonthlyReport";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,5 +206,7 @@
         private System.Windows.Forms.ListView TotalsTable;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Button LogOutButton;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

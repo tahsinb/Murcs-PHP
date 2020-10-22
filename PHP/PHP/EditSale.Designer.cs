@@ -186,7 +186,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EditSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form3";
+            this.Text = "EditSale";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -58,6 +58,7 @@
             this.SaleIDtext.Size = new System.Drawing.Size(100, 20);
             this.SaleIDtext.TabIndex = 8;
             this.SaleIDtext.TextChanged += new System.EventHandler(this.SaleID_TexChanged);
+            this.SaleIDtext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaleIDtext_KeyPress);
             // 
             // Search
             // 
