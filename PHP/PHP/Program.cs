@@ -39,7 +39,7 @@ namespace PHP
 
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new SalesPrediction(pHPRepo));
+			Application.Run(new Login(pHPRepo));
 		}
 	}
 	public class AppSettings : IDatabaseAppSettings
