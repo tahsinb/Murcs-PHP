@@ -175,6 +175,7 @@
             this.salesPredictionsToolStripMenuItem.Name = "salesPredictionsToolStripMenuItem";
             this.salesPredictionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salesPredictionsToolStripMenuItem.Text = "Sales Predictions";
+            this.salesPredictionsToolStripMenuItem.Click += new System.EventHandler(this.salesPredictionToolStripMenuItem_Click);
             // 
             // HomepageLogOutButton
             // 
