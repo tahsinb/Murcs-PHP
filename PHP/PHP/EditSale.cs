@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,13 +20,29 @@ namespace PHP
         private Sale _sale;
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
+
         public EditSale(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _SalesList = pHPRepo.GetSales();
             InitialiseTextBoxes();
             DisplaySales();
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\EditSale.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(SaleIDtext, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(DateBox, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(CostBox, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(NameBox, HelpNavigator.TableOfContents);
         }
 
         private void Search_TextChanged(object sender, EventArgs e)

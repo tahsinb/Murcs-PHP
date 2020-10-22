@@ -10,21 +10,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHP.Database.Classes;
+using System.Reflection;
+using System.IO;
 
 namespace PHP
 {
     public partial class DeleteItem : Form
     {
-        
-
         List<Product> _ProductList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
+
         public DeleteItem(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _ProductList = pHPRepo.GetProducts();
             DisplayItems();
+        }
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\DeleteItem.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(ProductID, HelpNavigator.TableOfContents);
         }
         private void DisplayItems()
         {

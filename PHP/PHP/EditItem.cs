@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,12 +19,28 @@ namespace PHP
         List<Product> _ProductList;
         PHPRepo _PHPRepo;
         Product _Product = new Product();
+        private HelpProvider helpProvider;
+
         public EditItem(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _ProductList = _PHPRepo.GetProducts();
             DisplayItems();
+        }
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\EditItem.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(ID, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Product_ID, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Product_Price, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Product_Stock, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Product_Name, HelpNavigator.TableOfContents);
         }
         private void DisplayItems()
         {
