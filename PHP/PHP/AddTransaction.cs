@@ -28,6 +28,7 @@ namespace PHP
         Product prod4 = new Product();
         Product prod5 = new Product();
         private HelpProvider helpProvider;
+        private int SaleID = 0;
 
         public AddTransaction(PHPRepo pHPRepo)
         {
@@ -38,7 +39,7 @@ namespace PHP
             //initialise autocomplete
             _ProductList = pHPRepo.GetProducts();
             initialiseAutocomplete();
-
+            SaleID = pHPRepo.GetMaxSaleId() + 1;
             
         }
 
@@ -200,7 +201,7 @@ namespace PHP
             //checks if all fields are completed 
             if (!string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
             {
-                //_sale.SaleId = Int32.Parse(SaleIDInput.Text);
+                _sale.SaleId = SaleID;
                 _sale.Sale_Date = DateTime.Now;
                
                 _sale.Customer_Name = CustomerNameInput.Text;

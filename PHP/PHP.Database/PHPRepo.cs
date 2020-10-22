@@ -55,7 +55,7 @@ namespace PHP.Database
         }
         public int GetMaxSaleId()
         {
-            return _pHPContext.Sales.Select(s=>s.SaleId).DefaultIfEmpty(0).Max();
+            return _pHPContext.Sales.Select(s=>s.SaleId).Max();
         }
         #endregion
 
