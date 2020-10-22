@@ -171,6 +171,12 @@
     <Compile Include="LowStock.Designer.cs">
       <DependentUpon>LowStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonthlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlyReport.Designer.cs">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParentMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,11 +189,11 @@
     <Compile Include="EditSale.Designer.cs">
       <DependentUpon>EditSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="SalesPrediction.cs">
+    <Compile Include="Popup_FileGenerated.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesPrediction.Designer.cs">
-      <DependentUpon>SalesPrediction.cs</DependentUpon>
+    <Compile Include="Popup_FileGenerated.Designer.cs">
+      <DependentUpon>Popup_FileGenerated.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewSale.cs">
       <SubType>Form</SubType>
@@ -208,6 +214,12 @@
     </Compile>
     <Compile Include="ViewStock.Designer.cs">
       <DependentUpon>ViewStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklyReport.Designer.cs">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
@@ -233,8 +245,14 @@
     <EmbeddedResource Include="LowStock.resx">
       <DependentUpon>LowStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.resx">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParentMDI.resx">
       <DependentUpon>ParentMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup_FileGenerated.resx">
+      <DependentUpon>Popup_FileGenerated.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -246,15 +264,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SalesPrediction.resx">
-      <DependentUpon>SalesPrediction.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewSale.resx">
       <DependentUpon>ViewSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStock.resx">
       <DependentUpon>ViewStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyReport.resx">
+      <DependentUpon>WeeklyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -287,6 +306,9 @@
       <Project>{f3592923-b9d4-4384-a3fb-f74f80af890a}</Project>
       <Name>PHP.Functions</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\UserDocumentation.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

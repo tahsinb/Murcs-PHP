@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,13 +20,29 @@ namespace PHP
         private Sale _sale;
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
+
         public EditSale(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _SalesList = pHPRepo.GetSales();
             InitialiseTextBoxes();
             DisplaySales();
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\EditSale.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(SaleIDtext, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(DateBox, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(CostBox, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(NameBox, HelpNavigator.TableOfContents);
         }
 
         private void Search_TextChanged(object sender, EventArgs e)
@@ -45,7 +63,10 @@ namespace PHP
             enableTextBoxes();
             SaleTable.Items.Clear();
             if (_PHPRepo.GetSaleById(SaleID) == null)
+            {
                 MessageBox.Show("Could not find sale", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplaySales();    
+            }
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
@@ -67,7 +88,7 @@ namespace PHP
 
         private void ClickConfirm(object sender, EventArgs e)
         {
-            if(DateBox.Text != "")
+            if(DateBox.Text != "" )
             {
                 _sale.Sale_Date = Convert.ToDateTime(DateBox.Text);
             }
@@ -128,6 +149,28 @@ namespace PHP
             else
             {
                 //do nothing after dialog box is closed
+            }
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+            if (logoutResult == DialogResult.Yes)
+            {
+
+                //close current page
+                this.Close();
+
+                //close homepage
+                ParentMDI.ActiveForm.Close();
+
+                //return to login page
+                new Login(_PHPRepo).Show();
+
+            }
+            else if (logoutResult == DialogResult.No)
+            {
+                //do nothing
             }
         }
     }

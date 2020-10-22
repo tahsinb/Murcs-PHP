@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,16 +19,151 @@ namespace PHP
         private Sale _sale = new Sale();
         private double saleTotal;
         PHPRepo _PHPRepo;
+        AutoCompleteStringCollection ACprodNames = new AutoCompleteStringCollection();
+        AutoCompleteStringCollection ACprodIDs = new AutoCompleteStringCollection();
+        List<Product> _ProductList;
+        Product prod1 = new Product();
+        Product prod2 = new Product();
+        Product prod3 = new Product();
+        Product prod4 = new Product();
+        Product prod5 = new Product();
+        private HelpProvider helpProvider;
+
         public AddTransaction(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             setEmpDetails();
-        }      
+            //initialise autocomplete
+            _ProductList = pHPRepo.GetProducts();
+            initialiseAutocomplete();
+
+            
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\AddTransaction.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(CustomerNameInput, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput1, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput2, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput3, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput4, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(prodIDinput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(PriceInput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(QtyInput5, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(ProdNameInput5, HelpNavigator.TableOfContents);
+        }
 
         //Methods to validate data entry into form
         #region Validation Checks
 
+        //only allows integer input on product id fields
+        private void prodIDinput1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on product id fields
+        private void prodIDinput5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on quantity fields
+        private void QtyInput1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on quantity fields
+        private void QtyInput2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on quantity fields
+        private void QtyInput3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on quantity fields
+        private void QtyInput4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //only allows integer input on quantity fields
+        private void QtyInput5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        //converts first letter of entry to uppercase to so autocomplete is correct
+        private void ProdNameInput1_TextChanged(object sender, EventArgs e)
+        {
+            firstLetterToUpper(ProdNameInput1);
+        }
+
+        //converts first letter of entry to uppercase to so autocomplete is correct
+        private void ProdNameInput2_TextChanged(object sender, EventArgs e)
+        {
+            firstLetterToUpper(ProdNameInput2);
+        }
+
+        //converts first letter of entry to uppercase to so autocomplete is correct
+        private void ProdNameInput3_TextChanged(object sender, EventArgs e)
+        {
+            firstLetterToUpper(ProdNameInput3);
+        }
+
+        //converts first letter of entry to uppercase to so autocomplete is correct
+        private void ProdNameInput4_TextChanged(object sender, EventArgs e)
+        {
+            firstLetterToUpper(ProdNameInput4);
+        }
+
+        //converts first letter of entry to uppercase to so autocomplete is correct
+        private void ProdNameInput5_TextChanged(object sender, EventArgs e)
+        {
+            firstLetterToUpper(ProdNameInput5);
+        }
 
         /// <summary>
         /// Validates that Customer Name field is not empty.
@@ -35,10 +172,10 @@ namespace PHP
         /// <param name="e"></param>
         private void CustomerNameInput_Validating(object sender, CancelEventArgs e)
         {
-            if (this.CustomerNameInput.Text == string.Empty)
-            {
-                MessageBox.Show("Please enter customer name.");
-            }
+            //if (this.CustomerNameInput.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Please enter customer name.");
+            //}
         }
 
         /// <summary>
@@ -53,17 +190,6 @@ namespace PHP
         }
 
         /// <summary>
-        /// Only allows letters to be entered in the employee name field.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void EmpNameInput_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back
-                         || e.KeyChar == (char)Keys.Space);
-        }
-
-        /// <summary>
         /// Validates that all fields have been completed successfully before saving and
         /// continuing.
         /// </summary>
@@ -72,9 +198,9 @@ namespace PHP
         private void SaveButton_Click_1(object sender, EventArgs e)
         {
             //checks if all fields are completed 
-            if (SaleIDInput.MaskCompleted && !string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
+            if (!string.IsNullOrEmpty(CustomerNameInput.Text) && row1Complete())
             {
-                _sale.SaleId = Int32.Parse(SaleIDInput.Text);
+                //_sale.SaleId = Int32.Parse(SaleIDInput.Text);
                 _sale.Sale_Date = DateTime.Now;
                
                 _sale.Customer_Name = CustomerNameInput.Text;
@@ -168,6 +294,28 @@ namespace PHP
         //Extra functions that are used throughout the form.
         #region Helper Functions
 
+
+        //calculates and displays price by multiplying quantity of item by its price, after quantity is validated
+        private void calcPriceByQty(TextBox inputPrice, TextBox inputQty, Product inputProd)
+        {
+            if (InputIsNumber(inputQty.Text))
+            {
+                double price1;
+                price1 = (Int32.Parse(inputQty.Text) * inputProd.Price);
+                inputPrice.Text = price1.ToString();
+            }
+        }
+
+        //function to convert first letter to uppercase if it is in lowercase
+        private void firstLetterToUpper(TextBox inputTextbox)
+        {
+            if (inputTextbox.Text != "" && (char.IsLower(Convert.ToChar(inputTextbox.Text.Substring(0, 1)))))
+            {
+                inputTextbox.Text = inputTextbox.Text.Replace(inputTextbox.Text.Substring(0, 1), inputTextbox.Text.ToUpper());
+                inputTextbox.SelectionStart = 2;
+            }
+        }
+
         //automatically sets the employee ID and name
         private void setEmpDetails()
         {
@@ -248,14 +396,48 @@ namespace PHP
             }
         }
 
-        
+        //sets sale product when product name is entered
+        private Product setProdByName(TextBox inputTextBox)
+        {
+            Product saleProd = new Product();
+            foreach (Product p in _ProductList)
+            {
+                if (p.Product_Name == inputTextBox.Text)
+                {
+                    saleProd = p;
+                    break;
+                }
+            }
+            return saleProd;
+        }
+
+        //sets sale product when Product ID is entered
+        private Product setProdByID(TextBox inputTextBox)
+        {
+            Product saleProd = new Product();
+            foreach (Product p in _ProductList)
+            {
+                try
+                {
+                    if (Int32.Parse(inputTextBox.Text) == p.ProductId)
+                    {
+                        saleProd = p;
+                        break;
+                    }
+                }
+                catch (System.FormatException)
+                { }
+            }
+            return saleProd;
+        }
+
         #endregion
 
         //Checks for completion of each row of table
         #region Row Checks
 
-            //Checks whether the first row of the table is complete
-            private bool row1Complete()
+        //Checks whether the first row of the table is complete
+        private bool row1Complete()
             {
                 if (!string.IsNullOrEmpty(prodIDinput1.Text) && !string.IsNullOrEmpty(ProdNameInput1.Text)
                     && !string.IsNullOrEmpty(QtyInput1.Text) && !string.IsNullOrEmpty(PriceInput1.Text))
@@ -338,6 +520,204 @@ namespace PHP
 
         #endregion
 
+        #region Autocomplete Functionality
+
+        //initialise autocomplete functionality
+        private void initialiseAutocomplete()
+        {
+            List<string> nameList = new List<string>();
+            List<string> idList = new List<string>();
+
+            //sorts product names and ids and stores in respective list
+            foreach (Product p in _ProductList)
+            {
+                nameList.Add(p.Product_Name);
+                idList.Add(p.ProductId.ToString());
+            }
+            nameList.Sort();
+            idList.Sort();
+            
+
+            //adds sorted names to autocomplete suggestion list
+            foreach (string s in nameList)
+            {
+                ACprodNames.Add(s);
+            }
+
+            //adds sorted product IDs to autocomplete suggestion list
+            foreach(string s in idList)
+            {
+                ACprodIDs.Add(s);
+            }
+
+            //gives each product name input field access to autocomplete suggestion list
+            ProdNameInput1.AutoCompleteCustomSource = ACprodNames;
+            ProdNameInput2.AutoCompleteCustomSource = ACprodNames;
+            ProdNameInput3.AutoCompleteCustomSource = ACprodNames;
+            ProdNameInput4.AutoCompleteCustomSource = ACprodNames;
+            ProdNameInput5.AutoCompleteCustomSource = ACprodNames;
+
+            //gives each product ID field access to autocomplete suggestion list
+            prodIDinput1.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput2.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput3.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput4.AutoCompleteCustomSource = ACprodIDs;
+            prodIDinput5.AutoCompleteCustomSource = ACprodIDs;
+        }
+
+        //autofills product name when id is entered
+        private void prodIDinput1_Leave(object sender, EventArgs e)
+        {
+            prod1 = setProdByID(prodIDinput1);
+            if (prod1 != null)
+            {
+                ProdNameInput1.Text = prod1.Product_Name;
+            }
+            else
+            {
+                prodIDinput1.Text = "";
+            }
+
+        }
+
+        //autofills product name when id is entered
+        private void prodIDinput2_Leave(object sender, EventArgs e)
+        {
+            prod2 = setProdByID(prodIDinput2);
+            if (prod2 != null)
+            {
+                ProdNameInput2.Text = prod2.Product_Name;
+            }
+            else
+            {
+                prodIDinput2.Text = "";
+            }
+        }
+
+        //autofills product name when id is entered
+        private void prodIDinput3_Leave(object sender, EventArgs e)
+        {
+            prod3 = setProdByID(prodIDinput3);
+            if (prod3 != null)
+            {
+                ProdNameInput3.Text = prod3.Product_Name;
+            }
+            else
+            {
+                prodIDinput3.Text = "";
+            }
+        }
+
+        //autofills product name when id is entered
+        private void prodIDinput4_Leave(object sender, EventArgs e)
+        {
+            prod4 = setProdByID(prodIDinput4);
+            if (prod4 != null)
+            {
+                ProdNameInput4.Text = prod4.Product_Name;
+            }
+            else
+            {
+                prodIDinput4.Text = "";
+            }
+        }
+
+        //autofills product name when id is entered
+        private void prodIDinput5_Leave(object sender, EventArgs e)
+        {
+            prod5 = setProdByID(prodIDinput5);
+            if (prod5 != null)
+            {
+                ProdNameInput5.Text = prod5.Product_Name;
+            }
+            else
+            {
+                prodIDinput5.Text = "";
+            }
+        }
+
+        //Calculates and shows price when quantity is filled
+        private void QtyInput1_Leave(object sender, EventArgs e)
+        {
+            calcPriceByQty(PriceInput1, QtyInput1, prod1);
+        }
+
+        //Calculates and shows price when quantity is filled
+        private void QtyInput2_Leave(object sender, EventArgs e)
+        {
+            calcPriceByQty(PriceInput2, QtyInput2, prod2);
+        }
+
+        //Calculates and shows price when quantity is filled
+        private void QtyInput3_Leave(object sender, EventArgs e)
+        {
+            calcPriceByQty(PriceInput3, QtyInput3, prod3);
+        }
+
+        //Calculates and shows price when quantity is filled
+        private void QtyInput4_Leave(object sender, EventArgs e)
+        {
+            calcPriceByQty(PriceInput4, QtyInput4, prod4);
+        }
+
+        //Calculates and shows price when quantity is filled
+        private void QtyInput5_Leave(object sender, EventArgs e)
+        {
+            calcPriceByQty(PriceInput5, QtyInput5, prod5);
+        }
+
+        //autofills product id when name field is completed
+        private void ProdNameInput1_Leave(object sender, EventArgs e)
+        {
+            prod1 = setProdByName(ProdNameInput1);
+            if (prod1 != null)
+            {
+                prodIDinput1.Text = prod1.ProductId.ToString();
+            }
+        }
+
+        //autofills product id when name field is completed
+        private void ProdNameInput2_Leave(object sender, EventArgs e)
+        {
+            prod2 = setProdByName(ProdNameInput2);
+            if (prod2 != null)
+            {
+                prodIDinput2.Text = prod2.ProductId.ToString();
+            }
+        }
+
+        //autofills product id when name field is completed
+        private void ProdNameInput3_Leave(object sender, EventArgs e)
+        {
+            prod3 = setProdByName(ProdNameInput3);
+            if (prod3 != null)
+            {
+                prodIDinput3.Text = prod3.ProductId.ToString();
+            }
+        }
+
+        //autofills product id when name field is completed
+        private void ProdNameInput4_Leave(object sender, EventArgs e)
+        {
+            prod4 = setProdByName(ProdNameInput4);
+            if (prod4 != null)
+            {
+                prodIDinput4.Text = prod4.ProductId.ToString();
+            }
+        }
+
+        //autofills product id when name field is completed
+        private void ProdNameInput5_Leave(object sender, EventArgs e)
+        {
+            prod5 = setProdByName(ProdNameInput5);
+            if (prod5 != null)
+            {
+                prodIDinput5.Text = prod5.ProductId.ToString();
+            }
+        }
+
+        #endregion
+
         private void CloseButton_Click(object sender, EventArgs e)
         {
 
@@ -345,18 +725,39 @@ namespace PHP
                 if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
                                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    
                     //confirmed exit
                     this.Close();
-
+                    
                 }
                 else
                 {
                     //do nothing after dialog box is closed
                 }
+        }
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+            if (logoutResult == DialogResult.Yes)
+            {
 
+                //close current page
+                this.Close();
+
+                //close homepage
+                ParentMDI.ActiveForm.Close();
+
+                //return to login page
+                new Login(_PHPRepo).Show();
+
+            }
+            else if (logoutResult == DialogResult.No)
+            {
+                //do nothing
+            }
         }
 
-
+       
     }
 }
 

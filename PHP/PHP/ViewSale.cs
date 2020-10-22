@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,19 +21,34 @@ namespace PHP
         private Sale _sale;
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
         public ViewSale(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _SalesList = pHPRepo.GetSales();
             DisplaySales();
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\ViewSale.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(SaleIDtext, HelpNavigator.TableOfContents);
         }
 
         private void SaleID_Search(object sender, EventArgs e)
         {
             SaleTable.Items.Clear();
             if (_PHPRepo.GetSaleById(SaleID) == null)
+            {
                 MessageBox.Show("Could not find sale", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplaySales();
+            }
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
@@ -65,7 +82,15 @@ namespace PHP
             }
             else
             {
-                SaleID = int.Parse(SaleIDtext.Text);
+                try
+                {
+                    SaleID = int.Parse(SaleIDtext.Text);
+                }
+                catch(FormatException)
+                {
+                    MessageBox.Show("Please enter a valid sale ID.", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SaleIDtext.Text = "";
+                }
             }
         }
 
@@ -81,18 +106,35 @@ namespace PHP
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            //confirm closing of forms
-            if (MessageBox.Show("Are you sure you want to exit this page? All unsaved changes will be lost.", "Close form",
-                                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 //confirmed exit
                 this.Close();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult logoutResult = MessageBox.Show("Are you sure you would like to log out?", "Log Out Confirmation", MessageBoxButtons.YesNo);
+            if (logoutResult == DialogResult.Yes)
+            {
+
+                //close current page
+                this.Close();
+
+                //close homepage
+                ParentMDI.ActiveForm.Close();
+
+                //return to login page
+                new Login(_PHPRepo).Show();
 
             }
-            else
+            else if (logoutResult == DialogResult.No)
             {
-                //do nothing after dialog box is closed
+                //do nothing
             }
+        }
+
+        private void SaleIDtext_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

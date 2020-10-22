@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListView1 = new System.Windows.Forms.ListView();
+            this.StockList = new System.Windows.Forms.ListView();
             this.Header1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Header3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,25 +43,26 @@
             this.Product_Stock = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ListView1
+            // StockList
             // 
-            this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.StockList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Header1,
             this.Header2,
             this.Header3,
             this.Header4});
-            this.ListView1.GridLines = true;
-            this.ListView1.HideSelection = false;
-            this.ListView1.Location = new System.Drawing.Point(332, 64);
-            this.ListView1.Name = "ListView1";
-            this.ListView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ListView1.Size = new System.Drawing.Size(429, 297);
-            this.ListView1.TabIndex = 14;
-            this.ListView1.UseCompatibleStateImageBehavior = false;
-            this.ListView1.View = System.Windows.Forms.View.Details;
-            this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ProductTable_SelectedIndexChanged);
+            this.StockList.GridLines = true;
+            this.StockList.HideSelection = false;
+            this.StockList.Location = new System.Drawing.Point(332, 64);
+            this.StockList.Name = "StockList";
+            this.StockList.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StockList.Size = new System.Drawing.Size(429, 297);
+            this.StockList.TabIndex = 14;
+            this.StockList.UseCompatibleStateImageBehavior = false;
+            this.StockList.View = System.Windows.Forms.View.Details;
+            this.StockList.SelectedIndexChanged += new System.EventHandler(this.ProductTable_SelectedIndexChanged);
             // 
             // Header1
             // 
@@ -109,7 +110,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // label2
             // 
@@ -162,7 +163,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CloseButton
             // 
@@ -174,12 +175,23 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // LogOutButton
+            // 
+            this.LogOutButton.Location = new System.Drawing.Point(713, 12);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.TabIndex = 25;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // EditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PHP.Properties.Resources.Sales1;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Product_Stock);
@@ -190,8 +202,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID);
-            this.Controls.Add(this.ListView1);
+            this.Controls.Add(this.StockList);
             this.Name = "EditItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "EditItem";
             this.Load += new System.EventHandler(this.EditItem_Load);
             this.ResumeLayout(false);
@@ -201,7 +214,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView ListView1;
+        private System.Windows.Forms.ListView StockList;
         public System.Windows.Forms.ColumnHeader Header1;
         private System.Windows.Forms.ColumnHeader Header2;
         private System.Windows.Forms.ColumnHeader Header3;
@@ -216,5 +229,6 @@
         private System.Windows.Forms.TextBox Product_Stock;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button LogOutButton;
     }
 }
