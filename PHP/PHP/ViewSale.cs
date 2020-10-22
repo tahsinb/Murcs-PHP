@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,12 +21,24 @@ namespace PHP
         private Sale _sale;
         List<Sale> _SalesList;
         PHPRepo _PHPRepo;
+        private HelpProvider helpProvider;
         public ViewSale(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _SalesList = pHPRepo.GetSales();
             DisplaySales();
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\ViewSale.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(SaleIDtext, HelpNavigator.TableOfContents);
         }
 
         private void SaleID_Search(object sender, EventArgs e)

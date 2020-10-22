@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -334,6 +336,17 @@ namespace PHP
 				//do nothing
 			}
 		}
+
+        private void userDocumentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WebBrowser browser = new WebBrowser();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\UserDoc.htm");
+            var uri = new Uri(path);
+            System.Diagnostics.Process.Start(path);
+            //browser.Navigate(uri);
+        }
 
         private void ParentMDI_Activated(object sender, EventArgs e)
         {

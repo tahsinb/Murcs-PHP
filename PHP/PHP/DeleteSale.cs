@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +18,24 @@ namespace PHP
     {
         PHPRepo _pHPRepo;
         Sale sale;
+        private HelpProvider helpProvider;
 
         public DeleteSale(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
 
             _pHPRepo = pHPRepo;
+        }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\DeleteSale.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(SaleID, HelpNavigator.TableOfContents);
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PHP.Database;
+using System.Reflection;
+using System.IO;
 
 namespace PHP
 {
@@ -17,13 +19,29 @@ namespace PHP
         PHPRepo _PHPRepo;
         List<Product> _ProductList;
         Product _Product = new Product();
+        private HelpProvider helpProvider;
+
         public AddItem(PHPRepo pHPRepo)
         {
             InitializeComponent();
+            CreateHelpProvider();
             _PHPRepo = pHPRepo;
             _ProductList = pHPRepo.GetProducts();
             DisplayItems();
         }
+
+        private void CreateHelpProvider()
+        {
+            helpProvider = new HelpProvider();
+            string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+            string exeDir = Path.GetDirectoryName(exeFile);
+            string path = Path.Combine(exeDir, "..\\..\\Resources\\AddItem.htm");
+            helpProvider.HelpNamespace = path;
+            helpProvider.SetHelpNavigator(Stock, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Name, HelpNavigator.TableOfContents);
+            helpProvider.SetHelpNavigator(Price, HelpNavigator.TableOfContents);
+        }
+
         private void DisplayItems()
         {
             foreach (Product p in _ProductList)
