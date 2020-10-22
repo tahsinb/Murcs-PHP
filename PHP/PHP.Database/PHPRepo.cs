@@ -140,6 +140,10 @@ namespace PHP.Database
         {
             return _pHPContext.Products.Where(p => p.Stock_Level < p.Low_Stock_Number).ToList();
         }
+        public int GetMaxProductId()
+        {
+            return _pHPContext.Products.Select(s => s.ProductId).Max();
+        }
         #endregion
     }
 

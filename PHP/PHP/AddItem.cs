@@ -64,23 +64,15 @@ namespace PHP
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(ID.Text) && !string.IsNullOrEmpty(Price.Text) && !string.IsNullOrEmpty(Stock.Text))
+            if (!string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(Price.Text) && !string.IsNullOrEmpty(Stock.Text))
             {
                 int IntTest;
                 Double DoubleTest;
                 Boolean Fail = true;
                 while (Fail)
                 {
-                    if (Int32.TryParse(ID.Text, out IntTest))
-                    {
-                        _Product.ProductId = Int32.Parse(ID.Text);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Not an acceptable ID");
-                        Fail = false;
-                        break;
-                    }
+
+                    
 
                     if (Double.TryParse(Price.Text, out DoubleTest))
                     {
@@ -105,6 +97,7 @@ namespace PHP
                     }
 
                     _Product.Product_Name = Name.Text;
+                    _Product.ProductId = _PHPRepo.GetMaxProductId() + 1;
                     _PHPRepo.AddProductRecord(_Product);
 
                     MessageBox.Show("New product added successfully.");
@@ -120,7 +113,6 @@ namespace PHP
 
                     Name.Clear();
                     Price.Clear();
-                    ID.Clear();
                     Stock.Clear();
 
                     Fail = false;

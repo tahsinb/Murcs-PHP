@@ -38,10 +38,8 @@
             this.Price = new System.Windows.Forms.TextBox();
             this.PriceLabel = new System.Windows.Forms.Label();
             this.Stock = new System.Windows.Forms.TextBox();
-            this.IDLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.AddItemButton = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.TextBox();
             this.Name = new System.Windows.Forms.TextBox();
             this.CloseButton = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
@@ -130,21 +128,11 @@
             this.Stock.Size = new System.Drawing.Size(100, 20);
             this.Stock.TabIndex = 20;
             // 
-            // IDLabel
-            // 
-            this.IDLabel.AutoSize = true;
-            this.IDLabel.BackColor = System.Drawing.Color.Transparent;
-            this.IDLabel.Location = new System.Drawing.Point(79, 173);
-            this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(18, 13);
-            this.IDLabel.TabIndex = 19;
-            this.IDLabel.Text = "ID";
-            // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.NameLabel.Location = new System.Drawing.Point(72, 135);
+            this.NameLabel.Location = new System.Drawing.Point(72, 183);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(35, 13);
             this.NameLabel.TabIndex = 18;
@@ -160,17 +148,9 @@
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
-            // ID
-            // 
-            this.ID.Location = new System.Drawing.Point(113, 170);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(100, 20);
-            this.ID.TabIndex = 15;
-            this.ID.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // Name
             // 
-            this.Name.Location = new System.Drawing.Point(113, 128);
+            this.Name.Location = new System.Drawing.Point(113, 176);
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(100, 20);
             this.Name.TabIndex = 14;
@@ -209,12 +189,9 @@
             this.Controls.Add(this.Price);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.Stock);
-            this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AddItemButton);
-            this.Controls.Add(this.ID);
             this.Controls.Add(this.Name);
-            //this.Name = "AddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddItem";
             this.Load += new System.EventHandler(this.AddItem_Load);
@@ -234,10 +211,8 @@
         private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.TextBox Stock;
-        private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Button AddItemButton;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button LogOutButton;
