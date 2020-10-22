@@ -63,7 +63,10 @@ namespace PHP
             enableTextBoxes();
             SaleTable.Items.Clear();
             if (_PHPRepo.GetSaleById(SaleID) == null)
+            {
                 MessageBox.Show("Could not find sale", "Search Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DisplaySales();    
+            }
             else
             {
                 _sale = _PHPRepo.GetSaleById(SaleID);
@@ -85,7 +88,7 @@ namespace PHP
 
         private void ClickConfirm(object sender, EventArgs e)
         {
-            if(DateBox.Text != "")
+            if(DateBox.Text != "" )
             {
                 _sale.Sale_Date = Convert.ToDateTime(DateBox.Text);
             }
